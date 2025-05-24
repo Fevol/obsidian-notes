@@ -209,5 +209,6 @@
     height: 16px;
 }
 
-
-
+.icon-action {
+    cursor: pointer;
+}

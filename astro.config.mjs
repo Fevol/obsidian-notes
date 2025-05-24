@@ -32,9 +32,7 @@ export default defineConfig({
                 starlightObsidian({
                     vault: './vault'
                 }),
-                starlightObsidianTheme({
-                    skipGeneration: import.meta.env.PROD,
-                }),
+                starlightObsidianTheme(),
             ],
             favicon: './favicon.svg',
             sidebar: [

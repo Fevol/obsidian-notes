@@ -14,11 +14,11 @@ export default defineConfig({
             title: "Fevol's Compendium",
             credits: true,
             social: [
-                { icon: 'github', label: 'GitHub', href: 'https://github.com/fevol/obsidian-development-notes'},
+                { icon: 'github', label: 'GitHub', href: 'https://github.com/fevol/obsidian-notes'},
                 { icon: 'discord', label: 'Discord', href: 'https://discord.com/users/264169866511122432' },
             ],
             editLink: {
-                baseUrl: 'https://github.com/fevol/obsidian-development-notes/edit/main/docs/',
+                baseUrl: 'https://github.com/fevol/obsidian-notes/edit/main/docs/',
             },
             customCss: [
                 './src/styles/global.css',

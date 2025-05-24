@@ -1,0 +1,10 @@
+{
+	"id": "list-all-icons",
+	"name": "Icon Lister",
+	"version": "1.0.0",
+	"minAppVersion": "1.7.2",
+	"description": "Exports all icons Obsidian currently has available.",
+	"author": "Fevol",
+	"authorUrl": "https://github.com/Fevol/obsidian-notes",
+	"isDesktopOnly": false
+}

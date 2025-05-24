@@ -19,6 +19,24 @@
     flex-wrap: wrap;
 }
 
+.icon-header-toggles > * {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    margin: 0;
+
+    font-size: var(--sl-text-sm);
+}
+
+.rangeSlider {
+    min-width: 100px;
+    flex-grow: 1;
+}
+
+.icon-header-toggles p {
+    margin: 0;
+}
+
 .icon-header p {
     line-height: 20px;
 }

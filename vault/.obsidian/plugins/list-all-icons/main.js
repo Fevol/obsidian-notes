@@ -24,6 +24,8 @@ __export(plugin_exports, {
 module.exports = __toCommonJS(plugin_exports);
 
 var import_obsidian = require("obsidian");
+const path = require("path");
+const fs = require("fs");
 
 function toTitleCase(str) {
     return str
@@ -36,33 +38,41 @@ var IconLister = class extends import_obsidian.Plugin {
         super(...arguments);
     }
 
+    saveIconsToFile() {
+        const icons = import_obsidian.getIconIds()
+        const icons_list = Object.fromEntries(icons.map((icon) => {
+            let stripped_icon = icon.replace("lucide-", "");
+            return [icon, {
+                name: toTitleCase(stripped_icon),
+                svg: import_obsidian.getIcon(icon).outerHTML,
+                lucide: icon.startsWith("lucide-"),
+            }]
+        }));
+        const version = import_obsidian.apiVersion;
+        const fs = require('fs');
+        const path = require('path');
+        console.log(this.app.vault.adapter.basePath)
+        const filePath = path.join(this.app.vault.adapter.basePath, '../src/assets/icon-data/', `${version}.json`);
+        console.log(filePath)
+        fs.writeFile(filePath, JSON.stringify(icons_list, null, 2), (err) => {
+            if (err) {
+                console.error(err);
+                return;
+            }
+            console.log(`Icons data written to ${filePath}`);
+        });
+    }
+
     async onload() {
+        this.registerObsidianProtocolHandler("list-icons", async (e) => {
+            this.saveIconsToFile()
+        });
+
         this.addCommand({
             id: "generate-icons-file",
             name: "Fetch all icons and generate a file",
             callback: () => {
-                const icons = import_obsidian.getIconIds()
-                const icons_list = Object.fromEntries(icons.map((icon) => {
-                    let stripped_icon = icon.replace("lucide-", "");
-                    return [icon, {
-                        name: toTitleCase(stripped_icon),
-                        svg: import_obsidian.getIcon(icon).outerHTML,
-                        lucide: icon.startsWith("lucide-"),
-                    }]
-                }));
-                const version = import_obsidian.apiVersion;
-                const fs = require('fs');
-                const path = require('path');
-                console.log(this.app.vault.adapter.basePath)
-                const filePath = path.join(this.app.vault.adapter.basePath, '../src/assets/icon-data/', `${version}.json`);
-                console.log(filePath)
-                fs.writeFile(filePath, JSON.stringify(icons_list, null, 2), (err) => {
-                    if (err) {
-                        console.error(err);
-                        return;
-                    }
-                    console.log(`Icons data written to ${filePath}`);
-                });
+                this.saveIconsToFile();
             }
         });
     }

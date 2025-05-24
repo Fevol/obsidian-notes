@@ -9,7 +9,9 @@
 		"start": "astro dev",
 		"build": "astro check && astro build",
 		"preview": "astro preview",
-		"astro": "astro"
+		"astro": "astro",
+		"fetch-icons": "bun run ./scripts/fetch-icons.ts",
+		"combine-icons": "bun run ./scripts/combine-icons.ts"
 	},
 	"dependencies": {
 		"@astrojs/check": "^0.9.4",
@@ -24,6 +26,7 @@
 		"starlight-package-managers": "^0.7.0",
 		"starlight-theme-obsidian": "^0.3.2",
 		"svelte": "^5.33.1",
+		"svelte-range-slider-pips": "^3.2.2",
 		"typescript": "^5.8.3"
 	}
 }

@@ -30,16 +30,23 @@ export default defineConfig({
                 starlightObsidian({
                     vault: './vault'
                 }),
-                starlightObsidianTheme(),
+                starlightObsidianTheme({
+                    skipGeneration: !import.meta.env.DEV,
+                }),
             ],
             favicon: './favicon.svg',
             sidebar: [
                 {
-                    label: 'Root',
+                    label: 'Start Here',
                     items: [
                         { label: 'Overview', link: '/overview/' },
-                        { label: 'Icons', link: '/icons/' },
                     ],
+                },
+                {
+                    label: 'Utilities',
+                    autogenerate: {
+                        directory: 'utils'
+                    },
                 },
                 obsidianSidebarGroup
             ],

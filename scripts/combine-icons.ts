@@ -43,7 +43,7 @@ for (const file of fs.readdirSync(iconsDir)) {
 
 for (const key in iconData) {
     if (included_versions[included_versions.length - 1] === iconData[key].lastVersion) {
-        delete iconData[key].lastVersion;
+        delete (iconData[key] as Partial<IconData>).lastVersion;
     }
 }
 

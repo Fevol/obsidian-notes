@@ -22,7 +22,7 @@ export const { getStaticPaths, GET } = OGImageRoute({
 			description: page.data.description || '',
 			// Customize various colors and add a border.
 			bgGradient: [[17, 18, 19] as const/*, [24, 21, 13] as const*/],
-			border: { color: [148, 63, 205], width: 10, side: 'block-end' },
+			border: { colorX: [36, 101, 36], width: 10, side: 'block-end' },
 			font: {
 				title: {
 					size: 90,
@@ -42,8 +42,8 @@ export const { getStaticPaths, GET } = OGImageRoute({
 			],
 			padding: 90,
 			logo: {
-				path: '../assets/icon.png',
-				size: [500]
+				path: 'public/favicon.png',
+				size: [140]
 			},
 		};
 	},

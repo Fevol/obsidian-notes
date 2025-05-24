@@ -3,7 +3,28 @@ title: Overview
 description: See what contents are available on this site.
 ---
 
+import { CardGrid } from '@astrojs/starlight/components';
+import { LinkCardIcon } from '../../components';
+
+
 This site is a collection of notes based on my experience with [Obsidian](https://obsidian.md/) plugin development.
-It is currently W.I.P. and might not ever be finished.
-Further, there may be _many_ things that are not correct or are just plain wrong.
-I'm just an idiot who very occasionally manages to write working code.
+It is currently W.I.P. and there are many more pages to come. Suggestions for new topics or utilities are always welcome!
+
+:::danger[Warning]
+While I try to do my best to make sure that the information on this site is correct, there will certainly be mistakes.
+Please open up an issue in the [GitHub repository](https://github.com/fevol/obsidian-notes/issues) if you find any mistakes or have suggestions for improvements.
+:::
+
+
+## Site Contents
+
+<CardGrid>
+    <LinkCardIcon
+        icon="seti:config"
+        title="Utilities"
+        href="/obsidian-dev-notes/utils"
+        description="A collection of utilities to help with Obsidian plugin development."
+    />
+
+
+</CardGrid>

@@ -94,95 +94,97 @@
     }
 </script>
 
-<div class="icon-header">
-    <p>
-        Filter the icons by name (icon name or identifier). <br>
-        <span class="icon-count">
-            Showing {Object.keys(filteredList).length} of {Object.keys(icons).length} icons.
-        </span>
-    </p>
-    <div class="icon-search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/>
-        </svg>
-        <input bind:value={searchTerm} placeholder="Search icons..." />
-    </div>
-</div>
-
-<div class="icon-header-toggles">
-    <div>
+<div class="icon-view">
+    <div class="icon-header">
         <p>
-            Show Lucide prefix:
-            <input type="checkbox" bind:checked={showLucidePrefix} />
+            Filter the icons by name (icon name or identifier). <br>
+            <span class="icon-count">
+                Showing {Object.keys(filteredList).length} of {Object.keys(icons).length} icons.
+            </span>
         </p>
-
-        <p>
-            Show Lucide icons:
-            <input type="checkbox" bind:checked={showLucideIcons} />
-        </p>
-
-        <p>
-            Filter by Obsidian version:
-            <input type="checkbox" bind:checked={filterVersionRange} />
-        </p>
-    </div>
-    <p>
-        Supported version range:
-        <RangeSlider
-                range pushy pips
-                bind:values={versionRange}
-                min={0}
-                max={versions.length - 1}
-                all="label"
-                formatter={(value, index, percent) => versions[value] || ''}
-                disabled={!filterVersionRange}
-        />
-    </p>
-</div>
-
-
-{#if clickedIcon}
-    <Portal target="body">
-        <div class="icon-info" style="position: absolute; top: {mouseEvent?.clientY}px; left: {mouseEvent?.clientX}px;" use:clickoutside onclickoutside={onClickOutside}>
-            {@html icons[clickedIcon].svg}
-            <div class="icon-info-content">
-                <h4>{icons[clickedIcon].name}</h4>
-                <p>
-                    Icon ID: <code>{clickedIcon}</code>
-                    <button onclick={() => onCopy(clickedIcon)}>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <rect width="14" height="14" x="8" y="8" rx="2" ry="2"/>
-                            <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/>
-                        </svg>
-                    </button>
-                </p>
-                <p>
-                    SVG: <a href={`data:image/svg+xml;utf8,${encodeURIComponent(icons[clickedIcon].svg)}`} download={`${clickedIcon}.svg`}>Download</a>
-                    <button onclick={() => onCopy(icons[clickedIcon].svg)}>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <rect width="14" height="14" x="8" y="8" rx="2" ry="2"/>
-                            <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/>
-                        </svg>
-                    </button>
-                </p>
-                <p>Lucide: {icons[clickedIcon].lucide ? 'Yes' : 'No'}</p>
-                <p>Supported versions: {icons[clickedIcon].firstVersion} - {icons[clickedIcon].lastVersion ?? versions[versions.length - 1]}</p>
-            </div>
+        <div class="icon-search">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/>
+            </svg>
+            <input bind:value={searchTerm} placeholder="Search icons..." />
         </div>
-    </Portal>
-{/if}
+    </div>
 
-<!-- TODO: I tried to use VirtualLists, but none of them seem to support CSS grids, afaics, more investigation required-->
+    <div class="icon-header-toggles">
+        <div>
+            <p>
+                Show Lucide prefix:
+                <input type="checkbox" bind:checked={showLucidePrefix} />
+            </p>
 
-<ul class="icon-list">
-    {#each Object.entries(filteredList) as [key, { name, svg, lucide }]}
-        <li id={key} class="icon-item">
-            <button onclick={onClick}>
-                {@html svg}
-                <code>
-                    {(showLucidePrefix && lucide) ? key.slice(7) : key}
-                </code>
-            </button>
-        </li>
-    {/each}
-</ul>
+            <p>
+                Show Lucide icons:
+                <input type="checkbox" bind:checked={showLucideIcons} />
+            </p>
+
+            <p>
+                Filter by Obsidian version:
+                <input type="checkbox" bind:checked={filterVersionRange} />
+            </p>
+        </div>
+        <div>
+            Supported version range:
+            <RangeSlider
+                    range pushy pips
+                    bind:values={versionRange}
+                    min={0}
+                    max={versions.length - 1}
+                    all="label"
+                    formatter={(value, index, percent) => versions[value] || ''}
+                    disabled={!filterVersionRange}
+            />
+        </div>
+    </div>
+
+
+    {#if clickedIcon}
+        <Portal target="body">
+            <div class="icon-info" style="position: absolute; top: {mouseEvent?.clientY}px; left: {mouseEvent?.clientX}px;" use:clickoutside onclickoutside={onClickOutside}>
+                {@html icons[clickedIcon].svg}
+                <div class="icon-info-content">
+                    <h4>{icons[clickedIcon].name}</h4>
+                    <p>
+                        Icon ID: <code>{clickedIcon}</code>
+                        <button onclick={() => onCopy(clickedIcon)}>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect width="14" height="14" x="8" y="8" rx="2" ry="2"/>
+                                <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/>
+                            </svg>
+                        </button>
+                    </p>
+                    <p>
+                        SVG: <a href={`data:image/svg+xml;utf8,${encodeURIComponent(icons[clickedIcon].svg)}`} download={`${clickedIcon}.svg`}>Download</a>
+                        <button onclick={() => onCopy(icons[clickedIcon].svg)}>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect width="14" height="14" x="8" y="8" rx="2" ry="2"/>
+                                <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/>
+                            </svg>
+                        </button>
+                    </p>
+                    <p>Lucide: {icons[clickedIcon].lucide ? 'Yes' : 'No'}</p>
+                    <p>Supported versions: {icons[clickedIcon].firstVersion} - {icons[clickedIcon].lastVersion ?? versions[versions.length - 1]}</p>
+                </div>
+            </div>
+        </Portal>
+    {/if}
+
+    <!-- TODO: I tried to use VirtualLists, but none of them seem to support CSS grids, afaics, more investigation required-->
+
+    <ul class="icon-list">
+        {#each Object.entries(filteredList) as [key, { name, svg, lucide }]}
+            <li id={key} class="icon-item">
+                <button onclick={onClick}>
+                    {@html svg}
+                    <code>
+                        {(showLucidePrefix && lucide) ? key.slice(7) : key}
+                    </code>
+                </button>
+            </li>
+        {/each}
+    </ul>
+</div>

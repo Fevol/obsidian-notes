@@ -11,7 +11,7 @@ if (process.platform === 'linux') {
     cmd = 'start';
     attrs = { shell: true };
 } else {
-    console.error('Unsupported OS:', os);
+    console.error('Unsupported OS:', process.platform);
     process.exit(1);
 }
 

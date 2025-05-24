@@ -8,7 +8,7 @@ import svelte from '@astrojs/svelte';
 
 export default defineConfig({
     site: "https://fevol.github.io",
-    base: "/obsidian-dev-notes",
+    base: "/obsidian-notes",
     integrations: [
         starlight({
             title: "Fevol's Compendium",

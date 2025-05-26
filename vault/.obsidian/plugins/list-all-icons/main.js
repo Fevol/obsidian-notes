@@ -52,7 +52,7 @@ var IconLister = class extends import_obsidian.Plugin {
         const fs = require('fs');
         const path = require('path');
         console.log(this.app.vault.adapter.basePath)
-        const filePath = path.join(this.app.vault.adapter.basePath, '../src/assets/icon-data/', `${version}.json`);
+        const filePath = path.join(this.app.vault.adapter.basePath, '../icon-data/', `${version}.json`);
         console.log(filePath)
         fs.writeFile(filePath, JSON.stringify(icons_list, null, 2), (err) => {
             if (err) {

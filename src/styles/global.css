@@ -12,6 +12,10 @@
     --sl-hero-color: hsla(120, 70%, 70%, 15%);
 }
 
+.icon-view {
+    position: relative;
+}
+
 .icon-view ul {
     list-style: none;
     padding: 0;
@@ -34,8 +38,13 @@
 }
 
 .rangeSlider {
-    min-width: 100px;
+    min-width: 160px;
     flex-grow: 1;
+}
+
+.icon-header-toggles > div {
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .icon-header-toggles p {
@@ -88,7 +97,7 @@
     display: grid;
     gap: 8px;
 
-    grid-auto-rows: 80px;
+    grid-auto-rows: 84px;
     grid-template-columns: repeat(auto-fill, 80px);
     justify-content: space-between;
     grid-auto-flow: dense;
@@ -101,7 +110,8 @@
 }
 
 .icon-item {
-
+    width: 80px;
+    height: 80px;
 }
 
 .icon-item button {
@@ -121,7 +131,7 @@
 
     border: none;
     border-radius: 1rem;
-    box-shadow: 0 2px 8px rgba(89,85,101,.2);
+    box-shadow: var(--sl-shadow-sm);
 
     overflow: hidden;
 }
@@ -154,12 +164,15 @@
 }
 
 .icon-info {
+    position: absolute;
     display: flex;
     flex-direction: row;
     gap: 16px;
     align-items: start;
 
     padding: 16px;
+
+    max-width: 500px;
 
     z-index: 1;
     background-color: var(--sl-color-black);
@@ -198,17 +211,83 @@
     text-overflow: ellipsis;
 }
 
-.icon-info-content p button {
-    border: 0;
-    background-color: transparent;
-    padding: 0;
+.icon-labels {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 8px;
 }
 
-.icon-info-content p svg {
+.icon-label {
+    display: inline-block;
+    padding: 0 4px;
+    border: 0;
+    margin: 0;
+
+    font-size: var(--sl-text-xs);
+    font-weight: 600;
+
+    background-color: var(--sl-color-gray-6);
+
+    border-radius: 4px;
+}
+
+.icon-label:hover {
+    background-color: var(--sl-color-gray-5);
+    cursor: pointer;
+}
+
+.icon-action {
+    border: 0;
+
+    color: var(--sl-color-text);
+    background-color: unset;
+
+    margin: 0;
+    padding: 4px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.icon-action svg {
     width: 16px;
     height: 16px;
 }
 
-.icon-action {
-    cursor: pointer;
+.icon-action:hover, .icon-action:focus {
+    background-color: var(--sl-color-gray-6);
+}
+
+.icon-search-options {
+    display: flex;
+    gap: 0;
+    flex-direction: row;
+    align-items: center;
+}
+
+.icon-search-options button {
+    height: 32px;
+    margin: 0;
+    padding: 0 8px;
+
+    border: 0;
+    flex: 1;
+}
+
+.icon-search-options button:first-child {
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+.icon-search-options button:last-child {
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.icon-search-options button.is-active {
+    background-color: var(--sl-color-accent);
+}
+
+.icon-search-options button.is-active:hover {
+    background-color: var(--sl-color-accent-low);
 }

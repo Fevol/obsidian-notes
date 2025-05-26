@@ -6,8 +6,6 @@ import starlightLinksValidator from 'starlight-links-validator';
 
 import svelte from '@astrojs/svelte';
 
-console.log(import.meta.env)
-
 export default defineConfig({
     site: "https://fevol.github.io",
     base: "/obsidian-notes",

@@ -10,17 +10,23 @@
 		"build": "astro check && astro build",
 		"preview": "astro preview",
 		"astro": "astro",
-		"fetch-icons": "bun run ./scripts/fetch-icons.ts",
-		"combine-icons": "bun run ./scripts/combine-icons.ts"
+		"fetch-obsidian-icons": "bun run ./scripts/fetch-obsidian-icons.ts",
+		"combine-icons": "bun run ./scripts/combine-icons.ts",
+		"fetch-lucide-icons": "bun run ./scripts/fetch-lucide-icons.ts"
+	},
+	"devDependencies": {
+		"@types/node-fetch": "^2.6.12",
+		"@types/yauzl": "^2.10.3",
+		"yauzl": "^3.2.0"
 	},
 	"dependencies": {
 		"@astrojs/check": "^0.9.4",
 		"@astrojs/starlight": "^0.34.2",
 		"@astrojs/svelte": "^7.1.0",
-		"@jsrob/svelte-portal": "^0.2.1",
 		"@svelte-put/clickoutside": "^4.0.0",
 		"astro": "^5.7.10",
 		"astro-og-canvas": "^0.7.0",
+		"fuse.js": "^7.1.0",
 		"starlight-links-validator": "^0.12.4",
 		"starlight-obsidian": "^0.9.0",
 		"starlight-package-managers": "^0.7.0",

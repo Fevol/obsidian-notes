@@ -110,8 +110,51 @@
 }
 
 .icon-item {
+    margin: 0;
     width: 80px;
     height: 80px;
+}
+
+.icon-item.icon-deprecated button {
+    background-color: var(--sl-color-red-low);
+
+    &:hover {
+        background-color: color-mix(in srgb, var(--sl-color-red), var(--sl-color-gray-6));
+    }
+}
+
+.icon-item.icon-latest button {
+    background-color: var(--sl-color-green-low);
+
+    &:hover {
+        background-color: color-mix(in srgb, var(--sl-color-green), var(--sl-color-gray-6));
+    }
+}
+
+.icon-item.icon-unique button {
+    background-color: var(--sl-color-blue-low);
+
+    &:hover {
+        background-color: color-mix(in srgb, var(--sl-color-blue), var(--sl-color-gray-6));
+    }
+}
+
+.icon-share-link {
+    display: flex;
+    background-color: transparent;
+    align-items: center;
+    border: 0;
+    gap: 4px;
+}
+
+.icon-share-link svg {
+    width: 16px;
+    height: 16px;
+}
+
+.icon-share-link:hover {
+    color: var(--sl-color-accent);
+    text-decoration: underline;
 }
 
 .icon-item button {
@@ -238,6 +281,8 @@
 }
 
 .icon-action {
+    width: 24px;
+    height: 24px;
     border: 0;
 
     color: var(--sl-color-text);

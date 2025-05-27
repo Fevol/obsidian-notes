@@ -32,7 +32,6 @@
 		"starlight-package-managers": "^0.7.0",
 		"starlight-theme-obsidian": "^0.3.2",
 		"svelte": "^5.33.1",
-		"svelte-range-slider-pips": "^3.2.2",
 		"typescript": "^5.8.3"
 	}
 }

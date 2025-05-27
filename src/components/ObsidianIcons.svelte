@@ -6,7 +6,6 @@
     import Icons from '../../icon-data/icons.json?raw'
     import {onMount} from "svelte";
     import { clickoutside } from '@svelte-put/clickoutside';
-    import RangeSlider from 'svelte-range-slider-pips';
     import Fuse from 'fuse.js';
 
     interface Icon {
@@ -14,8 +13,11 @@
         name: string;
         svg: string;
         lucide: boolean;
+        deprecated: boolean;
+        is_new: boolean;
         firstVersion: string;
-        lastVersion?: string;
+        lastVersion: string;
+        alternatives?: string[];
         categories: string[];
         tags: string[];
     }
@@ -55,8 +57,8 @@
     let showLucideIcons: boolean = $state(true);
     let clickedIcon: Icon | null = $state(null);
     let mouseEvent: MouseEvent | null = $state(null);
-    let versionRange: number[] = $state([0, versions.length - 1]);
-    let filterVersionRange: boolean = $state(true);
+    let minimumVersion: number = $state(versions.findIndex(v => v === '1.8.10'));
+    let filterVersion: boolean = $state(true);
     let iconListContentRect = $state({ left: 0, width: 0, height: 0, top: 0, right: 0, bottom: 0, x: 0, y: 0 }) as DOMRect;
     let iconInfoContentRect = $state({ left: 0, width: 0, height: 0, top: 0, right: 0, bottom: 0, x: 0, y: 0 }) as DOMRect;
     let searchIdentifiers: boolean = $state(true);
@@ -67,7 +69,7 @@
     let copySvgSuccess: boolean = $state(false);
     let copyIdSuccess: boolean = $state(false);
 
-    let filteredList = $derived.by(() => filterIcons(icons, inputtedText, showLucideIcons, filterVersionRange, versions[versionRange[0]], versions[versionRange[1]]));
+    let filteredList = $derived.by(() => filterIcons(icons, inputtedText, showLucideIcons, filterVersion, versions[minimumVersion]));
 
     let fuse = $derived.by(() => {
         const keys: string[] = [];
@@ -84,31 +86,61 @@
 
     onMount(() => {
         const url = new URL(window.location.href);
-        const searchParam = url.searchParams.get('search');
-        if (searchParam) {
-            inputtedText = searchParam;
-        }
+        inputtedText = url.searchParams.get('q') || '';
+        searchIdentifiers = url.searchParams.has('id') ? url.searchParams.get('id') === 't' : searchIdentifiers;
+        searchTags = url.searchParams.has('tag') ? url.searchParams.get('tag') === 't' : searchTags;
+        searchCategories = url.searchParams.has('cat') ? url.searchParams.get('cat') === 't' : searchCategories;
+        showLucideIcons = url.searchParams.has('lucide') ? url.searchParams.get('lucide') === 't' : showLucideIcons;
+        showLucidePrefix = url.searchParams.has('prefix') ? url.searchParams.get('prefix') === 't' : showLucidePrefix;
+        filterVersion = url.searchParams.has('fltr') ? url.searchParams.get('fltr') === 't' : filterVersion;
+        minimumVersion = url.searchParams.has('min_version') ? versions.findIndex(v => v === url.searchParams.get('min_version')) : minimumVersion;
     });
 
-    $effect(() => {
+    function copyShareLink() {
         const url = new URL(window.location.href);
-        url.searchParams.set('search', inputtedText);
+        const check: [string, string | boolean][] = [
+            ['q', inputtedText],
+            ['id', searchIdentifiers],
+            ['tag', searchTags],
+            ['cat', searchCategories],
+            ['lucide', showLucideIcons],
+            ['prefix', showLucidePrefix],
+            ['filter_version', filterVersion],
+        ]
+
+        for (const [key, value] of check) {
+            if (typeof value === 'boolean') {
+                url.searchParams.set(key, value ? 't' : 'f');
+            } else if (value.length > 0) {
+                url.searchParams.set(key, value);
+            } else {
+                url.searchParams.delete(key);
+            }
+        }
+
+        url.searchParams.set('min_version', versions[minimumVersion]);
+
         window.history.replaceState({}, '', url);
-    });
+
+        navigator.clipboard.writeText(url.toString()).then(() => {
+            console.log('Shareable link copied to clipboard:', url.toString());
+        }).catch(err => {
+            console.error('Failed to copy shareable link:', err);
+        });
+    }
 
     function semverCompare(a: string, b: string): boolean {
         return a.localeCompare(b, 'en', { numeric: true }) === 1;
     }
 
-    function filterIcons(list: IconList, search: string, include_lucide: boolean, filter_versions: boolean, first_version: string, last_version: string): IconList {
+    function filterIcons(list: IconList, search: string, include_lucide: boolean, filter_versions: boolean, minimum_version: string): IconList {
         let filtered = search.length
             ? fuse.search(search).map(result => result.item)
             : list;
         return filtered.filter(({ lucide, firstVersion, lastVersion }) => {
             return !(
                 (!include_lucide && lucide) ||
-                (filter_versions && semverCompare(firstVersion, first_version)) ||
-                (filter_versions && lastVersion && semverCompare(lastVersion, lastVersion))
+                (filter_versions && semverCompare(firstVersion, minimum_version))
             );
         });
     }
@@ -150,20 +182,27 @@
         URL.revokeObjectURL(url);
     }
 
-    function onTagClick(event: MouseEvent, tag: string) {
+    function onIdentifierClick(event: MouseEvent, identifier: string) {
         event.preventDefault();
-        inputtedText = tag;
-        searchIdentifiers = false;
-        searchTags = true;
+        inputtedText = identifier;
+        searchIdentifiers = true;
+        searchTags = false;
         searchCategories = false;
     }
-
     function onCategoryClick(event: MouseEvent, category: string) {
         event.preventDefault();
         inputtedText = category;
         searchCategories = true;
         searchTags = false;
         searchIdentifiers = false;
+    }
+
+    function onTagClick(event: MouseEvent, tag: string) {
+        event.preventDefault();
+        inputtedText = tag;
+        searchIdentifiers = false;
+        searchTags = true;
+        searchCategories = false;
     }
 
     function onClickOutside(event: CustomEvent<MouseEvent>) {
@@ -199,12 +238,20 @@
                 Tags
             </button>
         </div>
+
+        <button class="icon-share-link" onclick={copyShareLink}>
+            Get shareable link
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-link">
+                <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+            </svg>
+        </button>
     </div>
 
     <div class="icon-header-toggles">
         <div>
             <p>
-                Show Lucide prefix:
+                Hide Lucide prefix:
                 <input type="checkbox" bind:checked={showLucidePrefix} />
             </p>
 
@@ -212,23 +259,21 @@
                 Show Lucide icons:
                 <input type="checkbox" bind:checked={showLucideIcons} />
             </p>
-
-            <p>
-                Filter by Obsidian version:
-                <input type="checkbox" bind:checked={filterVersionRange} />
-            </p>
         </div>
         <div>
-            Supported version range:
-            <RangeSlider
-                    range pushy pips
-                    bind:values={versionRange}
-                    min={0}
-                    max={versions.length - 1}
-                    all="label"
-                    formatter={(value, index, percent) => versions[value] || ''}
-                    disabled={!filterVersionRange}
-            />
+            <p>
+                Filter by Obsidian version:
+                <input type="checkbox" bind:checked={filterVersion} />
+            </p>
+
+            <p>
+                Lowest supported version:
+                <select bind:value={minimumVersion} disabled={!filterVersion}>
+                    {#each versions as version, index}
+                        <option value={index}>{version}</option>
+                    {/each}
+                </select>
+            </p>
         </div>
     </div>
 
@@ -239,7 +284,7 @@
                 bind:contentRect={iconInfoContentRect}
                 style="
                     left: {Math.max(0, Math.min(mouseEvent.layerX - iconInfoContentRect.width / 2,  iconListContentRect.width - iconInfoContentRect.width - 30))}px;
-                    top: {(mouseEvent.layerY) + 78 - (mouseEvent.layerY + 70) % 92}px;
+                    top: {(mouseEvent.layerY) + 80 - (mouseEvent.layerY + 20) % 92}px;
                 "
                 use:clickoutside onclickoutside={onClickOutside}
             >
@@ -295,6 +340,16 @@
                             </span>
                         </p>
                     {/if}
+                    {#if clickedIcon.alternatives}
+                        <p>
+                            <b>Alternatives:</b>
+                            <span class="icon-labels">
+                                {#each clickedIcon.alternatives as alternative}
+                                    <button class="icon-label" onclick={(evt) => onIdentifierClick(evt, alternative)}>{alternative}</button>
+                                {/each}
+                            </span>
+                        </p>
+                    {/if}
                 </div>
             </div>
     {/if}
@@ -304,8 +359,8 @@
     <ul class="icon-list"
         bind:contentRect={iconListContentRect}
     >
-        {#each filteredList as { id, svg, lucide }}
-            <li id={id} class="icon-item">
+        {#each filteredList as { id, svg, lucide, is_new, deprecated }}
+            <li id={id} class="icon-item" class:icon-deprecated={deprecated} class:icon-latest={is_new} class:icon-unique={!lucide}>
                 <button onclick={onClick}>
                     {@html svg}
                     <code>

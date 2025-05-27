@@ -13,8 +13,11 @@ interface BaseIconData {
 interface IconData extends BaseIconData {
     firstVersion: string;
     lastVersion: string;
+    deprecated: boolean;
+    is_new: boolean;
     tags: string[];
     categories: string[];
+    alternatives?: string[];
 }
 
 interface LucideIconData {
@@ -30,7 +33,11 @@ let included_versions: string[] = [];
 let included_tags: Set<string> = new Set();
 let included_categories: Set<string> = new Set();
 
+
+// All icons from this version onwards are marked 'NEW'
+const NEW_VERSION = "1.7.7";
 const LUCIDE_ICONS_DATA = JSON.parse(fs.readFileSync(path.join(ICONS_DIR, 'lucide-icons.json'), 'utf-8')) as Record<string, LucideIconData>;
+const ICON_ALTERNATIVES = JSON.parse(fs.readFileSync(path.join(ICONS_DIR, 'alternatives.json'), 'utf-8')) as Record<string, string[]>;
 const LUCIDE_ALIASES = Object.entries(LUCIDE_ICONS_DATA).reduce((acc: Record<string, LucideIconData>, [key, icon]) => {
     if (icon.aliases) {
         icon.aliases.forEach(alias => {
@@ -39,6 +46,11 @@ const LUCIDE_ALIASES = Object.entries(LUCIDE_ICONS_DATA).reduce((acc: Record<str
     }
     return acc;
 }, {});
+
+
+function semverCompare(a: string, b: string): boolean {
+    return a.localeCompare(b, undefined, { numeric: true, sensitivity: 'base' }) >= 0;
+}
 
 
 const iconData: Record<string, IconData> = {};
@@ -71,6 +83,9 @@ for (const file of fs.readdirSync(ICONS_DIR)) {
                 ...icon,
                 firstVersion: version,
                 lastVersion: version,
+                alternatives: ICON_ALTERNATIVES[key],
+                deprecated: false,
+                is_new: semverCompare(version, NEW_VERSION),
                 tags,
                 categories,
             };
@@ -84,15 +99,12 @@ for (const file of fs.readdirSync(ICONS_DIR)) {
 
 const outputIcons: IconData[] = Object.entries(iconData).map(([key, icon]) => ({
     id: key,
-    name: icon.name,
-    svg: icon.svg,
-    lucide: icon.lucide,
-    firstVersion: icon.firstVersion,
-    lastVersion: (included_versions.includes(icon.lastVersion) ? icon.lastVersion : undefined)!,
+    ...icon,
     tags: icon.tags.sort(),
     categories: icon.categories.sort(),
-}));
+    deprecated: icon.lastVersion !== included_versions[included_versions.length - 1],
 
+})).sort((a, b) => a.name.localeCompare(b.name));
 
 const output = {
     icons: outputIcons,
@@ -100,4 +112,5 @@ const output = {
     tags: Array.from(included_tags).sort(),
     categories: Array.from(included_categories).sort(),
 }
+
 fs.writeFileSync(OUTPUT_FILE, JSON.stringify(output, null, 2), 'utf-8');

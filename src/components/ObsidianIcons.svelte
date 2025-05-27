@@ -58,7 +58,6 @@
     let clickedIcon: Icon | null = $state(null);
     let mouseEvent: MouseEvent | null = $state(null);
     let minimumVersion: number = $state(versions.findIndex(v => v === '1.8.10'));
-    let filterVersion: boolean = $state(true);
     let iconListContentRect = $state({ left: 0, width: 0, height: 0, top: 0, right: 0, bottom: 0, x: 0, y: 0 }) as DOMRect;
     let iconInfoContentRect = $state({ left: 0, width: 0, height: 0, top: 0, right: 0, bottom: 0, x: 0, y: 0 }) as DOMRect;
     let searchIdentifiers: boolean = $state(true);
@@ -69,7 +68,7 @@
     let copySvgSuccess: boolean = $state(false);
     let copyIdSuccess: boolean = $state(false);
 
-    let filteredList = $derived.by(() => filterIcons(icons, inputtedText, showLucideIcons, filterVersion, versions[minimumVersion]));
+    let filteredList = $derived.by(() => filterIcons(icons, inputtedText, showLucideIcons, versions[minimumVersion]));
 
     let fuse = $derived.by(() => {
         const keys: string[] = [];
@@ -92,7 +91,6 @@
         searchCategories = url.searchParams.has('cat') ? url.searchParams.get('cat') === 't' : searchCategories;
         showLucideIcons = url.searchParams.has('lucide') ? url.searchParams.get('lucide') === 't' : showLucideIcons;
         showLucidePrefix = url.searchParams.has('prefix') ? url.searchParams.get('prefix') === 't' : showLucidePrefix;
-        filterVersion = url.searchParams.has('fltr') ? url.searchParams.get('fltr') === 't' : filterVersion;
         minimumVersion = url.searchParams.has('min_version') ? versions.findIndex(v => v === url.searchParams.get('min_version')) : minimumVersion;
     });
 
@@ -105,7 +103,6 @@
             ['cat', searchCategories],
             ['lucide', showLucideIcons],
             ['prefix', showLucidePrefix],
-            ['filter_version', filterVersion],
         ]
 
         for (const [key, value] of check) {
@@ -133,14 +130,14 @@
         return a.localeCompare(b, 'en', { numeric: true }) === 1;
     }
 
-    function filterIcons(list: IconList, search: string, include_lucide: boolean, filter_versions: boolean, minimum_version: string): IconList {
+    function filterIcons(list: IconList, search: string, include_lucide: boolean, minimum_version: string): IconList {
         let filtered = search.length
             ? fuse.search(search).map(result => result.item)
             : list;
         return filtered.filter(({ lucide, firstVersion, lastVersion }) => {
             return !(
                 (!include_lucide && lucide) ||
-                (filter_versions && semverCompare(firstVersion, minimum_version))
+                (semverCompare(firstVersion, minimum_version))
             );
         });
     }
@@ -262,13 +259,8 @@
         </div>
         <div>
             <p>
-                Filter by Obsidian version:
-                <input type="checkbox" bind:checked={filterVersion} />
-            </p>
-
-            <p>
-                Lowest supported version:
-                <select bind:value={minimumVersion} disabled={!filterVersion}>
+                Available in version and higher:
+                <select bind:value={minimumVersion}>
                     {#each versions as version, index}
                         <option value={index}>{version}</option>
                     {/each}

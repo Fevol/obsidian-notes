@@ -238,7 +238,7 @@
                 class="icon-info"
                 bind:contentRect={iconInfoContentRect}
                 style="
-                    left: {Math.max(0, Math.min(mouseEvent.clientX - iconListContentRect.width + iconInfoContentRect.width / 2 - 40, iconListContentRect.width - iconInfoContentRect.width - 30))}px;
+                    left: {Math.max(0, Math.min(mouseEvent.layerX - iconInfoContentRect.width / 2,  iconListContentRect.width - iconInfoContentRect.width - 30))}px;
                     top: {(mouseEvent.layerY) + 78 - (mouseEvent.layerY + 70) % 92}px;
                 "
                 use:clickoutside onclickoutside={onClickOutside}

@@ -403,11 +403,20 @@
 }
 
 .icon-util-focus-group {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+
     border: 0;
     border-radius: 4px;
 
     cursor: pointer;
     background-color: var(--color-expl-bg);
+}
+
+.icon-util-focus-group svg {
+    width: 16px;
+    height: 16px;
 }
 
 .icon-util-focus-group:hover {

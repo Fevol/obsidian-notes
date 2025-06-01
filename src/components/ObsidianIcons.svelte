@@ -13,7 +13,7 @@
         categoryIcon,
         searchIcon,
         linkIcon,
-        identifierIcon
+        identifierIcon, newIcon, deprecatedIcon, uniqueIcon
     } from './icons';
 
     import {onMount} from "svelte";
@@ -381,15 +381,18 @@
         <br/>
 
         <div class="icon-util-focus-groups">
-           <button class="icon-util-focus-group icon-util-focus-group-new" onclick={() => { toggleFilterFocus(0) }} class:icon-util-focus-group-active={filterNewIcons}>
-                New
+           <button class="icon-util-focus-group icon-util-focus-group-new" onclick={() => { toggleFilterFocus(0) }} class:icon-util-focus-group-active={filterNewIcons} use:tooltip aria-label="Focus on new icons">
+               {@html newIcon}
+               New
             </button>
 
-            <button class="icon-util-focus-group icon-util-focus-group-deprecated" onclick={() => { toggleFilterFocus(1) }} class:icon-util-focus-group-active={filterDeprecatedIcons}>
+            <button class="icon-util-focus-group icon-util-focus-group-deprecated" onclick={() => { toggleFilterFocus(1) }} class:icon-util-focus-group-active={filterDeprecatedIcons} use:tooltip aria-label="Focus on deprecated icons">
+                {@html deprecatedIcon}
                 Deprecated
             </button>
 
-            <button class="icon-util-focus-group icon-util-focus-group-unique" onclick={() => { toggleFilterFocus(2) }} class:icon-util-focus-group-active={filterUniqueIcons}>
+            <button class="icon-util-focus-group icon-util-focus-group-unique" onclick={() => { toggleFilterFocus(2) }} class:icon-util-focus-group-active={filterUniqueIcons} use:tooltip aria-label="Focus on icons not from Lucide">
+                {@html uniqueIcon}
                 Obsidian-only
             </button>
         </div>

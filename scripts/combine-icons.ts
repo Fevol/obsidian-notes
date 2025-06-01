@@ -47,7 +47,6 @@ const LUCIDE_ALIASES = Object.entries(LUCIDE_ICONS_DATA).reduce((acc: Record<str
     return acc;
 }, {});
 
-
 function semverCompare(a: string, b: string): boolean {
     return a.localeCompare(b, undefined, { numeric: true, sensitivity: 'base' }) >= 0;
 }
@@ -97,14 +96,35 @@ for (const file of fs.readdirSync(ICONS_DIR)) {
     included_versions.push(version);
 }
 
-const outputIcons: IconData[] = Object.entries(iconData).map(([key, icon]) => ({
-    id: key,
-    ...icon,
-    tags: icon.tags.sort(),
-    categories: icon.categories.sort(),
-    deprecated: icon.lastVersion !== included_versions[included_versions.length - 1],
+const SVG_ALTERNATIVES_SET = new Map<string, string[]>();
+for (const [key, icon] of Object.entries(iconData)) {
+    const innerContents = icon.svg.replace(/<svg[^>]*>|<\/svg>/g, '').trim();
+    SVG_ALTERNATIVES_SET.set(innerContents, (SVG_ALTERNATIVES_SET.get(innerContents) || []).concat(key));
+}
 
-})).sort((a, b) => a.name.localeCompare(b.name));
+const SVG_ALTERNATIVES: Record<string, string[]> = {};
+for (const alternatives of SVG_ALTERNATIVES_SET.values()) {
+    for (const icon of alternatives) {
+        SVG_ALTERNATIVES[icon] = alternatives.filter(a => a !== icon);
+    }
+}
+
+const outputIcons: IconData[] = Object.entries(iconData)
+    .map(([key, icon]) => {
+        const alternatives = Array.from(new Set([
+            ...(icon.alternatives || []),
+            ...(SVG_ALTERNATIVES[key] || []),
+        ]));
+        return {
+            id: key,
+            ...icon,
+            alternatives: alternatives.length > 0 ? alternatives.sort() : undefined,
+            tags: icon.tags.sort(),
+                categories: icon.categories.sort(),
+            deprecated: icon.lastVersion !== included_versions[included_versions.length - 1],
+        }
+    })
+    .sort((a, b) => a.name.localeCompare(b.name));
 
 const output = {
     icons: outputIcons,

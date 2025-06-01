@@ -136,6 +136,9 @@
       "lucide": true,
       "firstVersion": "1.5.12",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-square-activity"
+      ],
       "deprecated": false,
       "is_new": false,
       "tags": [
@@ -226,6 +229,9 @@
       "lucide": true,
       "firstVersion": "1.4.16",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-alarm-clock-check"
+      ],
       "deprecated": false,
       "is_new": false,
       "tags": [
@@ -266,6 +272,9 @@
       "lucide": true,
       "firstVersion": "1.7.7",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-alarm-check"
+      ],
       "deprecated": false,
       "is_new": true,
       "tags": [
@@ -288,6 +297,9 @@
       "lucide": true,
       "firstVersion": "1.7.7",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-alarm-minus"
+      ],
       "deprecated": false,
       "is_new": true,
       "tags": [
@@ -325,6 +337,9 @@
       "lucide": true,
       "firstVersion": "1.7.7",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-alarm-plus"
+      ],
       "deprecated": false,
       "is_new": true,
       "tags": [
@@ -343,6 +358,9 @@
       "lucide": true,
       "firstVersion": "1.4.16",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-alarm-clock-minus"
+      ],
       "deprecated": false,
       "is_new": false,
       "tags": [
@@ -361,6 +379,9 @@
       "lucide": true,
       "firstVersion": "1.4.16",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-alarm-clock-plus"
+      ],
       "deprecated": false,
       "is_new": false,
       "tags": [
@@ -422,6 +443,9 @@
       "lucide": true,
       "firstVersion": "1.4.16",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-circle-alert"
+      ],
       "deprecated": false,
       "is_new": false,
       "tags": [
@@ -1763,6 +1787,9 @@
       "lucide": true,
       "firstVersion": "1.7.7",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-square-arrow-out-down-left"
+      ],
       "deprecated": false,
       "is_new": true,
       "tags": [
@@ -1783,6 +1810,9 @@
       "lucide": true,
       "firstVersion": "1.5.12",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-square-arrow-down-left"
+      ],
       "deprecated": false,
       "is_new": false,
       "tags": [
@@ -1871,6 +1901,9 @@
       "lucide": true,
       "firstVersion": "1.7.7",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-square-arrow-out-down-right"
+      ],
       "deprecated": false,
       "is_new": true,
       "tags": [
@@ -1891,6 +1924,9 @@
       "lucide": true,
       "firstVersion": "1.5.12",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-square-arrow-down-right"
+      ],
       "deprecated": false,
       "is_new": false,
       "tags": [
@@ -1915,6 +1951,9 @@
       "lucide": true,
       "firstVersion": "1.5.12",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-square-arrow-down"
+      ],
       "deprecated": false,
       "is_new": false,
       "tags": [
@@ -2167,6 +2206,9 @@
       "lucide": true,
       "firstVersion": "1.5.12",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-square-arrow-left"
+      ],
       "deprecated": false,
       "is_new": false,
       "tags": [
@@ -2312,6 +2354,9 @@
       "lucide": true,
       "firstVersion": "1.5.12",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-square-arrow-right"
+      ],
       "deprecated": false,
       "is_new": false,
       "tags": [
@@ -2602,6 +2647,9 @@
       "lucide": true,
       "firstVersion": "1.7.7",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-square-arrow-out-up-left"
+      ],
       "deprecated": false,
       "is_new": true,
       "tags": [
@@ -2622,6 +2670,9 @@
       "lucide": true,
       "firstVersion": "1.5.12",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-square-arrow-up-left"
+      ],
       "deprecated": false,
       "is_new": false,
       "tags": [
@@ -2708,6 +2759,9 @@
       "lucide": true,
       "firstVersion": "1.7.7",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-square-arrow-out-up-right"
+      ],
       "deprecated": false,
       "is_new": true,
       "tags": [
@@ -2733,6 +2787,9 @@
       "lucide": true,
       "firstVersion": "1.5.12",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-square-arrow-up-right"
+      ],
       "deprecated": false,
       "is_new": false,
       "tags": [
@@ -2757,6 +2814,9 @@
       "lucide": true,
       "firstVersion": "1.5.12",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-square-arrow-up"
+      ],
       "deprecated": false,
       "is_new": false,
       "tags": [
@@ -2919,6 +2979,9 @@
       "lucide": true,
       "firstVersion": "1.7.7",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-square-asterisk"
+      ],
       "deprecated": false,
       "is_new": true,
       "tags": [
@@ -3719,6 +3782,9 @@
       "lucide": true,
       "firstVersion": "1.4.16",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-chart-no-axes-column-increasing"
+      ],
       "deprecated": false,
       "is_new": false,
       "tags": [],
@@ -3731,6 +3797,9 @@
       "lucide": true,
       "firstVersion": "1.4.16",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-chart-no-axes-column"
+      ],
       "deprecated": false,
       "is_new": false,
       "tags": [],
@@ -4331,6 +4400,9 @@
       "lucide": true,
       "firstVersion": "1.7.7",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-between-horizontal-end"
+      ],
       "deprecated": false,
       "is_new": true,
       "tags": [],
@@ -4343,6 +4415,9 @@
       "lucide": true,
       "firstVersion": "1.7.7",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-between-horizontal-start"
+      ],
       "deprecated": false,
       "is_new": true,
       "tags": [],
@@ -4355,6 +4430,9 @@
       "lucide": true,
       "firstVersion": "1.7.7",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-between-horizonal-end"
+      ],
       "deprecated": false,
       "is_new": true,
       "tags": [
@@ -4393,6 +4471,9 @@
       "lucide": true,
       "firstVersion": "1.7.7",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-between-horizonal-start"
+      ],
       "deprecated": false,
       "is_new": true,
       "tags": [
@@ -6151,6 +6232,9 @@
       "lucide": true,
       "firstVersion": "1.5.12",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-curly-braces"
+      ],
       "deprecated": false,
       "is_new": false,
       "tags": [
@@ -7924,6 +8008,9 @@
       "lucide": true,
       "firstVersion": "1.7.7",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-bar-chart-2"
+      ],
       "deprecated": false,
       "is_new": true,
       "tags": [
@@ -7963,6 +8050,9 @@
       "lucide": true,
       "firstVersion": "1.7.7",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-bar-chart"
+      ],
       "deprecated": false,
       "is_new": true,
       "tags": [
@@ -8003,6 +8093,9 @@
       "lucide": true,
       "firstVersion": "1.7.7",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-gantt-chart"
+      ],
       "deprecated": false,
       "is_new": true,
       "tags": [
@@ -8217,6 +8310,9 @@
       "lucide": true,
       "firstVersion": "1.5.12",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-square-check"
+      ],
       "deprecated": false,
       "is_new": false,
       "tags": [
@@ -8294,6 +8390,9 @@
       "lucide": true,
       "firstVersion": "1.5.12",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-circle-chevron-down"
+      ],
       "deprecated": false,
       "is_new": false,
       "tags": [
@@ -8390,6 +8489,9 @@
       "lucide": true,
       "firstVersion": "1.5.12",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-circle-chevron-left"
+      ],
       "deprecated": false,
       "is_new": false,
       "tags": [
@@ -8467,6 +8569,9 @@
       "lucide": true,
       "firstVersion": "1.5.12",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-circle-chevron-right"
+      ],
       "deprecated": false,
       "is_new": false,
       "tags": [
@@ -8549,6 +8654,9 @@
       "lucide": true,
       "firstVersion": "1.5.12",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-circle-chevron-up"
+      ],
       "deprecated": false,
       "is_new": false,
       "tags": [
@@ -8885,6 +8993,9 @@
       "lucide": true,
       "firstVersion": "1.7.7",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-alert-circle"
+      ],
       "deprecated": false,
       "is_new": true,
       "tags": [
@@ -9123,6 +9234,9 @@
       "lucide": true,
       "firstVersion": "1.7.7",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-chevron-down-circle"
+      ],
       "deprecated": false,
       "is_new": true,
       "tags": [
@@ -9141,6 +9255,9 @@
       "lucide": true,
       "firstVersion": "1.7.7",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-chevron-left-circle"
+      ],
       "deprecated": false,
       "is_new": true,
       "tags": [
@@ -9163,6 +9280,9 @@
       "lucide": true,
       "firstVersion": "1.7.7",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-chevron-right-circle"
+      ],
       "deprecated": false,
       "is_new": true,
       "tags": [
@@ -9184,6 +9304,9 @@
       "lucide": true,
       "firstVersion": "1.7.7",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-chevron-up-circle"
+      ],
       "deprecated": false,
       "is_new": true,
       "tags": [
@@ -9228,6 +9351,9 @@
       "lucide": true,
       "firstVersion": "1.7.7",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-divide-circle"
+      ],
       "deprecated": false,
       "is_new": true,
       "tags": [
@@ -9418,6 +9544,9 @@
       "lucide": true,
       "firstVersion": "1.7.7",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-gauge-circle"
+      ],
       "deprecated": false,
       "is_new": true,
       "tags": [
@@ -9519,6 +9648,9 @@
       "lucide": true,
       "firstVersion": "1.7.7",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-parking-circle"
+      ],
       "deprecated": false,
       "is_new": true,
       "tags": [
@@ -9537,6 +9669,9 @@
       "lucide": true,
       "firstVersion": "1.7.7",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-parking-circle-off"
+      ],
       "deprecated": false,
       "is_new": true,
       "tags": [
@@ -9556,6 +9691,9 @@
       "lucide": true,
       "firstVersion": "1.7.7",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-pause-circle"
+      ],
       "deprecated": false,
       "is_new": true,
       "tags": [
@@ -9574,6 +9712,9 @@
       "lucide": true,
       "firstVersion": "1.7.7",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-percent-circle"
+      ],
       "deprecated": false,
       "is_new": true,
       "tags": [
@@ -9600,6 +9741,9 @@
       "lucide": true,
       "firstVersion": "1.7.7",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-play-circle"
+      ],
       "deprecated": false,
       "is_new": true,
       "tags": [
@@ -9721,6 +9865,9 @@
       "lucide": true,
       "firstVersion": "1.4.16",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-circle-slashed"
+      ],
       "deprecated": false,
       "is_new": false,
       "tags": [
@@ -9756,6 +9903,9 @@
       "lucide": true,
       "firstVersion": "1.5.12",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-circle-slash-2"
+      ],
       "deprecated": false,
       "is_new": false,
       "tags": [
@@ -9808,6 +9958,9 @@
       "lucide": true,
       "firstVersion": "1.7.7",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-user-circle"
+      ],
       "deprecated": false,
       "is_new": true,
       "tags": [
@@ -9826,6 +9979,9 @@
       "lucide": true,
       "firstVersion": "1.7.7",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-user-circle-2"
+      ],
       "deprecated": false,
       "is_new": true,
       "tags": [
@@ -10183,6 +10339,9 @@
       "lucide": true,
       "firstVersion": "1.4.16",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-clock-4"
+      ],
       "deprecated": false,
       "is_new": false,
       "tags": [
@@ -10311,6 +10470,9 @@
       "lucide": true,
       "firstVersion": "1.4.16",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-clock"
+      ],
       "deprecated": false,
       "is_new": false,
       "tags": [
@@ -10842,6 +11004,9 @@
       "lucide": true,
       "firstVersion": "1.4.16",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-code-xml"
+      ],
       "deprecated": false,
       "is_new": false,
       "tags": [],
@@ -10876,6 +11041,9 @@
       "lucide": true,
       "firstVersion": "1.7.7",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-code-2"
+      ],
       "deprecated": false,
       "is_new": true,
       "tags": [
@@ -11076,6 +11244,9 @@
       "lucide": true,
       "firstVersion": "1.7.7",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-panels-left-right"
+      ],
       "deprecated": false,
       "is_new": true,
       "tags": [
@@ -12019,6 +12190,9 @@
       "lucide": true,
       "firstVersion": "1.4.16",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-braces"
+      ],
       "deprecated": false,
       "is_new": false,
       "tags": [
@@ -12317,6 +12491,9 @@
       "lucide": true,
       "firstVersion": "1.7.7",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-percent-diamond"
+      ],
       "deprecated": false,
       "is_new": true,
       "tags": [
@@ -12379,6 +12556,9 @@
       "lucide": false,
       "firstVersion": "1.4.16",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "dice-glyph"
+      ],
       "deprecated": false,
       "is_new": false,
       "tags": [],
@@ -12517,6 +12697,9 @@
       "lucide": false,
       "firstVersion": "1.4.16",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "dice"
+      ],
       "deprecated": false,
       "is_new": false,
       "tags": [],
@@ -12753,6 +12936,9 @@
       "lucide": true,
       "firstVersion": "1.4.16",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-circle-divide"
+      ],
       "deprecated": false,
       "is_new": false,
       "tags": [
@@ -12772,6 +12958,9 @@
       "lucide": true,
       "firstVersion": "1.4.16",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-square-divide"
+      ],
       "deprecated": false,
       "is_new": false,
       "tags": [
@@ -13008,6 +13197,9 @@
       "lucide": true,
       "firstVersion": "1.7.7",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-square-dot"
+      ],
       "deprecated": false,
       "is_new": true,
       "tags": [
@@ -13528,6 +13720,9 @@
       "lucide": true,
       "firstVersion": "1.7.7",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-more-horizontal"
+      ],
       "deprecated": false,
       "is_new": true,
       "tags": [
@@ -13565,6 +13760,9 @@
       "lucide": true,
       "firstVersion": "1.7.7",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-more-vertical"
+      ],
       "deprecated": false,
       "is_new": true,
       "tags": [
@@ -13634,6 +13832,9 @@
       "lucide": true,
       "firstVersion": "1.7.7",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-square-equal"
+      ],
       "deprecated": false,
       "is_new": true,
       "tags": [
@@ -14319,6 +14520,9 @@
       "lucide": true,
       "firstVersion": "1.4.16",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-file-code-2"
+      ],
       "deprecated": false,
       "is_new": false,
       "tags": [
@@ -14342,6 +14546,9 @@
       "lucide": true,
       "firstVersion": "1.5.12",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-file-code"
+      ],
       "deprecated": false,
       "is_new": false,
       "tags": [
@@ -16563,6 +16770,9 @@
       "lucide": true,
       "firstVersion": "1.7.7",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-utensils-crossed"
+      ],
       "deprecated": false,
       "is_new": true,
       "tags": [
@@ -16610,6 +16820,9 @@
       "lucide": true,
       "firstVersion": "1.4.16",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-rectangle-ellipsis"
+      ],
       "deprecated": false,
       "is_new": false,
       "tags": [
@@ -16775,6 +16988,9 @@
       "lucide": true,
       "firstVersion": "1.4.16",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-square-function"
+      ],
       "deprecated": false,
       "is_new": false,
       "tags": [
@@ -16968,6 +17184,9 @@
       "lucide": true,
       "firstVersion": "1.5.12",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-chart-no-axes-gantt"
+      ],
       "deprecated": false,
       "is_new": false,
       "tags": [],
@@ -16980,6 +17199,11 @@
       "lucide": true,
       "firstVersion": "1.5.12",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-square-chart-gantt",
+        "lucide-square-gantt",
+        "lucide-square-gantt-chart"
+      ],
       "deprecated": false,
       "is_new": false,
       "tags": [
@@ -17041,6 +17265,9 @@
       "lucide": true,
       "firstVersion": "1.5.12",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-circle-gauge"
+      ],
       "deprecated": false,
       "is_new": false,
       "tags": [
@@ -17185,6 +17412,9 @@
       "lucide": true,
       "firstVersion": "1.4.16",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-git-commit-horizontal"
+      ],
       "deprecated": false,
       "is_new": false,
       "tags": [
@@ -17206,6 +17436,9 @@
       "lucide": true,
       "firstVersion": "1.5.12",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-git-commit"
+      ],
       "deprecated": false,
       "is_new": false,
       "tags": [
@@ -18592,6 +18825,9 @@
       "lucide": false,
       "firstVersion": "1.4.16",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "question-mark-glyph"
+      ],
       "deprecated": false,
       "is_new": false,
       "tags": [],
@@ -18906,6 +19142,9 @@
       "lucide": true,
       "firstVersion": "1.4.16",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-ice-cream-cone"
+      ],
       "deprecated": false,
       "is_new": false,
       "tags": [
@@ -18957,6 +19196,9 @@
       "lucide": true,
       "firstVersion": "1.7.7",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-ice-cream"
+      ],
       "deprecated": false,
       "is_new": true,
       "tags": [
@@ -19200,6 +19442,9 @@
       "lucide": true,
       "firstVersion": "1.4.16",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-indent-increase"
+      ],
       "deprecated": false,
       "is_new": false,
       "tags": [
@@ -19218,6 +19463,9 @@
       "lucide": true,
       "firstVersion": "1.7.7",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-outdent"
+      ],
       "deprecated": false,
       "is_new": true,
       "tags": [
@@ -19236,6 +19484,9 @@
       "lucide": true,
       "firstVersion": "1.7.7",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-indent"
+      ],
       "deprecated": false,
       "is_new": true,
       "tags": [
@@ -19308,6 +19559,9 @@
       "lucide": true,
       "firstVersion": "1.4.16",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-mouse-pointer-square"
+      ],
       "deprecated": false,
       "is_new": false,
       "tags": [
@@ -19500,6 +19754,9 @@
       "lucide": true,
       "firstVersion": "1.5.12",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-square-kanban"
+      ],
       "deprecated": false,
       "is_new": false,
       "tags": [
@@ -19533,6 +19790,10 @@
       "lucide": true,
       "firstVersion": "1.5.12",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-square-dashed-kanban",
+        "lucide-square-kanban-dashed"
+      ],
       "deprecated": false,
       "is_new": false,
       "tags": [
@@ -19947,6 +20208,9 @@
       "lucide": true,
       "firstVersion": "1.4.16",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-laptop-minimal"
+      ],
       "deprecated": false,
       "is_new": false,
       "tags": [],
@@ -19959,6 +20223,9 @@
       "lucide": true,
       "firstVersion": "1.7.7",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-laptop-2"
+      ],
       "deprecated": false,
       "is_new": true,
       "tags": [
@@ -20423,6 +20690,9 @@
       "lucide": true,
       "firstVersion": "1.5.12",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-square-library"
+      ],
       "deprecated": false,
       "is_new": false,
       "tags": [
@@ -20588,6 +20858,9 @@
       "lucide": false,
       "firstVersion": "1.4.16",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "link-glyph"
+      ],
       "deprecated": false,
       "is_new": false,
       "tags": [
@@ -20636,6 +20909,9 @@
       "lucide": false,
       "firstVersion": "1.4.16",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "link"
+      ],
       "deprecated": false,
       "is_new": false,
       "tags": [],
@@ -21045,6 +21321,9 @@
       "lucide": true,
       "firstVersion": "1.4.16",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-loader-circle"
+      ],
       "deprecated": false,
       "is_new": false,
       "tags": [
@@ -21070,6 +21349,9 @@
       "lucide": true,
       "firstVersion": "1.7.7",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-loader-2"
+      ],
       "deprecated": false,
       "is_new": true,
       "tags": [
@@ -21216,6 +21498,9 @@
       "lucide": true,
       "firstVersion": "1.7.7",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-unlock-keyhole"
+      ],
       "deprecated": false,
       "is_new": true,
       "tags": [
@@ -21232,6 +21517,9 @@
       "lucide": true,
       "firstVersion": "1.7.7",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-unlock"
+      ],
       "deprecated": false,
       "is_new": true,
       "tags": [
@@ -21352,6 +21640,9 @@
       "lucide": true,
       "firstVersion": "1.5.12",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-square-m"
+      ],
       "deprecated": false,
       "is_new": false,
       "tags": [
@@ -22112,6 +22403,9 @@
       "lucide": true,
       "firstVersion": "1.5.12",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-square-menu"
+      ],
       "deprecated": false,
       "is_new": false,
       "tags": [
@@ -23588,6 +23882,9 @@
       "lucide": true,
       "firstVersion": "1.4.16",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-ellipsis"
+      ],
       "deprecated": false,
       "is_new": false,
       "tags": [
@@ -23625,6 +23922,9 @@
       "lucide": true,
       "firstVersion": "1.4.16",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-ellipsis-vertical"
+      ],
       "deprecated": false,
       "is_new": false,
       "tags": [
@@ -23801,6 +24101,7 @@
       "firstVersion": "1.5.12",
       "lastVersion": "1.6.7",
       "alternatives": [
+        "lucide-inspect",
         "lucide-square-mouse-pointer"
       ],
       "deprecated": true,
@@ -24775,6 +25076,9 @@
       "lucide": true,
       "firstVersion": "1.4.16",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-indent-decrease"
+      ],
       "deprecated": false,
       "is_new": false,
       "tags": [
@@ -25167,6 +25471,9 @@
       "lucide": true,
       "firstVersion": "1.7.7",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-panel-bottom-inactive"
+      ],
       "deprecated": false,
       "is_new": true,
       "tags": [
@@ -25186,6 +25493,9 @@
       "lucide": true,
       "firstVersion": "1.5.12",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-panel-bottom-dashed"
+      ],
       "deprecated": false,
       "is_new": false,
       "tags": [
@@ -25227,6 +25537,9 @@
       "lucide": true,
       "firstVersion": "1.5.12",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-sidebar"
+      ],
       "deprecated": false,
       "is_new": false,
       "tags": [
@@ -25244,6 +25557,9 @@
       "lucide": true,
       "firstVersion": "1.5.12",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-sidebar-close"
+      ],
       "deprecated": false,
       "is_new": false,
       "tags": [
@@ -25265,6 +25581,9 @@
       "lucide": true,
       "firstVersion": "1.7.7",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-panel-left-inactive"
+      ],
       "deprecated": false,
       "is_new": true,
       "tags": [
@@ -25285,6 +25604,9 @@
       "lucide": true,
       "firstVersion": "1.5.12",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-panel-left-dashed"
+      ],
       "deprecated": false,
       "is_new": false,
       "tags": [
@@ -25305,6 +25627,9 @@
       "lucide": true,
       "firstVersion": "1.5.12",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-sidebar-open"
+      ],
       "deprecated": false,
       "is_new": false,
       "tags": [
@@ -25368,6 +25693,9 @@
       "lucide": true,
       "firstVersion": "1.7.7",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-panel-right-inactive"
+      ],
       "deprecated": false,
       "is_new": true,
       "tags": [
@@ -25388,6 +25716,9 @@
       "lucide": true,
       "firstVersion": "1.5.12",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-panel-right-dashed"
+      ],
       "deprecated": false,
       "is_new": false,
       "tags": [
@@ -25473,6 +25804,9 @@
       "lucide": true,
       "firstVersion": "1.7.7",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-panel-top-inactive"
+      ],
       "deprecated": false,
       "is_new": true,
       "tags": [
@@ -25492,6 +25826,9 @@
       "lucide": true,
       "firstVersion": "1.5.12",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-panel-top-dashed"
+      ],
       "deprecated": false,
       "is_new": false,
       "tags": [
@@ -25551,6 +25888,9 @@
       "lucide": true,
       "firstVersion": "1.7.7",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-columns-3"
+      ],
       "deprecated": false,
       "is_new": true,
       "tags": [
@@ -25609,6 +25949,9 @@
       "lucide": true,
       "firstVersion": "1.7.7",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-rows-3"
+      ],
       "deprecated": false,
       "is_new": true,
       "tags": [
@@ -25718,6 +26061,9 @@
       "lucide": true,
       "firstVersion": "1.4.16",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-circle-parking"
+      ],
       "deprecated": false,
       "is_new": false,
       "tags": [
@@ -25736,6 +26082,9 @@
       "lucide": true,
       "firstVersion": "1.4.16",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-circle-parking-off"
+      ],
       "deprecated": false,
       "is_new": false,
       "tags": [
@@ -25776,6 +26125,9 @@
       "lucide": true,
       "firstVersion": "1.4.16",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-square-parking"
+      ],
       "deprecated": false,
       "is_new": false,
       "tags": [
@@ -25856,6 +26208,9 @@
       "lucide": true,
       "firstVersion": "1.4.16",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-circle-pause"
+      ],
       "deprecated": false,
       "is_new": false,
       "tags": [
@@ -25974,6 +26329,9 @@
       "lucide": true,
       "firstVersion": "1.5.12",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-pen-square"
+      ],
       "deprecated": false,
       "is_new": false,
       "tags": [
@@ -26070,6 +26428,9 @@
       "lucide": true,
       "firstVersion": "1.5.12",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-pen-box"
+      ],
       "deprecated": false,
       "is_new": false,
       "tags": [
@@ -26303,6 +26664,9 @@
       "lucide": true,
       "firstVersion": "1.5.12",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-circle-percent"
+      ],
       "deprecated": false,
       "is_new": false,
       "tags": [
@@ -26329,6 +26693,9 @@
       "lucide": true,
       "firstVersion": "1.5.12",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-diamond-percent"
+      ],
       "deprecated": false,
       "is_new": false,
       "tags": [
@@ -26355,6 +26722,9 @@
       "lucide": true,
       "firstVersion": "1.5.12",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-square-percent"
+      ],
       "deprecated": false,
       "is_new": false,
       "tags": [
@@ -26575,6 +26945,9 @@
       "lucide": true,
       "firstVersion": "1.5.12",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-square-pi"
+      ],
       "deprecated": false,
       "is_new": false,
       "tags": [
@@ -26805,6 +27178,9 @@
       "lucide": true,
       "firstVersion": "1.5.12",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-square-pilcrow"
+      ],
       "deprecated": false,
       "is_new": false,
       "tags": [
@@ -27039,6 +27415,9 @@
       "lucide": true,
       "firstVersion": "1.4.16",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-circle-play"
+      ],
       "deprecated": false,
       "is_new": false,
       "tags": [
@@ -27057,6 +27436,9 @@
       "lucide": true,
       "firstVersion": "1.5.12",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-square-play"
+      ],
       "deprecated": false,
       "is_new": false,
       "tags": [
@@ -27737,6 +28119,9 @@
       "lucide": false,
       "firstVersion": "1.4.16",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "help"
+      ],
       "deprecated": false,
       "is_new": false,
       "tags": [],
@@ -28270,6 +28655,9 @@
       "lucide": true,
       "firstVersion": "1.7.7",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-form-input"
+      ],
       "deprecated": false,
       "is_new": true,
       "tags": [
@@ -28517,6 +28905,9 @@
       "lucide": false,
       "firstVersion": "1.4.16",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-refresh-cw-off"
+      ],
       "deprecated": false,
       "is_new": false,
       "tags": [
@@ -28546,6 +28937,9 @@
       "lucide": true,
       "firstVersion": "1.5.12",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "refresh-cw-off"
+      ],
       "deprecated": false,
       "is_new": false,
       "tags": [
@@ -29154,6 +29548,9 @@
       "lucide": true,
       "firstVersion": "1.7.7",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-panels-top-bottom"
+      ],
       "deprecated": false,
       "is_new": true,
       "tags": [
@@ -29862,6 +30259,9 @@
       "lucide": true,
       "firstVersion": "1.5.12",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-square-scissors"
+      ],
       "deprecated": false,
       "is_new": false,
       "tags": [
@@ -29888,6 +30288,9 @@
       "lucide": true,
       "firstVersion": "1.5.12",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-square-bottom-dashed-scissors"
+      ],
       "deprecated": false,
       "is_new": false,
       "tags": [
@@ -30178,6 +30581,9 @@
       "lucide": true,
       "firstVersion": "1.5.12",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-send-horizontal"
+      ],
       "deprecated": false,
       "is_new": false,
       "tags": [],
@@ -30190,6 +30596,9 @@
       "lucide": true,
       "firstVersion": "1.5.12",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-send-horizonal"
+      ],
       "deprecated": false,
       "is_new": false,
       "tags": [
@@ -31568,6 +31977,9 @@
       "lucide": true,
       "firstVersion": "1.4.16",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-panel-left"
+      ],
       "deprecated": false,
       "is_new": false,
       "tags": [
@@ -31585,6 +31997,9 @@
       "lucide": true,
       "firstVersion": "1.4.16",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-panel-left-close"
+      ],
       "deprecated": false,
       "is_new": false,
       "tags": [
@@ -31618,6 +32033,9 @@
       "lucide": true,
       "firstVersion": "1.4.16",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-panel-left-open"
+      ],
       "deprecated": false,
       "is_new": false,
       "tags": [
@@ -31688,6 +32106,9 @@
       "lucide": true,
       "firstVersion": "1.5.12",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-square-sigma"
+      ],
       "deprecated": false,
       "is_new": false,
       "tags": [
@@ -32025,6 +32446,9 @@
       "lucide": true,
       "firstVersion": "1.7.7",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-square-slash"
+      ],
       "deprecated": false,
       "is_new": true,
       "tags": [
@@ -32067,6 +32491,9 @@
       "lucide": true,
       "firstVersion": "1.4.16",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-sliders-vertical"
+      ],
       "deprecated": false,
       "is_new": false,
       "tags": [
@@ -32102,6 +32529,9 @@
       "lucide": true,
       "firstVersion": "1.7.7",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-sliders"
+      ],
       "deprecated": false,
       "is_new": true,
       "tags": [
@@ -32441,6 +32871,9 @@
       "lucide": true,
       "firstVersion": "1.5.12",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-stars"
+      ],
       "deprecated": false,
       "is_new": false,
       "tags": [
@@ -32605,6 +33038,9 @@
       "lucide": true,
       "firstVersion": "1.4.16",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-square-split-horizontal"
+      ],
       "deprecated": false,
       "is_new": false,
       "tags": [
@@ -32622,6 +33058,9 @@
       "lucide": true,
       "firstVersion": "1.4.16",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-square-split-vertical"
+      ],
       "deprecated": false,
       "is_new": false,
       "tags": [
@@ -32702,6 +33141,9 @@
       "lucide": true,
       "firstVersion": "1.7.7",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-activity-square"
+      ],
       "deprecated": false,
       "is_new": true,
       "tags": [
@@ -32747,6 +33189,9 @@
       "lucide": true,
       "firstVersion": "1.7.7",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-arrow-down-square"
+      ],
       "deprecated": false,
       "is_new": true,
       "tags": [
@@ -32771,6 +33216,9 @@
       "lucide": true,
       "firstVersion": "1.7.7",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-arrow-down-left-square"
+      ],
       "deprecated": false,
       "is_new": true,
       "tags": [
@@ -32795,6 +33243,9 @@
       "lucide": true,
       "firstVersion": "1.7.7",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-arrow-down-right-square"
+      ],
       "deprecated": false,
       "is_new": true,
       "tags": [
@@ -32819,6 +33270,9 @@
       "lucide": true,
       "firstVersion": "1.7.7",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-arrow-left-square"
+      ],
       "deprecated": false,
       "is_new": true,
       "tags": [
@@ -32843,6 +33297,9 @@
       "lucide": true,
       "firstVersion": "1.7.7",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-arrow-down-left-from-square"
+      ],
       "deprecated": false,
       "is_new": true,
       "tags": [
@@ -32863,6 +33320,9 @@
       "lucide": true,
       "firstVersion": "1.7.7",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-arrow-down-right-from-square"
+      ],
       "deprecated": false,
       "is_new": true,
       "tags": [
@@ -32883,6 +33343,9 @@
       "lucide": true,
       "firstVersion": "1.7.7",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-arrow-up-left-from-square"
+      ],
       "deprecated": false,
       "is_new": true,
       "tags": [
@@ -32903,6 +33366,9 @@
       "lucide": true,
       "firstVersion": "1.7.7",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-arrow-up-right-from-square"
+      ],
       "deprecated": false,
       "is_new": true,
       "tags": [
@@ -32928,6 +33394,9 @@
       "lucide": true,
       "firstVersion": "1.7.7",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-arrow-right-square"
+      ],
       "deprecated": false,
       "is_new": true,
       "tags": [
@@ -32952,6 +33421,9 @@
       "lucide": true,
       "firstVersion": "1.7.7",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-arrow-up-square"
+      ],
       "deprecated": false,
       "is_new": true,
       "tags": [
@@ -32974,6 +33446,9 @@
       "lucide": true,
       "firstVersion": "1.7.7",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-arrow-up-left-square"
+      ],
       "deprecated": false,
       "is_new": true,
       "tags": [
@@ -32996,6 +33471,9 @@
       "lucide": true,
       "firstVersion": "1.7.7",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-arrow-up-right-square"
+      ],
       "deprecated": false,
       "is_new": true,
       "tags": [
@@ -33020,6 +33498,9 @@
       "lucide": true,
       "firstVersion": "1.5.12",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-asterisk-square"
+      ],
       "deprecated": false,
       "is_new": false,
       "tags": [
@@ -33047,6 +33528,9 @@
       "lucide": true,
       "firstVersion": "1.7.7",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-scissors-square-dashed-bottom"
+      ],
       "deprecated": false,
       "is_new": true,
       "tags": [
@@ -33071,6 +33555,11 @@
       "lucide": true,
       "firstVersion": "1.7.7",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-gantt-chart-square",
+        "lucide-square-gantt",
+        "lucide-square-gantt-chart"
+      ],
       "deprecated": false,
       "is_new": true,
       "tags": [
@@ -33108,6 +33597,9 @@
       "lucide": true,
       "firstVersion": "1.7.7",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-check-square-2"
+      ],
       "deprecated": false,
       "is_new": true,
       "tags": [
@@ -33321,6 +33813,10 @@
       "lucide": true,
       "firstVersion": "1.7.7",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-kanban-square-dashed",
+        "lucide-square-kanban-dashed"
+      ],
       "deprecated": false,
       "is_new": true,
       "tags": [
@@ -33384,6 +33880,9 @@
       "lucide": true,
       "firstVersion": "1.7.7",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-divide-square"
+      ],
       "deprecated": false,
       "is_new": true,
       "tags": [
@@ -33403,6 +33902,9 @@
       "lucide": true,
       "firstVersion": "1.5.12",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-dot-square"
+      ],
       "deprecated": false,
       "is_new": false,
       "tags": [
@@ -33422,6 +33924,9 @@
       "lucide": true,
       "firstVersion": "1.5.12",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-equal-square"
+      ],
       "deprecated": false,
       "is_new": false,
       "tags": [
@@ -33439,6 +33944,9 @@
       "lucide": true,
       "firstVersion": "1.7.7",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-function-square"
+      ],
       "deprecated": false,
       "is_new": true,
       "tags": [
@@ -33460,6 +33968,8 @@
       "firstVersion": "1.5.12",
       "lastVersion": "1.6.7",
       "alternatives": [
+        "lucide-gantt-chart-square",
+        "lucide-square-chart-gantt",
         "lucide-square-gantt-chart"
       ],
       "deprecated": true,
@@ -33474,6 +33984,11 @@
       "lucide": true,
       "firstVersion": "1.7.7",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-gantt-chart-square",
+        "lucide-square-chart-gantt",
+        "lucide-square-gantt"
+      ],
       "deprecated": false,
       "is_new": true,
       "tags": [
@@ -33511,6 +34026,9 @@
       "lucide": true,
       "firstVersion": "1.5.12",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-kanban-square"
+      ],
       "deprecated": false,
       "is_new": false,
       "tags": [
@@ -33545,6 +34063,7 @@
       "firstVersion": "1.5.12",
       "lastVersion": "1.6.7",
       "alternatives": [
+        "lucide-kanban-square-dashed",
         "lucide-square-dashed-kanban"
       ],
       "deprecated": true,
@@ -33559,6 +34078,9 @@
       "lucide": true,
       "firstVersion": "1.7.7",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-library-square"
+      ],
       "deprecated": false,
       "is_new": true,
       "tags": [
@@ -33601,6 +34123,9 @@
       "lucide": true,
       "firstVersion": "1.7.7",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-m-square"
+      ],
       "deprecated": false,
       "is_new": true,
       "tags": [
@@ -33622,6 +34147,9 @@
       "lucide": true,
       "firstVersion": "1.7.7",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-menu-square"
+      ],
       "deprecated": false,
       "is_new": true,
       "tags": [
@@ -33713,6 +34241,9 @@
       "lucide": true,
       "firstVersion": "1.7.7",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-parking-square"
+      ],
       "deprecated": false,
       "is_new": true,
       "tags": [
@@ -33780,6 +34311,9 @@
       "lucide": true,
       "firstVersion": "1.7.7",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-percent-square"
+      ],
       "deprecated": false,
       "is_new": true,
       "tags": [
@@ -33806,6 +34340,9 @@
       "lucide": true,
       "firstVersion": "1.7.7",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-pi-square"
+      ],
       "deprecated": false,
       "is_new": true,
       "tags": [
@@ -33830,6 +34367,9 @@
       "lucide": true,
       "firstVersion": "1.7.7",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-pilcrow-square"
+      ],
       "deprecated": false,
       "is_new": true,
       "tags": [
@@ -33854,6 +34394,9 @@
       "lucide": true,
       "firstVersion": "1.7.7",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-play-square"
+      ],
       "deprecated": false,
       "is_new": true,
       "tags": [
@@ -33962,6 +34505,9 @@
       "lucide": true,
       "firstVersion": "1.7.7",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-scissors-square"
+      ],
       "deprecated": false,
       "is_new": true,
       "tags": [
@@ -33988,6 +34534,9 @@
       "lucide": true,
       "firstVersion": "1.7.7",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-sigma-square"
+      ],
       "deprecated": false,
       "is_new": true,
       "tags": [
@@ -34010,6 +34559,9 @@
       "lucide": true,
       "firstVersion": "1.5.12",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-slash-square"
+      ],
       "deprecated": false,
       "is_new": false,
       "tags": [
@@ -34034,6 +34586,9 @@
       "lucide": true,
       "firstVersion": "1.7.7",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-split-square-horizontal"
+      ],
       "deprecated": false,
       "is_new": true,
       "tags": [
@@ -34051,6 +34606,9 @@
       "lucide": true,
       "firstVersion": "1.7.7",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-split-square-vertical"
+      ],
       "deprecated": false,
       "is_new": true,
       "tags": [
@@ -34112,6 +34670,9 @@
       "lucide": true,
       "firstVersion": "1.7.7",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-terminal-square"
+      ],
       "deprecated": false,
       "is_new": true,
       "tags": [
@@ -34131,6 +34692,9 @@
       "lucide": true,
       "firstVersion": "1.7.7",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-user-square"
+      ],
       "deprecated": false,
       "is_new": true,
       "tags": [
@@ -34149,6 +34713,9 @@
       "lucide": true,
       "firstVersion": "1.7.7",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-user-square-2"
+      ],
       "deprecated": false,
       "is_new": true,
       "tags": [
@@ -34357,6 +34924,9 @@
       "lucide": true,
       "firstVersion": "1.5.12",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-sparkles"
+      ],
       "deprecated": false,
       "is_new": false,
       "tags": [
@@ -35560,6 +36130,9 @@
       "lucide": true,
       "firstVersion": "1.4.16",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-square-terminal"
+      ],
       "deprecated": false,
       "is_new": false,
       "tags": [
@@ -35781,6 +36354,9 @@
       "lucide": true,
       "firstVersion": "1.5.12",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-text-selection"
+      ],
       "deprecated": false,
       "is_new": false,
       "tags": [
@@ -35801,6 +36377,9 @@
       "lucide": true,
       "firstVersion": "1.4.16",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-text-select"
+      ],
       "deprecated": false,
       "is_new": false,
       "tags": [
@@ -36478,6 +37057,9 @@
       "lucide": true,
       "firstVersion": "1.4.16",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-tram-front"
+      ],
       "deprecated": false,
       "is_new": false,
       "tags": [
@@ -36567,6 +37149,9 @@
       "lucide": true,
       "firstVersion": "1.5.12",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-train"
+      ],
       "deprecated": false,
       "is_new": false,
       "tags": [
@@ -36966,6 +37551,9 @@
       "lucide": true,
       "firstVersion": "1.4.16",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-tv-minimal"
+      ],
       "deprecated": false,
       "is_new": false,
       "tags": [],
@@ -36978,6 +37566,9 @@
       "lucide": true,
       "firstVersion": "1.7.7",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-tv-2"
+      ],
       "deprecated": false,
       "is_new": true,
       "tags": [
@@ -37373,6 +37964,9 @@
       "lucide": true,
       "firstVersion": "1.4.16",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-lock-open"
+      ],
       "deprecated": false,
       "is_new": false,
       "tags": [
@@ -37389,6 +37983,9 @@
       "lucide": true,
       "firstVersion": "1.5.12",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-lock-keyhole-open"
+      ],
       "deprecated": false,
       "is_new": false,
       "tags": [
@@ -37560,6 +38157,9 @@
       "lucide": true,
       "firstVersion": "1.5.12",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-circle-user"
+      ],
       "deprecated": false,
       "is_new": false,
       "tags": [
@@ -37578,6 +38178,9 @@
       "lucide": true,
       "firstVersion": "1.5.12",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-circle-user-round"
+      ],
       "deprecated": false,
       "is_new": false,
       "tags": [],
@@ -37892,6 +38495,9 @@
       "lucide": true,
       "firstVersion": "1.5.12",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-square-user"
+      ],
       "deprecated": false,
       "is_new": false,
       "tags": [
@@ -37910,6 +38516,9 @@
       "lucide": true,
       "firstVersion": "1.5.12",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-square-user-round"
+      ],
       "deprecated": false,
       "is_new": false,
       "tags": [],
@@ -38029,6 +38638,9 @@
       "lucide": true,
       "firstVersion": "1.4.16",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-fork-knife-crossed"
+      ],
       "deprecated": false,
       "is_new": false,
       "tags": [
@@ -38528,6 +39140,9 @@
       "lucide": true,
       "firstVersion": "1.5.12",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-wallet-minimal"
+      ],
       "deprecated": false,
       "is_new": false,
       "tags": [],
@@ -38566,6 +39181,9 @@
       "lucide": true,
       "firstVersion": "1.7.7",
       "lastVersion": "1.9.1",
+      "alternatives": [
+        "lucide-wallet-2"
+      ],
       "deprecated": false,
       "is_new": true,
       "tags": [

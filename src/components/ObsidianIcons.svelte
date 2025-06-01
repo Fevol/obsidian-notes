@@ -45,6 +45,7 @@
         categories: string[];
     };
     const { icons, versions, tags, categories } = iconsInformation;
+    const LATEST_VERSION_CUTOFF = '1.8.10';
 
     // EXPL: Search and filter settings
     let inputtedText: string = $state('');
@@ -52,7 +53,7 @@
     let filterNewIcons: boolean = $state(false);
     let filterDeprecatedIcons: boolean = $state(false);
     let filterUniqueIcons: boolean = $state(false);
-    let minimumVersion: number = $state(versions.findIndex(v => v === '1.8.10'));
+    let minimumVersion: number = $state(versions.findIndex(v => v === LATEST_VERSION_CUTOFF));
     let searchIdentifiers: boolean = $state(true);
     let searchTags: boolean = $state(false);
     let searchCategories: boolean = $state(false);
@@ -381,7 +382,7 @@
         <br/>
 
         <div class="icon-util-focus-groups">
-           <button class="icon-util-focus-group icon-util-focus-group-new" onclick={() => { toggleFilterFocus(0) }} class:icon-util-focus-group-active={filterNewIcons} use:tooltip aria-label="Focus on new icons">
+           <button class="icon-util-focus-group icon-util-focus-group-new" onclick={() => { toggleFilterFocus(0) }} class:icon-util-focus-group-active={filterNewIcons} use:tooltip aria-label={`Focus on icons added in v${LATEST_VERSION_CUTOFF} and higher`}>
                {@html newIcon}
                New
             </button>

@@ -1,0 +1,435 @@
+/* ----------------------   Icons View  ---------------------- */
+.icon-util-view {
+    position: relative;
+}
+
+.icon-util-view * {
+    margin: 0;
+}
+
+.icon-util-view ul {
+    list-style: none;
+    padding: 0;
+}
+
+.icon-util-view hr {
+    width: 100vw;
+    margin: 0 -16px 8px -16px;
+}
+
+.icon-util-view br {
+    width: 100vw;
+}
+
+.icon-util-settings {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+
+    border-radius: 8px;
+    padding: 8px 16px 16px 16px;
+    border: 1px solid var(--sl-color-hairline);
+    background-color: var(--sl-color-black);
+}
+/* ----------------------------------------------------------- */
+
+
+
+/* ----------------   Two state icon buttons  ---------------- */
+.icon-util-icon-action {
+    width: 24px;
+    height: 24px;
+    border: 0;
+
+    color: var(--sl-color-text);
+    background-color: unset;
+
+    padding: 4px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.icon-util-icon-action.icon-util-icon-action-active {
+    background-color: var(--sl-color-accent);
+}
+
+.icon-util-icon-action.icon-util-icon-action-active:hover {
+    background-color: color-mix(in srgb, 90% var(--sl-color-accent), 10% var(--sl-color-gray-6));
+}
+
+.icon-util-icon-action.icon-util-icon-action-active svg {
+    stroke: var(--sl-color-black);
+}
+
+.icon-util-icon-action svg {
+    width: 16px;
+    height: 16px;
+}
+
+.icon-util-icon-action:hover {
+    background-color: var(--sl-color-gray-6);
+}
+/* ----------------------------------------------------------- */
+
+
+
+/* -----------------------   Top bar  ------------------------ */
+.icon-util-top-bar {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.icon-util-icons-count {
+    font-size: var(--sl-text-sm);
+    color: var(--sl-color-gray-5)
+}
+
+.icon-share-link {
+    display: flex;
+    background-color: transparent;
+    align-items: center;
+    border: 0;
+    gap: 4px;
+    color: var(--sl-color-gray-4);
+}
+
+.icon-share-link svg {
+    width: 16px;
+    height: 16px;
+}
+
+.icon-share-link:hover {
+    color: var(--sl-color-accent);
+    text-decoration: underline;
+}
+/* ----------------------------------------------------------- */
+
+
+
+/* ----------------------   Search bar  ---------------------- */
+.icon-util-search-bar {
+    display: flex;
+    position: relative;
+
+    gap: 8px;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 2px 8px;
+    flex: 6;
+
+    --sv-bg: color-mix(in srgb, 30% var(--sl-color-gray-6), 70% var(--sl-color-black));
+    --sv-border: 0;
+    --sv-general-padding: 0;
+
+    background-color: var(--sv-bg);
+    border-radius: 8px;
+    border: 1px solid var(--sl-color-hairline);
+
+    min-width: 200px;
+
+}
+
+.icon-util-search-settings {
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+}
+
+.icon-util-search-bar:focus-within .icon-util-search-hints {
+    display: flex;
+}
+
+.icon-util-search-hints {
+    display: none;
+
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+
+    background-color: var(--sl-color-black);
+    border-radius: 8px;
+    box-shadow: var(--sl-shadow-lg);
+
+    padding: 8px;
+
+    flex-direction: column;
+    overflow-y: scroll;
+    max-height: 200px;
+}
+
+.icon-util-search-hint {
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    line-height: normal;
+    padding: 4px 8px;
+    border-radius: 8px;
+}
+
+.icon-util-search-hint-focused {
+    background-color: var(--sl-color-accent);
+}
+
+
+.icon-util-search-hint-highlight {
+    background-color: color-mix(in srgb, 80% var(--sl-color-accent), 20% var(--sl-color-white));
+    border-radius: 4px;
+}
+
+.icon-util-search-hint:hover {
+    background-color: var(--sl-color-gray-6);
+}
+
+.icon-util-search-bar:focus-within {
+    box-shadow: 0 0 0 2px var(--sl-color-accent);
+}
+
+.icon-util-search-bar svg {
+    height: 20px;
+    min-width: 20px;
+}
+
+.icon-util-search-bar input {
+    width: 100%;
+    border: 0;
+    background-color: transparent;
+}
+
+.icon-util-search-bar input:focus {
+    outline: none;
+}
+/* ----------------------------------------------------------- */
+
+
+
+/* ------------------------   Select  ------------------------ */
+.icon-util-settings select {
+    padding: 0 4px;
+    border: 0;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.icon-util-settings select:focus {
+    box-shadow: 0 0 0 2px var(--sl-color-accent);
+}
+/* ----------------------------------------------------------- */
+
+
+
+/* ----------------------   Grid view  ----------------------- */
+.icon-util-grid {
+    display: grid;
+    gap: 8px;
+
+    grid-auto-rows: 84px;
+    grid-template-columns: repeat(auto-fill, 80px);
+    justify-content: space-between;
+    grid-auto-flow: dense;
+
+    width: 100%;
+    height: 100%;
+
+    margin: 16px 0 0;
+    padding: 16px 0 0;
+}
+
+.icon-util-grid-item {
+    width: 80px;
+    height: 80px;
+
+    --icon-util-grid-item-icon-bg: var(--sl-color-gray-6);
+}
+
+.icon-util-grid-item-deprecated {
+    --icon-util-grid-item-icon-bg: var(--sl-color-red-low);
+    --icon-util-grid-item-icon-bg-hover: color-mix(in srgb, var(--sl-color-red), var(--sl-color-gray-6));
+}
+
+.icon-util-grid-item-new {
+    --icon-util-grid-item-icon-bg: var(--sl-color-green-low);
+    --icon-util-grid-item-icon-bg-hover: color-mix(in srgb, var(--sl-color-green), var(--sl-color-gray-6));
+}
+
+.icon-util-grid-item-unique {
+    --icon-util-grid-item-icon-bg: var(--sl-color-blue-low);
+    --icon-util-grid-item-icon-bg-hover: color-mix(in srgb, var(--sl-color-blue), var(--sl-color-gray-6));
+}
+
+.icon-util-grid-item button {
+    display: flex;
+    width: 100%;
+    height: 100%;
+
+    cursor: pointer;
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    padding: 4px;
+
+    background-color: var(--icon-util-grid-item-icon-bg);
+    border: none;
+    border-radius: 1rem;
+    box-shadow: var(--sl-shadow-sm);
+
+    overflow: hidden;
+}
+
+.icon-util-grid-item button:hover {
+    background-color: var(--icon-util-grid-item-icon-bg-hover);
+}
+
+.icon-util-grid-item svg {
+    min-width: 20px;
+    min-height: 20px;
+
+    margin-bottom: 2px;
+}
+
+.icon-util-grid-item code {
+    background-color: unset;
+
+    font-size: 10px;
+    line-height: 10px;
+    max-height: 40px;
+    font-weight: 700;
+
+    display: flex;
+    align-items: flex-end;
+
+
+
+    text-overflow: ellipsis;
+    white-space: normal;
+    word-wrap: anywhere;
+    overflow: hidden;
+}
+/* ----------------------------------------------------------- */
+
+
+
+
+/* ----------------------   Info box  ------------------------ */
+.icon-util-info-box {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    align-items: start;
+
+    padding: 16px;
+
+    max-width: 500px;
+
+    z-index: 1;
+    background-color: var(--sl-color-black);
+    border: 1px solid var(--sl-color-hairline);
+    border-radius: 8px;
+
+    box-shadow: var(--sl-shadow-lg);
+}
+
+.icon-util-info-box > svg {
+    background-color: var(--sl-color-gray-6);
+    border-radius: 8px;
+    display: flex;
+    padding: 8px;
+    min-width: 50px;
+    min-height: 50px;
+    margin-top: 4px;
+}
+
+.icon-util-info-box-content h4 {
+    margin-bottom: 8px;
+}
+
+.icon-util-info-box-content p {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.icon-util-info-box-labels {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.icon-util-info-box-label {
+    display: inline-block;
+    padding: 0 4px;
+    border: 0;
+
+    font-size: var(--sl-text-xs);
+    font-weight: 600;
+
+    background-color: var(--sl-color-gray-6);
+
+    border-radius: 4px;
+}
+
+.icon-util-info-box-label:hover {
+    background-color: var(--sl-color-gray-5);
+    cursor: pointer;
+}
+/* ----------------------------------------------------------- */
+
+
+
+
+/* ----------------   Focus group buttons  ------------------- */
+.icon-util-focus-groups {
+    display: flex;
+    gap: 12px;
+}
+
+.icon-util-focus-group {
+    border: 0;
+    border-radius: 4px;
+
+    cursor: pointer;
+    background-color: var(--color-expl-bg);
+}
+
+.icon-util-focus-group:hover {
+    background-color: color-mix(in srgb, var(--color-expl-stroke), var(--sl-color-gray-6));
+}
+
+.icon-util-focus-group.icon-util-focus-group-active {
+    box-shadow: 0 0 0 4px var(--color-expl-stroke);
+}
+
+.icon-util-focus-group.icon-util-focus-group-new {
+    --color-expl-bg: var(--sl-color-green-low);
+    --color-expl-stroke: var(--sl-color-green);
+}
+
+.icon-util-focus-group.icon-util-focus-group-deprecated {
+    --color-expl-bg: var(--sl-color-red-low);
+    --color-expl-stroke: var(--sl-color-red);
+}
+
+.icon-util-focus-group.icon-util-focus-group-unique {
+    --color-expl-bg: var(--sl-color-blue-low);
+    --color-expl-stroke: var(--sl-color-blue);
+}
+/* ----------------------------------------------------------- */

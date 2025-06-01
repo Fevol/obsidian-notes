@@ -4,8 +4,22 @@
 -->
 <script lang="ts">
     import Icons from '../../icon-data/icons.json?raw'
+    import {
+        checkIcon,
+        copyIcon,
+        downloadIcon,
+        eyeIcon,
+        tagIcon,
+        categoryIcon,
+        searchIcon,
+        linkIcon,
+        identifierIcon
+    } from './icons';
+
     import {onMount} from "svelte";
-    import { clickoutside } from '@svelte-put/clickoutside';
+    import {clickoutside} from '@svelte-put/clickoutside';
+    import {tooltip} from './tooltip';
+
     import Fuse from 'fuse.js';
 
     interface Icon {
@@ -30,47 +44,64 @@
         tags: string[];
         categories: string[];
     };
-    const { icons, versions } = iconsInformation;
+    const { icons, versions, tags, categories } = iconsInformation;
 
-    const copyIcon = `
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <rect width="14" height="14" x="8" y="8" rx="2" ry="2"/>
-            <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/>
-        </svg>
-    `
-    const downloadIcon = `
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
-            <polyline points="7 10 12 15 17 10"/>
-            <line x1="12" y1="15" x2="12" y2="3"/>
-        </svg>
-    `;
-    const checkIcon = `
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <polyline points="20 6 9 17 4 12"/>
-        </svg>
-    `;
-
-
+    // EXPL: Search and filter settings
     let inputtedText: string = $state('');
-    let showLucidePrefix: boolean = $state(true);
-    let showLucideIcons: boolean = $state(true);
-    let clickedIcon: Icon | null = $state(null);
-    let mouseEvent: MouseEvent | null = $state(null);
+    let addLucidePrefix: boolean = $state(false);
+    let filterNewIcons: boolean = $state(false);
+    let filterDeprecatedIcons: boolean = $state(false);
+    let filterUniqueIcons: boolean = $state(false);
     let minimumVersion: number = $state(versions.findIndex(v => v === '1.8.10'));
-    let iconListContentRect = $state({ left: 0, width: 0, height: 0, top: 0, right: 0, bottom: 0, x: 0, y: 0 }) as DOMRect;
-    let iconInfoContentRect = $state({ left: 0, width: 0, height: 0, top: 0, right: 0, bottom: 0, x: 0, y: 0 }) as DOMRect;
     let searchIdentifiers: boolean = $state(true);
     let searchTags: boolean = $state(false);
     let searchCategories: boolean = $state(false);
 
+    // EXPL: Search box hints rendering
+    let currentHint: number | null = $state(null);
+    let searchHintsElement: HTMLDivElement | null = $state(null);
+
+    // EXPL: Icon info box positioning
+    let mouseEvent: MouseEvent | null = $state(null);
+    let clickedIcon: Icon | null = $state(null);
+    let iconListContentRect = $state({ left: 0, width: 0, height: 0, top: 0, right: 0, bottom: 0, x: 0, y: 0 }) as DOMRect;
+    let iconInfoContentRect = $state({ left: 0, width: 0, height: 0, top: 0, right: 0, bottom: 0, x: 0, y: 0 }) as DOMRect;
+
+    // EXPL: Copy/download success states
     let downloadSuccess: boolean = $state(false);
     let copySvgSuccess: boolean = $state(false);
     let copyIdSuccess: boolean = $state(false);
 
-    let filteredList = $derived.by(() => filterIcons(icons, inputtedText, showLucideIcons, versions[minimumVersion]));
+    let searchPlaceholder: string = $derived.by(() => {
+        if (searchIdentifiers && searchTags && searchCategories) {
+            return 'Search by identifier, tag, or category...';
+        } else if (searchIdentifiers && searchTags) {
+            return 'Search by identifier or tag...';
+        } else if (searchIdentifiers && searchCategories) {
+            return 'Search by identifier or category...';
+        } else if (searchTags && searchCategories) {
+            return 'Search by tag or category...';
+        } else if (searchIdentifiers) {
+            return 'Search by identifier...';
+        } else if (searchTags) {
+            return 'Search by tag...';
+        } else if (searchCategories) {
+            return 'Search by category...';
+        }
+        return 'Search icons...';
+    });
 
-    let fuse = $derived.by(() => {
+    let filteredList = $derived.by(() => filterIcons(icons, inputtedText, filterNewIcons, filterDeprecatedIcons, filterUniqueIcons, versions[minimumVersion]));
+
+    let allSearchableItems = $derived.by(() => {
+        return [
+            ...(searchTags ? tags.map(value => ({value: value, type: "tag"})) : []),
+            ...(searchCategories ? categories.map(value => ({value: value, type: "category"})) : []),
+        ].sort((a, b) => a.value.localeCompare(b.value));
+    }) as { value: string, type: 'tag' | 'category' }[];
+
+    let groupFuse = $derived.by(() => new Fuse(allSearchableItems, { keys: ["value"], threshold: 0.05, includeMatches: true, shouldSort: false }));
+    let iconFuse = $derived.by(() => {
         const keys: string[] = [];
         if (searchIdentifiers) keys.push('id');
         if (searchTags) keys.push('tags');
@@ -82,27 +113,83 @@
         });
     });
 
+    let searchableItems = $derived.by(() => {
+        return inputtedText.length
+            ? groupFuse
+                .search(inputtedText)
+                .map(result => ({
+                    value: result.item,
+                    markings: result.matches![0].indices
+                        .reduce((acc, [start, stop], idx) => {
+                            const previous_end = acc.length ? acc[acc.length - 1].to : 0;
+                            if (start > previous_end) {
+                                acc.push({ start: previous_end, to: start, mark: false });
+                            }
+                            acc.push({ start, to: stop + 1, mark: true });
+                            if (idx === result.matches![0].indices.length - 1 && stop + 1 < result.item.value.length) {
+                                acc.push({ start: stop + 1, to: result.item.value.length, mark: false });
+                            }
+                            return acc;
+                        }, [] as {start: number, to: number, mark: boolean}[])
+                    }))
+            : allSearchableItems.map(item => ({value: item, markings: []}));
+    });
+
+    // EXPL: Prevent nasty bug where info box will keep resizing itself to fit against the edge, which it shouldn't do
+    let previousWidth = iconInfoContentRect.width;
+    let infoBoxX = $derived.by(() => {
+        let width = Math.abs(previousWidth - iconInfoContentRect.width) < 25 ? previousWidth : iconInfoContentRect.width;
+        previousWidth = iconInfoContentRect.width;
+        return Math.max(0, Math.min((mouseEvent?.layerX ?? 0) - width / 2, iconListContentRect.width - width - 30))
+    });
+    let infoBoxY = $derived.by(() =>
+        (mouseEvent?.layerY ?? 0) + 105 - ((mouseEvent?.layerY ?? 0) + 5) % 92
+    );
+
+    $effect(() => {
+        if (inputtedText.length > 0 && currentHint === null) {
+            currentHint = 0;
+        } else if (inputtedText.length === 0) {
+            currentHint = null;
+        }
+    })
+
+    //     let inputtedText: string = $state('');
+    // let addLucidePrefix: boolean = $state(false);
+    // let filterNewIcons: boolean = $state(false);
+    // let filterDeprecatedIcons: boolean = $state(false);
+    // let filterUniqueIcons: boolean = $state(false);
+    // let minimumVersion: number = $state(versions.findIndex(v => v === '1.8.10'));
+    // let searchIdentifiers: boolean = $state(true);
+    // let searchTags: boolean = $state(false);
+    // let searchCategories: boolean = $state(false);
 
     onMount(() => {
         const url = new URL(window.location.href);
         inputtedText = url.searchParams.get('q') || '';
+        addLucidePrefix = url.searchParams.has('prefix') ? url.searchParams.get('prefix') === 't' : addLucidePrefix;
+        filterNewIcons = url.searchParams.has('new') ? url.searchParams.get('new') === 't' : filterNewIcons;
+        filterDeprecatedIcons = url.searchParams.has('rem') ? url.searchParams.get('rem') === 't' : filterDeprecatedIcons;
+        filterUniqueIcons = url.searchParams.has('unq') ? url.searchParams.get('unq') === 't' : filterUniqueIcons;
+        minimumVersion = url.searchParams.has('min_version') ? versions.findIndex(v => v === url.searchParams.get('min_version')) : minimumVersion;
         searchIdentifiers = url.searchParams.has('id') ? url.searchParams.get('id') === 't' : searchIdentifiers;
         searchTags = url.searchParams.has('tag') ? url.searchParams.get('tag') === 't' : searchTags;
         searchCategories = url.searchParams.has('cat') ? url.searchParams.get('cat') === 't' : searchCategories;
-        showLucideIcons = url.searchParams.has('lucide') ? url.searchParams.get('lucide') === 't' : showLucideIcons;
-        showLucidePrefix = url.searchParams.has('prefix') ? url.searchParams.get('prefix') === 't' : showLucidePrefix;
-        minimumVersion = url.searchParams.has('min_version') ? versions.findIndex(v => v === url.searchParams.get('min_version')) : minimumVersion;
     });
 
     function copyShareLink() {
         const url = new URL(window.location.href);
         const check: [string, string | boolean][] = [
             ['q', inputtedText],
+            ['prefix', addLucidePrefix],
+
+            ['new', filterNewIcons],
+            ['rem', filterDeprecatedIcons],
+            ['unq', filterUniqueIcons],
+
             ['id', searchIdentifiers],
             ['tag', searchTags],
             ['cat', searchCategories],
-            ['lucide', showLucideIcons],
-            ['prefix', showLucidePrefix],
         ]
 
         for (const [key, value] of check) {
@@ -130,13 +217,16 @@
         return a.localeCompare(b, 'en', { numeric: true }) === 1;
     }
 
-    function filterIcons(list: IconList, search: string, include_lucide: boolean, minimum_version: string): IconList {
-        let filtered = search.length
-            ? fuse.search(search).map(result => result.item)
+    function filterIcons(list: IconList, search: string, focus_new: boolean, focus_deprecated: boolean, focus_unique: boolean,
+    minimum_version: string): IconList {
+        let filtered = search?.length
+            ? iconFuse.search(search).map(result => result.item)
             : list;
-        return filtered.filter(({ lucide, firstVersion, lastVersion }) => {
+        return filtered.filter(({ lucide, firstVersion, is_new, deprecated, lastVersion }) => {
             return !(
-                (!include_lucide && lucide) ||
+                (focus_new && !is_new) ||
+                (focus_deprecated && !deprecated) ||
+                (focus_unique && lucide) ||
                 (semverCompare(firstVersion, minimum_version))
             );
         });
@@ -179,92 +269,140 @@
         URL.revokeObjectURL(url);
     }
 
-    function onIdentifierClick(event: MouseEvent, identifier: string) {
+    function focusSearchGroup(event: Event, type: 'identifier' | 'tag' | 'category', value: string) {
         event.preventDefault();
-        inputtedText = identifier;
-        searchIdentifiers = true;
-        searchTags = false;
-        searchCategories = false;
-    }
-    function onCategoryClick(event: MouseEvent, category: string) {
-        event.preventDefault();
-        inputtedText = category;
-        searchCategories = true;
-        searchTags = false;
-        searchIdentifiers = false;
-    }
-
-    function onTagClick(event: MouseEvent, tag: string) {
-        event.preventDefault();
-        inputtedText = tag;
-        searchIdentifiers = false;
-        searchTags = true;
-        searchCategories = false;
+        inputtedText = value;
+        searchIdentifiers = type === 'identifier';
+        searchTags = type === 'tag';
+        searchCategories = type === 'category';
+        if (document.activeElement instanceof HTMLElement) {
+            document.activeElement.blur();
+        }
     }
 
     function onClickOutside(event: CustomEvent<MouseEvent>) {
         clickedIcon = null;
         mouseEvent = null;
     }
+
+    function toggleFilterFocus(idx: number) {
+        filterNewIcons = idx === 0 ? !filterNewIcons : false;
+        filterDeprecatedIcons = idx === 1 ? !filterDeprecatedIcons : false;
+        filterUniqueIcons = idx === 2 ? !filterUniqueIcons : false;
+    }
 </script>
 
-<div class="icon-view">
-    <div class="icon-header">
-        <p>
-            Filter the icons by name (icon name or identifier). <br>
-            <span class="icon-count">
-                Showing {Object.keys(filteredList).length} of {Object.keys(icons).length} icons.
+<div class="icon-util-view">
+    <div class="icon-util-settings">
+        <div class="icon-util-top-bar">
+            <span class="icon-util-icons-count">
+                Showing {Object.keys(filteredList).length} of {Object.keys(icons).length} icons
             </span>
-        </p>
-        <div class="icon-search">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/>
-            </svg>
-            <input bind:value={inputtedText} placeholder="Search icons..." />
-        </div>
 
-        <div class="icon-search-options">
-            Include in search:&nbsp;
-            <button class:is-active={searchIdentifiers} onclick={() => { searchIdentifiers = !searchIdentifiers }}>
-                Identifiers
-            </button>
-            <button class:is-active={searchCategories} onclick={() => { searchCategories = !searchCategories }}>
-                Categories
-            </button>
-            <button class:is-active={searchTags} onclick={() => { searchTags = !searchTags }}>
-                Tags
+            <button class="icon-share-link" onclick={copyShareLink}>
+                Get shareable link
+                {@html linkIcon}
             </button>
         </div>
 
-        <button class="icon-share-link" onclick={copyShareLink}>
-            Get shareable link
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-link">
-                <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
-                <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
-            </svg>
-        </button>
-    </div>
+        <hr/>
 
-    <div class="icon-header-toggles">
+        <div>
+            <button class="icon-util-icon-action" onclick={() => { addLucidePrefix = !addLucidePrefix }} class:icon-util-icon-action-active={addLucidePrefix} use:tooltip aria-label="Show lucide prefix in icon ID">
+                {@html eyeIcon}
+            </button>
+        </div>
+
+        <div class="icon-util-search-bar">
+            {@html searchIcon}
+            <input
+                    bind:value={inputtedText}
+                    placeholder={searchPlaceholder}
+                    onkeydown={(e) => {
+                        if (e.key === 'Enter') {
+                            const item = searchableItems[currentHint];
+                            focusSearchGroup(e, item.value.type, item.value.value);
+                        } else if (e.key === 'ArrowDown') {
+                            currentHint = (currentHint + 1) % searchableItems.length;
+                            searchHintsElement.children[currentHint]?.scrollIntoView({ block: 'nearest', inline: 'nearest' });
+                        } else if (e.key === 'ArrowUp') {
+                            currentHint = (currentHint - 1 + searchableItems.length) % searchableItems.length;
+                            searchHintsElement.children[currentHint]?.scrollIntoView({ block: 'nearest', inline: 'nearest' });
+
+                        }
+                    }}
+            />
+            <div class="icon-util-search-hints" style={(allSearchableItems.length) ? "" : "display: none"} bind:this={searchHintsElement}>
+                {#if searchableItems.length}
+                    {#each searchableItems as {value: item, markings}, idx}
+                        <button class="icon-util-search-hint" class:icon-util-search-hint-focused={currentHint === idx} onclick={(evt) => { focusSearchGroup(evt, item.type, item.value) }}>
+                            <div>
+                                {#if searchCategories && searchTags}
+                                    {#if item.type === 'tag'}
+                                        {@html tagIcon}
+                                    {:else}
+                                        {@html categoryIcon}
+                                    {/if}
+                                {/if}
+                            </div>
+                            <div>
+                                {#if markings.length}
+                                    {#each markings as {start, to, mark}}
+                                        <span class={mark ? 'icon-util-search-hint-highlight' : ''}>
+                                            {item.value.slice(start, to)}
+                                        </span>
+                                    {/each}
+                                {:else}
+                                    <span>{item.value}</span>
+                                {/if}
+                            </div>
+                        </button>
+                    {/each}
+                {:else}
+                    <span>No results found</span>
+                {/if}
+            </div>
+        </div>
+
+        <div class="icon-util-search-settings">
+            <button class="icon-util-icon-action" onclick={() => { searchIdentifiers = !searchIdentifiers }} class:icon-util-icon-action-active={searchIdentifiers} use:tooltip aria-label="Search by identifier">
+                {@html identifierIcon}
+            </button>
+
+            <button class="icon-util-icon-action" onclick={() => { searchCategories = !searchCategories }} class:icon-util-icon-action-active={searchCategories} use:tooltip aria-label="Search by category">
+                {@html categoryIcon}
+            </button>
+
+            <button class="icon-util-icon-action" onclick={() => { searchTags = !searchTags }} class:icon-util-icon-action-active={searchTags} use:tooltip aria-label="Search by tag">
+                {@html tagIcon}
+            </button>
+        </div>
+
+        <br/>
+
+        <div class="icon-util-focus-groups">
+           <button class="icon-util-focus-group icon-util-focus-group-new" onclick={() => { toggleFilterFocus(0) }} class:icon-util-focus-group-active={filterNewIcons}>
+                New
+            </button>
+
+            <button class="icon-util-focus-group icon-util-focus-group-deprecated" onclick={() => { toggleFilterFocus(1) }} class:icon-util-focus-group-active={filterDeprecatedIcons}>
+                Deprecated
+            </button>
+
+            <button class="icon-util-focus-group icon-util-focus-group-unique" onclick={() => { toggleFilterFocus(2) }} class:icon-util-focus-group-active={filterUniqueIcons}>
+                Obsidian-only
+            </button>
+        </div>
+
         <div>
             <p>
-                Hide Lucide prefix:
-                <input type="checkbox" bind:checked={showLucidePrefix} />
-            </p>
-
-            <p>
-                Show Lucide icons:
-                <input type="checkbox" bind:checked={showLucideIcons} />
-            </p>
-        </div>
-        <div>
-            <p>
-                Available in version and higher:
+                Available in version
                 <select bind:value={minimumVersion}>
                     {#each versions as version, index}
                         <option value={index}>{version}</option>
                     {/each}
                 </select>
+                and higher
             </p>
         </div>
     </div>
@@ -272,42 +410,27 @@
 
     {#if clickedIcon}
             <div
-                class="icon-info"
+                class="icon-util-info-box"
                 bind:contentRect={iconInfoContentRect}
-                style="
-                    left: {Math.max(0, Math.min(mouseEvent.layerX - iconInfoContentRect.width / 2,  iconListContentRect.width - iconInfoContentRect.width - 30))}px;
-                    top: {(mouseEvent.layerY) + 80 - (mouseEvent.layerY + 20) % 92}px;
-                "
+                style="left: {infoBoxX}px; top: {infoBoxY}px;"
                 use:clickoutside onclickoutside={onClickOutside}
             >
                 {@html clickedIcon.svg}
-                <div class="icon-info-content">
+                <div class="icon-util-info-box-content">
                     <h4>{clickedIcon.name}</h4>
                     <p>
                         <b>Icon ID:</b> <code>{clickedIcon.id}</code>
-                        <button class="icon-action" onclick={(e) => { onCopy(e, clickedIcon.id); copyIdSuccess = true; setTimeout(() => { copyIdSuccess = false}, 1000)} }>
-                            {#if copyIdSuccess}
-                                {@html checkIcon}
-                            {:else}
-                                {@html copyIcon}
-                            {/if}
+                        <button class="icon-util-icon-action" onclick={(e) => { onCopy(e, clickedIcon.id); copyIdSuccess = true; setTimeout(() => { copyIdSuccess = false}, 1000)} }>
+                            {#if copyIdSuccess} {@html checkIcon} {:else} {@html copyIcon} {/if}
                         </button>
                     </p>
                     <p>
                         <b>SVG:</b>
-                        <button class="icon-action" onclick={(e) => { onDownload(e, clickedIcon.svg); downloadSuccess = true; setTimeout(() => { downloadSuccess = false}, 1000)} }>
-                            {#if downloadSuccess}
-                                {@html checkIcon}
-                            {:else}
-                                {@html downloadIcon}
-                            {/if}
+                        <button class="icon-util-icon-action" onclick={(e) => { onDownload(e, clickedIcon.svg); downloadSuccess = true; setTimeout(() => { downloadSuccess = false}, 1000)} }>
+                            {#if downloadSuccess} {@html checkIcon} {:else} {@html downloadIcon} {/if}
                         </button>
-                        <button class="icon-action" onclick={(e) => { onCopy(e, clickedIcon.svg); copySvgSuccess = true; setTimeout(() => { copySvgSuccess = false}, 1000)} }>
-                            {#if copySvgSuccess}
-                                {@html checkIcon}
-                            {:else}
-                                {@html copyIcon}
-                            {/if}
+                        <button class="icon-util-icon-action" onclick={(e) => { onCopy(e, clickedIcon.svg); copySvgSuccess = true; setTimeout(() => { copySvgSuccess = false}, 1000)} }>
+                            {#if copySvgSuccess} {@html checkIcon} {:else} {@html copyIcon} {/if}
                         </button>
                     </p>
                     <p><b>Lucide:</b> {clickedIcon.lucide ? 'Yes' : 'No'}</p>
@@ -315,9 +438,9 @@
                     {#if clickedIcon.categories.length}
                         <p>
                             <b>Categories:</b>
-                            <span class="icon-labels">
+                            <span class="icon-util-info-box-labels">
                                 {#each clickedIcon.categories as category}
-                                    <button class="icon-label" onclick={(evt) => onCategoryClick(evt, category)}>{category}</button>
+                                    <button class="icon-util-info-box-label" onclick={(evt) => focusSearchGroup(evt, 'category', category)}>{category}</button>
                                 {/each}
                             </span>
                         </p>
@@ -325,9 +448,9 @@
                     {#if clickedIcon.tags.length}
                         <p>
                             <b>Tags:</b>
-                            <span class="icon-labels">
+                            <span class="icon-util-info-box-labels">
                                 {#each clickedIcon.tags as tag}
-                                    <button class="icon-label" onclick={(evt) => onTagClick(evt, tag)}>{tag}</button>
+                                    <button class="icon-util-info-box-label" onclick={(evt) => focusSearchGroup(evt, 'tag', tag)}>{tag}</button>
                                 {/each}
                             </span>
                         </p>
@@ -335,9 +458,9 @@
                     {#if clickedIcon.alternatives}
                         <p>
                             <b>Alternatives:</b>
-                            <span class="icon-labels">
+                            <span class="icon-util-info-box-labels">
                                 {#each clickedIcon.alternatives as alternative}
-                                    <button class="icon-label" onclick={(evt) => onIdentifierClick(evt, alternative)}>{alternative}</button>
+                                    <button class="icon-util-info-box-label" onclick={(evt) => focusSearchGroup(evt, 'identifier', alternative)}>{alternative}</button>
                                 {/each}
                             </span>
                         </p>
@@ -346,17 +469,16 @@
             </div>
     {/if}
 
-    <!-- TODO: I tried to use VirtualLists, but none of them seem to support CSS grids, afaics, more investigation required-->
-
-    <ul class="icon-list"
+    <!-- TODO: This could use a VirtualLists, but couldn't find a package that supports CSS grids -->
+    <ul class="icon-util-grid"
         bind:contentRect={iconListContentRect}
     >
         {#each filteredList as { id, svg, lucide, is_new, deprecated }}
-            <li id={id} class="icon-item" class:icon-deprecated={deprecated} class:icon-latest={is_new} class:icon-unique={!lucide}>
+            <li id={id} class="icon-util-grid-item" class:icon-util-grid-item-deprecated={deprecated} class:icon-util-grid-item-new={is_new} class:icon-util-grid-item-unique={!lucide}>
                 <button onclick={onClick}>
                     {@html svg}
                     <code>
-                        {(showLucidePrefix && lucide) ? id.slice(7) : id}
+                        {(!addLucidePrefix && lucide) ? id.slice(7) : id}
                     </code>
                 </button>
             </li>

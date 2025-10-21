@@ -90,7 +90,7 @@ async function main() {
         await downloadZip(url, zipPath);
 
         console.log(`Extracting JSON files from ${name}...`);
-        const icon_data  = await extractJsonFilesFromZip(zipPath);
+        const icon_data  = Object.fromEntries(Object.entries(await extractJsonFilesFromZip(zipPath)).sort());
 
         const outputFilePath = path.join(OUTPUT_DIR, 'lucide-icons.json');
         fs.writeFileSync(outputFilePath, JSON.stringify(icon_data, null, 2), 'utf-8');

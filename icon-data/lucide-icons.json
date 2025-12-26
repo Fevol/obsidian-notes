@@ -698,7 +698,8 @@
     "$schema": "../icon.schema.json",
     "contributors": [
       "danielbayley",
-      "karsa-mistmere"
+      "karsa-mistmere",
+      "jguddas"
     ],
     "tags": [
       "and",
@@ -759,7 +760,8 @@
     "contributors": [
       "colebemis",
       "csandman",
-      "ericfennis"
+      "ericfennis",
+      "karsa-mistmere"
     ],
     "tags": [
       "ship"
@@ -1037,7 +1039,6 @@
     ],
     "categories": [
       "arrows",
-      "navigation",
       "gaming"
     ]
   },
@@ -1058,7 +1059,6 @@
     ],
     "categories": [
       "arrows",
-      "navigation",
       "gaming",
       "files"
     ]
@@ -1082,7 +1082,6 @@
     ],
     "categories": [
       "arrows",
-      "navigation",
       "gaming"
     ]
   },
@@ -1103,7 +1102,6 @@
     ],
     "categories": [
       "arrows",
-      "navigation",
       "gaming"
     ]
   },
@@ -1126,7 +1124,6 @@
     ],
     "categories": [
       "arrows",
-      "navigation",
       "gaming"
     ]
   },
@@ -1147,7 +1144,6 @@
     ],
     "categories": [
       "arrows",
-      "navigation",
       "gaming"
     ]
   },
@@ -1173,7 +1169,6 @@
     ],
     "categories": [
       "arrows",
-      "navigation",
       "text",
       "development",
       "gaming"
@@ -1201,7 +1196,6 @@
     ],
     "categories": [
       "arrows",
-      "navigation",
       "text",
       "development",
       "gaming"
@@ -1220,8 +1214,7 @@
       "south"
     ],
     "categories": [
-      "arrows",
-      "navigation"
+      "arrows"
     ]
   },
   "arrow-down-0-1": {
@@ -1335,7 +1328,6 @@
     ],
     "categories": [
       "arrows",
-      "navigation",
       "files"
     ]
   },
@@ -1351,8 +1343,7 @@
       "diagonal"
     ],
     "categories": [
-      "arrows",
-      "navigation"
+      "arrows"
     ]
   },
   "arrow-down-narrow-wide": {
@@ -1388,8 +1379,7 @@
       "diagonal"
     ],
     "categories": [
-      "arrows",
-      "navigation"
+      "arrows"
     ]
   },
   "arrow-down-to-dot": {
@@ -1406,8 +1396,7 @@
       "into"
     ],
     "categories": [
-      "arrows",
-      "navigation"
+      "arrows"
     ]
   },
   "arrow-down-to-line": {
@@ -1431,7 +1420,6 @@
     ],
     "categories": [
       "arrows",
-      "navigation",
       "files",
       "development"
     ]
@@ -1457,8 +1445,7 @@
       "move"
     ],
     "categories": [
-      "arrows",
-      "navigation"
+      "arrows"
     ]
   },
   "arrow-down-wide-narrow": {
@@ -1538,8 +1525,7 @@
       "<-"
     ],
     "categories": [
-      "arrows",
-      "navigation"
+      "arrows"
     ]
   },
   "arrow-left-from-line": {
@@ -1559,8 +1545,7 @@
       "<-|"
     ],
     "categories": [
-      "arrows",
-      "navigation"
+      "arrows"
     ]
   },
   "arrow-left-right": {
@@ -1582,8 +1567,7 @@
       "->"
     ],
     "categories": [
-      "arrows",
-      "navigation"
+      "arrows"
     ]
   },
   "arrow-left-to-line": {
@@ -1603,8 +1587,7 @@
       "|<-"
     ],
     "categories": [
-      "arrows",
-      "navigation"
+      "arrows"
     ]
   },
   "arrow-right": {
@@ -1621,8 +1604,7 @@
       "->"
     ],
     "categories": [
-      "arrows",
-      "navigation"
+      "arrows"
     ]
   },
   "arrow-right-from-line": {
@@ -1643,8 +1625,7 @@
       "|->"
     ],
     "categories": [
-      "arrows",
-      "navigation"
+      "arrows"
     ]
   },
   "arrow-right-left": {
@@ -1665,8 +1646,7 @@
       "->"
     ],
     "categories": [
-      "arrows",
-      "navigation"
+      "arrows"
     ]
   },
   "arrow-right-to-line": {
@@ -1691,7 +1671,6 @@
     ],
     "categories": [
       "arrows",
-      "navigation",
       "development"
     ]
   },
@@ -1707,8 +1686,7 @@
       "north"
     ],
     "categories": [
-      "arrows",
-      "navigation"
+      "arrows"
     ]
   },
   "arrow-up-0-1": {
@@ -1825,8 +1803,7 @@
       "move"
     ],
     "categories": [
-      "arrows",
-      "navigation"
+      "arrows"
     ]
   },
   "arrow-up-from-dot": {
@@ -1841,8 +1818,7 @@
       "out"
     ],
     "categories": [
-      "arrows",
-      "navigation"
+      "arrows"
     ]
   },
   "arrow-up-from-line": {
@@ -1865,7 +1841,6 @@
     ],
     "categories": [
       "arrows",
-      "navigation",
       "files",
       "development"
     ]
@@ -1882,8 +1857,7 @@
       "diagonal"
     ],
     "categories": [
-      "arrows",
-      "navigation"
+      "arrows"
     ]
   },
   "arrow-up-narrow-wide": {
@@ -1930,8 +1904,7 @@
       "diagonal"
     ],
     "categories": [
-      "arrows",
-      "navigation"
+      "arrows"
     ]
   },
   "arrow-up-to-line": {
@@ -1951,7 +1924,6 @@
     ],
     "categories": [
       "arrows",
-      "navigation",
       "files"
     ]
   },
@@ -2700,6 +2672,28 @@
     "categories": [
       "transportation",
       "travel"
+    ]
+  },
+  "balloon": {
+    "$schema": "../icon.schema.json",
+    "contributors": [
+      "peteruithoven"
+    ],
+    "tags": [
+      "party",
+      "festival",
+      "congratulations",
+      "celebration",
+      "decoration",
+      "colorful",
+      "floating",
+      "fun",
+      "birthday",
+      "event",
+      "entertainment"
+    ],
+    "categories": [
+      "emoji"
     ]
   },
   "ban": {
@@ -3680,6 +3674,27 @@
       "animals"
     ]
   },
+  "birdhouse": {
+    "$schema": "../icon.schema.json",
+    "contributors": [
+      "hieu-onefold",
+      "karsa-mistmere"
+    ],
+    "tags": [
+      "birdhouse",
+      "bird",
+      "garden",
+      "home",
+      "house",
+      "woodwork"
+    ],
+    "categories": [
+      "nature",
+      "animals",
+      "navigation",
+      "home"
+    ]
+  },
   "bitcoin": {
     "$schema": "../icon.schema.json",
     "contributors": [
@@ -4648,6 +4663,31 @@
       "gaming"
     ]
   },
+  "book-search": {
+    "$schema": "../icon.schema.json",
+    "contributors": [
+      "karsa-mistmere",
+      "Muhammad-Aqib-Bashir"
+    ],
+    "tags": [
+      "reading",
+      "library",
+      "study",
+      "education",
+      "research",
+      "knowledge",
+      "discover",
+      "browsing",
+      "lookup",
+      "finding",
+      "scanning"
+    ],
+    "categories": [
+      "text",
+      "development",
+      "gaming"
+    ]
+  },
   "book-text": {
     "$schema": "../icon.schema.json",
     "contributors": [
@@ -5451,7 +5491,8 @@
   "brush-cleaning": {
     "$schema": "../icon.schema.json",
     "contributors": [
-      "karsa-mistmere"
+      "karsa-mistmere",
+      "jguddas"
     ],
     "tags": [
       "cleaning",
@@ -5496,7 +5537,8 @@
     "$schema": "../icon.schema.json",
     "contributors": [
       "vqh2602",
-      "jguddas"
+      "jguddas",
+      "karsa-mistmere"
     ],
     "tags": [
       "water",
@@ -6230,6 +6272,28 @@
       "time"
     ]
   },
+  "calendars": {
+    "$schema": "../icon.schema.json",
+    "contributors": [
+      "colebemis",
+      "ericfennis",
+      "jguddas",
+      "karsa-mistmere"
+    ],
+    "tags": [
+      "date",
+      "month",
+      "year",
+      "event",
+      "dates",
+      "months",
+      "years",
+      "events"
+    ],
+    "categories": [
+      "time"
+    ]
+  },
   "camera": {
     "$schema": "../icon.schema.json",
     "contributors": [
@@ -6332,6 +6396,20 @@
     "contributors": [
       "jguddas",
       "karsa-mistmere"
+    ],
+    "tags": [
+      "cannabis",
+      "weed",
+      "leaf"
+    ],
+    "categories": [
+      "nature"
+    ]
+  },
+  "cannabis-off": {
+    "$schema": "../icon.schema.json",
+    "contributors": [
+      "nickveles"
     ],
     "tags": [
       "cannabis",
@@ -6617,7 +6695,8 @@
     ],
     "categories": [
       "buildings",
-      "gaming"
+      "gaming",
+      "navigation"
     ]
   },
   "cat": {
@@ -7265,6 +7344,102 @@
       "food-beverage"
     ]
   },
+  "chess-bishop": {
+    "$schema": "../icon.schema.json",
+    "contributors": [
+      "karsa-mistmere"
+    ],
+    "tags": [
+      "mitre",
+      "miter",
+      "piece",
+      "board game",
+      "religion"
+    ],
+    "categories": [
+      "gaming",
+      "emoji"
+    ]
+  },
+  "chess-king": {
+    "$schema": "../icon.schema.json",
+    "contributors": [
+      "karsa-mistmere"
+    ],
+    "tags": [
+      "ruler",
+      "crown",
+      "piece",
+      "board game",
+      "stalemate"
+    ],
+    "categories": [
+      "gaming",
+      "emoji"
+    ]
+  },
+  "chess-knight": {
+    "$schema": "../icon.schema.json",
+    "contributors": [
+      "karsa-mistmere"
+    ],
+    "tags": [
+      "piece",
+      "horse",
+      "board game"
+    ],
+    "categories": [
+      "gaming",
+      "emoji"
+    ]
+  },
+  "chess-pawn": {
+    "$schema": "../icon.schema.json",
+    "contributors": [
+      "karsa-mistmere"
+    ],
+    "tags": [
+      "piece",
+      "board game"
+    ],
+    "categories": [
+      "gaming",
+      "emoji"
+    ]
+  },
+  "chess-queen": {
+    "$schema": "../icon.schema.json",
+    "contributors": [
+      "karsa-mistmere"
+    ],
+    "tags": [
+      "ruler",
+      "crown",
+      "piece",
+      "board game",
+      "stalemate"
+    ],
+    "categories": [
+      "gaming",
+      "emoji"
+    ]
+  },
+  "chess-rook": {
+    "$schema": "../icon.schema.json",
+    "contributors": [
+      "karsa-mistmere",
+      "jguddas"
+    ],
+    "tags": [
+      "castle",
+      "piece",
+      "board game"
+    ],
+    "categories": [
+      "gaming",
+      "emoji"
+    ]
+  },
   "chevron-down": {
     "$schema": "../icon.schema.json",
     "contributors": [
@@ -7278,7 +7453,6 @@
     ],
     "categories": [
       "arrows",
-      "navigation",
       "gaming"
     ]
   },
@@ -7327,8 +7501,7 @@
       "<"
     ],
     "categories": [
-      "arrows",
-      "navigation"
+      "arrows"
     ]
   },
   "chevron-right": {
@@ -7352,7 +7525,6 @@
     ],
     "categories": [
       "arrows",
-      "navigation",
       "math",
       "development"
     ]
@@ -7378,7 +7550,6 @@
     ],
     "categories": [
       "arrows",
-      "navigation",
       "math",
       "gaming"
     ]
@@ -7395,7 +7566,6 @@
     ],
     "categories": [
       "arrows",
-      "navigation",
       "gaming"
     ]
   },
@@ -7426,7 +7596,6 @@
     ],
     "categories": [
       "arrows",
-      "navigation",
       "gaming"
     ]
   },
@@ -7496,7 +7665,6 @@
     ],
     "categories": [
       "arrows",
-      "navigation",
       "gaming"
     ]
   },
@@ -7528,7 +7696,6 @@
     ],
     "categories": [
       "arrows",
-      "navigation",
       "gaming"
     ]
   },
@@ -7675,7 +7842,6 @@
     ],
     "categories": [
       "arrows",
-      "navigation",
       "gaming"
     ],
     "aliases": [
@@ -7705,7 +7871,6 @@
     ],
     "categories": [
       "arrows",
-      "navigation",
       "gaming"
     ],
     "aliases": [
@@ -7729,8 +7894,7 @@
       "diagonal"
     ],
     "categories": [
-      "arrows",
-      "navigation"
+      "arrows"
     ],
     "aliases": [
       {
@@ -7753,8 +7917,7 @@
       "diagonal"
     ],
     "categories": [
-      "arrows",
-      "navigation"
+      "arrows"
     ],
     "aliases": [
       {
@@ -7781,7 +7944,6 @@
     ],
     "categories": [
       "arrows",
-      "navigation",
       "development"
     ],
     "aliases": [
@@ -7805,8 +7967,7 @@
       "diagonal"
     ],
     "categories": [
-      "arrows",
-      "navigation"
+      "arrows"
     ],
     "aliases": [
       {
@@ -7835,7 +7996,6 @@
     ],
     "categories": [
       "arrows",
-      "navigation",
       "gaming"
     ],
     "aliases": [
@@ -7862,7 +8022,6 @@
     ],
     "categories": [
       "arrows",
-      "navigation",
       "gaming"
     ],
     "aliases": [
@@ -7937,8 +8096,7 @@
       "menu"
     ],
     "categories": [
-      "arrows",
-      "navigation"
+      "arrows"
     ],
     "aliases": [
       {
@@ -7963,8 +8121,7 @@
       "<"
     ],
     "categories": [
-      "arrows",
-      "navigation"
+      "arrows"
     ],
     "aliases": [
       {
@@ -7988,8 +8145,7 @@
       ">"
     ],
     "categories": [
-      "arrows",
-      "navigation"
+      "arrows"
     ],
     "aliases": [
       {
@@ -8012,8 +8168,7 @@
       "^"
     ],
     "categories": [
-      "arrows",
-      "navigation"
+      "arrows"
     ],
     "aliases": [
       {
@@ -8406,6 +8561,35 @@
         "deprecated": true,
         "toBeRemovedInVersion": "v1.0"
       }
+    ]
+  },
+  "circle-pile": {
+    "$schema": "../icon.schema.json",
+    "contributors": [
+      "colebemis",
+      "nathan-de-pachtere"
+    ],
+    "tags": [
+      "off",
+      "zero",
+      "record",
+      "shape",
+      "circle-pile",
+      "circle",
+      "pile",
+      "stack",
+      "layer",
+      "structure",
+      "form",
+      "group",
+      "collection",
+      "stock",
+      "inventory",
+      "materials",
+      "warehouse"
+    ],
+    "categories": [
+      "shapes"
     ]
   },
   "circle-play": {
@@ -9351,6 +9535,22 @@
       "time"
     ]
   },
+  "clock-check": {
+    "$schema": "../icon.schema.json",
+    "contributors": [
+      "colebemis",
+      "jguddas",
+      "karsa-mistmere"
+    ],
+    "tags": [
+      "time",
+      "watch",
+      "alarm"
+    ],
+    "categories": [
+      "time"
+    ]
+  },
   "clock-fading": {
     "$schema": "../icon.schema.json",
     "contributors": [
@@ -9444,6 +9644,39 @@
     ],
     "categories": [
       "development"
+    ]
+  },
+  "cloud-backup": {
+    "$schema": "../icon.schema.json",
+    "contributors": [
+      "ericfennis",
+      "jguddas",
+      "danielbayley",
+      "karsa-mistmere"
+    ],
+    "tags": [
+      "storage",
+      "memory",
+      "bytes",
+      "servers",
+      "backup",
+      "timemachine",
+      "rotate",
+      "synchronize",
+      "synchronise",
+      "refresh",
+      "reconnect",
+      "transfer",
+      "data",
+      "security",
+      "upload",
+      "save",
+      "remote",
+      "safety"
+    ],
+    "categories": [
+      "arrows",
+      "files"
     ]
   },
   "cloud-check": {
@@ -9691,6 +9924,33 @@
     ],
     "categories": [
       "weather"
+    ]
+  },
+  "cloud-sync": {
+    "$schema": "../icon.schema.json",
+    "contributors": [
+      "colebemis",
+      "csandman",
+      "ericfennis",
+      "karsa-mistmere"
+    ],
+    "tags": [
+      "synchronize",
+      "synchronise",
+      "refresh",
+      "reconnect",
+      "transfer",
+      "backup",
+      "storage",
+      "upload",
+      "download",
+      "connection",
+      "network",
+      "data"
+    ],
+    "categories": [
+      "arrows",
+      "files"
     ]
   },
   "cloud-upload": {
@@ -10865,7 +11125,8 @@
     ],
     "categories": [
       "buildings",
-      "sustainability"
+      "sustainability",
+      "navigation"
     ]
   },
   "database": {
@@ -12475,7 +12736,8 @@
       "sector"
     ],
     "categories": [
-      "buildings"
+      "buildings",
+      "navigation"
     ]
   },
   "fan": {
@@ -12613,38 +12875,6 @@
       "files"
     ]
   },
-  "file-audio": {
-    "$schema": "../icon.schema.json",
-    "contributors": [
-      "karsa-mistmere",
-      "danielbayley"
-    ],
-    "tags": [
-      "music",
-      "audio",
-      "sound",
-      "headphones"
-    ],
-    "categories": [
-      "files"
-    ]
-  },
-  "file-audio-2": {
-    "$schema": "../icon.schema.json",
-    "contributors": [
-      "karsa-mistmere",
-      "danielbayley"
-    ],
-    "tags": [
-      "music",
-      "audio",
-      "sound",
-      "headphones"
-    ],
-    "categories": [
-      "files"
-    ]
-  },
   "file-axis-3d": {
     "$schema": "../icon.schema.json",
     "contributors": [
@@ -12686,25 +12916,14 @@
     ],
     "categories": [
       "files"
-    ]
-  },
-  "file-badge-2": {
-    "$schema": "../icon.schema.json",
-    "contributors": [
-      "karsa-mistmere",
-      "danielbayley",
-      "jguddas"
     ],
-    "tags": [
-      "award",
-      "achievement",
-      "badge",
-      "rosette",
-      "prize",
-      "winner"
-    ],
-    "categories": [
-      "files"
+    "aliases": [
+      {
+        "name": "file-badge-2",
+        "deprecated": true,
+        "deprecationReason": "alias.duplicate",
+        "toBeRemovedInVersion": "v1.0"
+      }
     ]
   },
   "file-box": {
@@ -12720,6 +12939,56 @@
     ],
     "categories": [
       "files"
+    ]
+  },
+  "file-braces": {
+    "$schema": "../icon.schema.json",
+    "contributors": [
+      "karsa-mistmere",
+      "danielbayley"
+    ],
+    "tags": [
+      "code",
+      "json",
+      "curly braces",
+      "curly brackets"
+    ],
+    "categories": [
+      "files",
+      "development"
+    ],
+    "aliases": [
+      {
+        "name": "file-json",
+        "deprecated": true,
+        "deprecationReason": "alias.name",
+        "toBeRemovedInVersion": "v1.0"
+      }
+    ]
+  },
+  "file-braces-corner": {
+    "$schema": "../icon.schema.json",
+    "contributors": [
+      "karsa-mistmere",
+      "danielbayley"
+    ],
+    "tags": [
+      "code",
+      "json",
+      "curly braces",
+      "curly brackets"
+    ],
+    "categories": [
+      "files",
+      "development"
+    ],
+    "aliases": [
+      {
+        "name": "file-json-2",
+        "deprecated": true,
+        "deprecationReason": "alias.name",
+        "toBeRemovedInVersion": "v1.0"
+      }
     ]
   },
   "file-chart-column": {
@@ -12842,7 +13111,7 @@
       "files"
     ]
   },
-  "file-check-2": {
+  "file-check-corner": {
     "$schema": "../icon.schema.json",
     "contributors": [
       "ericfennis",
@@ -12859,6 +13128,14 @@
     ],
     "categories": [
       "files"
+    ],
+    "aliases": [
+      {
+        "name": "file-check-2",
+        "deprecated": true,
+        "deprecationReason": "alias.name",
+        "toBeRemovedInVersion": "v1.0"
+      }
     ]
   },
   "file-clock": {
@@ -12899,7 +13176,7 @@
       "development"
     ]
   },
-  "file-code-2": {
+  "file-code-corner": {
     "$schema": "../icon.schema.json",
     "contributors": [
       "danielbayley",
@@ -12917,6 +13194,14 @@
     "categories": [
       "files",
       "development"
+    ],
+    "aliases": [
+      {
+        "name": "file-code-2",
+        "deprecated": true,
+        "deprecationReason": "alias.name",
+        "toBeRemovedInVersion": "v1.0"
+      }
     ]
   },
   "file-cog": {
@@ -12993,6 +13278,63 @@
       "arrows"
     ]
   },
+  "file-exclamation-point": {
+    "$schema": "../icon.schema.json",
+    "contributors": [
+      "karsa-mistmere",
+      "danielbayley"
+    ],
+    "tags": [
+      "hidden",
+      "warning",
+      "alert",
+      "danger",
+      "protected",
+      "exclamation mark"
+    ],
+    "categories": [
+      "files",
+      "notifications"
+    ],
+    "aliases": [
+      {
+        "name": "file-warning",
+        "deprecated": true,
+        "deprecationReason": "alias.name",
+        "toBeRemovedInVersion": "v1.0"
+      }
+    ]
+  },
+  "file-headphone": {
+    "$schema": "../icon.schema.json",
+    "contributors": [
+      "karsa-mistmere",
+      "danielbayley"
+    ],
+    "tags": [
+      "music",
+      "audio",
+      "sound",
+      "headphones"
+    ],
+    "categories": [
+      "files"
+    ],
+    "aliases": [
+      {
+        "name": "file-audio",
+        "deprecated": true,
+        "deprecationReason": "alias.name",
+        "toBeRemovedInVersion": "v1.0"
+      },
+      {
+        "name": "file-audio-2",
+        "deprecated": true,
+        "deprecationReason": "alias.duplicate",
+        "toBeRemovedInVersion": "v1.0"
+      }
+    ]
+  },
   "file-heart": {
     "$schema": "../icon.schema.json",
     "contributors": [
@@ -13041,40 +13383,6 @@
       "arrows"
     ]
   },
-  "file-json": {
-    "$schema": "../icon.schema.json",
-    "contributors": [
-      "karsa-mistmere",
-      "danielbayley"
-    ],
-    "tags": [
-      "code",
-      "json",
-      "curly braces",
-      "curly brackets"
-    ],
-    "categories": [
-      "files",
-      "development"
-    ]
-  },
-  "file-json-2": {
-    "$schema": "../icon.schema.json",
-    "contributors": [
-      "karsa-mistmere",
-      "danielbayley"
-    ],
-    "tags": [
-      "code",
-      "json",
-      "curly braces",
-      "curly brackets"
-    ],
-    "categories": [
-      "files",
-      "development"
-    ]
-  },
   "file-key": {
     "$schema": "../icon.schema.json",
     "contributors": [
@@ -13090,23 +13398,14 @@
     "categories": [
       "files",
       "security"
-    ]
-  },
-  "file-key-2": {
-    "$schema": "../icon.schema.json",
-    "contributors": [
-      "karsa-mistmere",
-      "danielbayley"
     ],
-    "tags": [
-      "key",
-      "private",
-      "public",
-      "security"
-    ],
-    "categories": [
-      "files",
-      "security"
+    "aliases": [
+      {
+        "name": "file-key-2",
+        "deprecated": true,
+        "deprecationReason": "alias.duplicate",
+        "toBeRemovedInVersion": "v1.0"
+      }
     ]
   },
   "file-lock": {
@@ -13124,23 +13423,14 @@
     "categories": [
       "files",
       "security"
-    ]
-  },
-  "file-lock-2": {
-    "$schema": "../icon.schema.json",
-    "contributors": [
-      "karsa-mistmere",
-      "ericfennis",
-      "danielbayley"
     ],
-    "tags": [
-      "lock",
-      "password",
-      "security"
-    ],
-    "categories": [
-      "files",
-      "security"
+    "aliases": [
+      {
+        "name": "file-lock-2",
+        "deprecated": true,
+        "deprecationReason": "alias.duplicate",
+        "toBeRemovedInVersion": "v1.0"
+      }
     ]
   },
   "file-minus": {
@@ -13160,7 +13450,7 @@
       "files"
     ]
   },
-  "file-minus-2": {
+  "file-minus-corner": {
     "$schema": "../icon.schema.json",
     "contributors": [
       "ericfennis",
@@ -13172,6 +13462,14 @@
     ],
     "categories": [
       "files"
+    ],
+    "aliases": [
+      {
+        "name": "file-minus-2",
+        "deprecated": true,
+        "deprecationReason": "alias.name",
+        "toBeRemovedInVersion": "v1.0"
+      }
     ]
   },
   "file-music": {
@@ -13301,7 +13599,7 @@
       "files"
     ]
   },
-  "file-plus-2": {
+  "file-plus-corner": {
     "$schema": "../icon.schema.json",
     "contributors": [
       "ericfennis",
@@ -13316,6 +13614,14 @@
     ],
     "categories": [
       "files"
+    ],
+    "aliases": [
+      {
+        "name": "file-plus-2",
+        "deprecated": true,
+        "deprecationReason": "alias.name",
+        "toBeRemovedInVersion": "v1.0"
+      }
     ]
   },
   "file-question-mark": {
@@ -13377,7 +13683,7 @@
       "files"
     ]
   },
-  "file-search-2": {
+  "file-search-corner": {
     "$schema": "../icon.schema.json",
     "contributors": [
       "karsa-mistmere",
@@ -13392,6 +13698,38 @@
     ],
     "categories": [
       "files"
+    ],
+    "aliases": [
+      {
+        "name": "file-search-2",
+        "deprecated": true,
+        "deprecationReason": "alias.name",
+        "toBeRemovedInVersion": "v1.0"
+      }
+    ]
+  },
+  "file-signal": {
+    "$schema": "../icon.schema.json",
+    "contributors": [
+      "karsa-mistmere",
+      "ericfennis",
+      "danielbayley"
+    ],
+    "tags": [
+      "audio",
+      "music",
+      "volume"
+    ],
+    "categories": [
+      "files"
+    ],
+    "aliases": [
+      {
+        "name": "file-volume-2",
+        "deprecated": true,
+        "deprecationReason": "alias.name",
+        "toBeRemovedInVersion": "v1.0"
+      }
     ]
   },
   "file-sliders": {
@@ -13521,7 +13859,7 @@
       "text"
     ]
   },
-  "file-type-2": {
+  "file-type-corner": {
     "$schema": "../icon.schema.json",
     "contributors": [
       "karsa-mistmere",
@@ -13536,6 +13874,14 @@
     "categories": [
       "files",
       "text"
+    ],
+    "aliases": [
+      {
+        "name": "file-type-2",
+        "deprecated": true,
+        "deprecationReason": "alias.name",
+        "toBeRemovedInVersion": "v1.0"
+      }
     ]
   },
   "file-up": {
@@ -13621,41 +13967,6 @@
       "files"
     ]
   },
-  "file-volume-2": {
-    "$schema": "../icon.schema.json",
-    "contributors": [
-      "karsa-mistmere",
-      "ericfennis",
-      "danielbayley"
-    ],
-    "tags": [
-      "audio",
-      "music",
-      "volume"
-    ],
-    "categories": [
-      "files"
-    ]
-  },
-  "file-warning": {
-    "$schema": "../icon.schema.json",
-    "contributors": [
-      "karsa-mistmere",
-      "danielbayley"
-    ],
-    "tags": [
-      "hidden",
-      "warning",
-      "alert",
-      "danger",
-      "protected",
-      "exclamation mark"
-    ],
-    "categories": [
-      "files",
-      "notifications"
-    ]
-  },
   "file-x": {
     "$schema": "../icon.schema.json",
     "contributors": [
@@ -13672,7 +13983,7 @@
       "files"
     ]
   },
-  "file-x-2": {
+  "file-x-corner": {
     "$schema": "../icon.schema.json",
     "contributors": [
       "ericfennis",
@@ -13686,6 +13997,14 @@
     ],
     "categories": [
       "files"
+    ],
+    "aliases": [
+      {
+        "name": "file-x-2",
+        "deprecated": true,
+        "deprecationReason": "alias.name",
+        "toBeRemovedInVersion": "v1.0"
+      }
     ]
   },
   "files": {
@@ -13725,7 +14044,7 @@
       "multimedia"
     ]
   },
-  "fingerprint": {
+  "fingerprint-pattern": {
     "$schema": "../icon.schema.json",
     "contributors": [
       "karsa-mistmere",
@@ -13743,6 +14062,14 @@
       "security",
       "medical",
       "devices"
+    ],
+    "aliases": [
+      {
+        "name": "fingerprint",
+        "deprecationReason": "alias.name",
+        "deprecated": true,
+        "toBeRemovedInVersion": "v1.0"
+      }
     ]
   },
   "fire-extinguisher": {
@@ -13843,6 +14170,34 @@
     "categories": [
       "food-beverage",
       "animals"
+    ]
+  },
+  "fishing-hook": {
+    "$schema": "../icon.schema.json",
+    "contributors": [
+      "7ender",
+      "jguddas",
+      "karsa-mistmere",
+      "jamiemlaw"
+    ],
+    "tags": [
+      "sea",
+      "boating",
+      "angler",
+      "bait",
+      "reel",
+      "tackle",
+      "marine",
+      "outdoors",
+      "fish",
+      "fishing",
+      "hook",
+      "sports",
+      "travel"
+    ],
+    "categories": [
+      "sports",
+      "travel"
     ]
   },
   "flag": {
@@ -13993,10 +14348,17 @@
     "$schema": "../icon.schema.json",
     "contributors": [
       "csandman",
-      "ericfennis"
+      "ericfennis",
+      "jamiemlaw"
     ],
     "tags": [
-      "torch"
+      "torch",
+      "light",
+      "beam",
+      "emergency",
+      "safety",
+      "tool",
+      "bright"
     ],
     "categories": [
       "photography",
@@ -14009,10 +14371,17 @@
       "Andreto",
       "ericfennis",
       "karsa-mistmere",
-      "csandman"
+      "csandman",
+      "jamiemlaw"
     ],
     "tags": [
-      "torch"
+      "torch",
+      "light",
+      "beam",
+      "emergency",
+      "safety",
+      "tool",
+      "bright"
     ],
     "categories": [
       "photography",
@@ -14431,7 +14800,8 @@
     "contributors": [
       "danielbayley",
       "karsa-mistmere",
-      "ericfennis"
+      "ericfennis",
+      "jguddas"
     ],
     "tags": [
       "directory",
@@ -14825,6 +15195,30 @@
       "transportation"
     ]
   },
+  "form": {
+    "$schema": "../icon.schema.json",
+    "contributors": [
+      "jguddas",
+      "karsa-mistmere"
+    ],
+    "tags": [
+      "document",
+      "page",
+      "file",
+      "layout",
+      "paper",
+      "stub",
+      "formality",
+      "structure",
+      "template",
+      "inputs",
+      "design",
+      "components"
+    ],
+    "categories": [
+      "development"
+    ]
+  },
   "forward": {
     "$schema": "../icon.schema.json",
     "contributors": [
@@ -15156,6 +15550,30 @@
       "devices"
     ]
   },
+  "gamepad-directional": {
+    "$schema": "../icon.schema.json",
+    "contributors": [
+      "felipeajzanetti",
+      "jguddas"
+    ],
+    "tags": [
+      "direction",
+      "arrow",
+      "controller",
+      "navigation",
+      "button",
+      "move",
+      "pointer",
+      "arrowhead",
+      "console",
+      "game",
+      "gaming"
+    ],
+    "categories": [
+      "gaming",
+      "devices"
+    ]
+  },
   "gauge": {
     "$schema": "../icon.schema.json",
     "contributors": [
@@ -15289,7 +15707,27 @@
     ],
     "tags": [
       "code",
-      "version control"
+      "version control",
+      "vcs",
+      "repository"
+    ],
+    "categories": [
+      "development"
+    ]
+  },
+  "git-branch-minus": {
+    "$schema": "../icon.schema.json",
+    "contributors": [
+      "joris-gallot"
+    ],
+    "tags": [
+      "code",
+      "version control",
+      "vcs",
+      "repository",
+      "delete",
+      "remove",
+      "-"
     ],
     "categories": [
       "development"
@@ -15302,6 +15740,10 @@
       "ericfennis"
     ],
     "tags": [
+      "code",
+      "version control",
+      "vcs",
+      "repository",
       "add",
       "create",
       "+"
@@ -16492,6 +16934,27 @@
       "weather"
     ]
   },
+  "hd": {
+    "$schema": "../icon.schema.json",
+    "contributors": [
+      "ahtohbi4",
+      "jamiemlaw",
+      "karsa-mistmere",
+      "jguddas"
+    ],
+    "tags": [
+      "tv",
+      "resolution",
+      "video",
+      "high definition",
+      "720p",
+      "1080p"
+    ],
+    "categories": [
+      "devices",
+      "multimedia"
+    ]
+  },
   "hdmi-port": {
     "$schema": "../icon.schema.json",
     "contributors": [
@@ -16878,6 +17341,31 @@
       "travel"
     ]
   },
+  "helicopter": {
+    "$schema": "../icon.schema.json",
+    "contributors": [
+      "liloudreams",
+      "ericfennis",
+      "jamiemlaw"
+    ],
+    "tags": [
+      "transport",
+      "flying",
+      "rotor",
+      "aviation",
+      "helipad",
+      "gear",
+      "flyer",
+      "technology",
+      "helicopter",
+      "aircraft",
+      "vehicle"
+    ],
+    "categories": [
+      "transportation",
+      "travel"
+    ]
+  },
   "hexagon": {
     "$schema": "../icon.schema.json",
     "contributors": [
@@ -17044,7 +17532,8 @@
     ],
     "categories": [
       "buildings",
-      "home"
+      "home",
+      "navigation"
     ],
     "aliases": [
       {
@@ -18113,6 +18602,28 @@
       "duplicate",
       "double",
       "shortcuts"
+    ],
+    "categories": [
+      "design",
+      "layout"
+    ]
+  },
+  "layers-plus": {
+    "$schema": "../icon.schema.json",
+    "contributors": [
+      "juanisidoro",
+      "karsa-mistmere"
+    ],
+    "tags": [
+      "stack",
+      "layers",
+      "add",
+      "new",
+      "increase",
+      "create",
+      "positive",
+      "copy",
+      "upgrade"
     ],
     "categories": [
       "design",
@@ -21463,6 +21974,33 @@
       "cursors"
     ]
   },
+  "mouse-pointer-2-off": {
+    "$schema": "../icon.schema.json",
+    "contributors": [
+      "ericfennis",
+      "csandman",
+      "domingasp",
+      "jguddas"
+    ],
+    "tags": [
+      "pointer",
+      "mouse",
+      "cursor",
+      "off",
+      "disable",
+      "arrow",
+      "navigation",
+      "selection",
+      "select",
+      "click",
+      "no-click",
+      "interaction"
+    ],
+    "categories": [
+      "arrows",
+      "cursors"
+    ]
+  },
   "mouse-pointer-ban": {
     "$schema": "../icon.schema.json",
     "contributors": [
@@ -24025,7 +24563,8 @@
     ],
     "categories": [
       "transportation",
-      "travel"
+      "travel",
+      "navigation"
     ]
   },
   "plane-landing": {
@@ -24094,7 +24633,11 @@
       "energy",
       "electronics",
       "socket",
-      "outlet"
+      "outlet",
+      "power",
+      "voltage",
+      "current",
+      "charger"
     ],
     "categories": [
       "devices",
@@ -25980,7 +26523,8 @@
   "ruler-dimension-line": {
     "$schema": "../icon.schema.json",
     "contributors": [
-      "jguddas"
+      "jguddas",
+      "karsa-mistmere"
     ],
     "tags": [
       "measurements",
@@ -26180,7 +26724,8 @@
     "contributors": [
       "mittalyashu",
       "ericfennis",
-      "karsa-mistmere"
+      "karsa-mistmere",
+      "jamiemlaw"
     ],
     "tags": [
       "balance",
@@ -26188,10 +26733,20 @@
       "license",
       "right",
       "rule",
-      "law"
+      "law",
+      "justice",
+      "weight",
+      "measure",
+      "compare",
+      "judge",
+      "fair",
+      "ethics",
+      "decision"
     ],
     "categories": [
-      "navigation"
+      "navigation",
+      "science",
+      "finance"
     ]
   },
   "scale-3d": {
@@ -26522,6 +27077,28 @@
       "tools"
     ]
   },
+  "scooter": {
+    "$schema": "../icon.schema.json",
+    "contributors": [
+      "Ahmed-Dghaies",
+      "karsa-mistmere"
+    ],
+    "tags": [
+      "vehicle",
+      "drive",
+      "trip",
+      "journey",
+      "transport",
+      "electric",
+      "ride",
+      "urban",
+      "commute",
+      "speed"
+    ],
+    "categories": [
+      "transportation"
+    ]
+  },
   "screen-share": {
     "$schema": "../icon.schema.json",
     "contributors": [
@@ -26623,6 +27200,31 @@
       "scan",
       "magnifier",
       "magnifying glass",
+      "lens"
+    ],
+    "categories": [
+      "text",
+      "social"
+    ]
+  },
+  "search-alert": {
+    "$schema": "../icon.schema.json",
+    "contributors": [
+      "colebemis",
+      "ericfennis",
+      "jguddas",
+      "Veatec22"
+    ],
+    "tags": [
+      "find",
+      "scan",
+      "magnifier",
+      "magnifying glass",
+      "stop",
+      "warning",
+      "alert",
+      "error",
+      "anomaly",
       "lens"
     ],
     "categories": [
@@ -28582,6 +29184,29 @@
       "home"
     ]
   },
+  "solar-panel": {
+    "$schema": "../icon.schema.json",
+    "contributors": [
+      "UsamaKhan",
+      "jguddas",
+      "karsa-mistmere"
+    ],
+    "tags": [
+      "solar panel",
+      "solar",
+      "panel",
+      "sun",
+      "energy",
+      "electricity",
+      "light"
+    ],
+    "categories": [
+      "home",
+      "science",
+      "sustainability",
+      "weather"
+    ]
+  },
   "soup": {
     "$schema": "../icon.schema.json",
     "contributors": [
@@ -29029,7 +29654,6 @@
     ],
     "categories": [
       "arrows",
-      "navigation",
       "gaming"
     ],
     "aliases": [
@@ -29057,7 +29681,6 @@
     ],
     "categories": [
       "arrows",
-      "navigation",
       "gaming"
     ],
     "aliases": [
@@ -29085,7 +29708,6 @@
     ],
     "categories": [
       "arrows",
-      "navigation",
       "gaming"
     ],
     "aliases": [
@@ -29114,8 +29736,7 @@
       "<-"
     ],
     "categories": [
-      "arrows",
-      "navigation"
+      "arrows"
     ],
     "aliases": [
       {
@@ -29138,8 +29759,7 @@
       "diagonal"
     ],
     "categories": [
-      "arrows",
-      "navigation"
+      "arrows"
     ],
     "aliases": [
       {
@@ -29162,8 +29782,7 @@
       "diagonal"
     ],
     "categories": [
-      "arrows",
-      "navigation"
+      "arrows"
     ],
     "aliases": [
       {
@@ -29186,8 +29805,7 @@
       "diagonal"
     ],
     "categories": [
-      "arrows",
-      "navigation"
+      "arrows"
     ],
     "aliases": [
       {
@@ -29215,7 +29833,6 @@
     ],
     "categories": [
       "arrows",
-      "navigation",
       "social"
     ],
     "aliases": [
@@ -29244,8 +29861,7 @@
       "->"
     ],
     "categories": [
-      "arrows",
-      "navigation"
+      "arrows"
     ],
     "aliases": [
       {
@@ -29271,8 +29887,7 @@
       "button"
     ],
     "categories": [
-      "arrows",
-      "navigation"
+      "arrows"
     ],
     "aliases": [
       {
@@ -29297,8 +29912,7 @@
       "button"
     ],
     "categories": [
-      "arrows",
-      "navigation"
+      "arrows"
     ],
     "aliases": [
       {
@@ -29325,7 +29939,6 @@
     ],
     "categories": [
       "arrows",
-      "navigation",
       "social"
     ],
     "aliases": [
@@ -29371,7 +29984,8 @@
   "square-bottom-dashed-scissors": {
     "$schema": "../icon.schema.json",
     "contributors": [
-      "danielbayley"
+      "danielbayley",
+      "eden881"
     ],
     "tags": [
       "cut",
@@ -30476,7 +31090,8 @@
   "square-scissors": {
     "$schema": "../icon.schema.json",
     "contributors": [
-      "danielbayley"
+      "danielbayley",
+      "eden881"
     ],
     "tags": [
       "cut",
@@ -31094,6 +31709,30 @@
     "categories": [
       "text",
       "social"
+    ]
+  },
+  "stone": {
+    "$schema": "../icon.schema.json",
+    "contributors": [
+      "Alportan",
+      "karsa-mistmere"
+    ],
+    "tags": [
+      "mineral",
+      "geology",
+      "nature",
+      "solid",
+      "pebble",
+      "crystal",
+      "ore",
+      "hard",
+      "coal",
+      "stone",
+      "rock",
+      "boulder"
+    ],
+    "categories": [
+      "nature"
     ]
   },
   "store": {
@@ -32300,7 +32939,8 @@
     "$schema": "../icon.schema.json",
     "contributors": [
       "ericfennis",
-      "karsa-mistmere"
+      "karsa-mistmere",
+      "jguddas"
     ],
     "tags": [
       "temperature",
@@ -32544,7 +33184,8 @@
   "tickets": {
     "$schema": "../icon.schema.json",
     "contributors": [
-      "jguddas"
+      "jguddas",
+      "karsa-mistmere"
     ],
     "tags": [
       "trip",
@@ -32567,7 +33208,8 @@
   "tickets-plane": {
     "$schema": "../icon.schema.json",
     "contributors": [
-      "jguddas"
+      "jguddas",
+      "karsa-mistmere"
     ],
     "tags": [
       "plane",
@@ -32708,6 +33350,43 @@
     "categories": [
       "tools",
       "development",
+      "home"
+    ]
+  },
+  "toolbox": {
+    "$schema": "../icon.schema.json",
+    "contributors": [
+      "karsa-mistmere"
+    ],
+    "tags": [
+      "toolkit",
+      "tools",
+      "trunk",
+      "chest",
+      "box",
+      "storage",
+      "utility",
+      "utilities",
+      "container",
+      "kit",
+      "set",
+      "repair",
+      "fix",
+      "service",
+      "maintenance",
+      "mechanic",
+      "workshop",
+      "construction",
+      "hardware",
+      "equipment",
+      "gear",
+      "handyman",
+      "engineering",
+      "craft",
+      "diy"
+    ],
+    "categories": [
+      "tools",
       "home"
     ]
   },
@@ -34339,6 +35018,34 @@
       "sustainability"
     ]
   },
+  "van": {
+    "$schema": "../icon.schema.json",
+    "contributors": [
+      "Ahmed-Dghaies",
+      "karsa-mistmere"
+    ],
+    "tags": [
+      "minivan",
+      "cart",
+      "wagon",
+      "truck",
+      "lorry",
+      "trailer",
+      "camper",
+      "vehicle",
+      "drive",
+      "trip",
+      "journey",
+      "van",
+      "transport",
+      "carriage",
+      "delivery",
+      "travel"
+    ],
+    "categories": [
+      "transportation"
+    ]
+  },
   "variable": {
     "$schema": "../icon.schema.json",
     "contributors": [
@@ -34984,6 +35691,58 @@
       "sustainability"
     ]
   },
+  "waves-arrow-down": {
+    "$schema": "../icon.schema.json",
+    "contributors": [
+      "karsa-mistmere",
+      "ericfennis",
+      "danielbayley"
+    ],
+    "tags": [
+      "water",
+      "sea",
+      "level",
+      "sound",
+      "hertz",
+      "wavelength",
+      "vibrate",
+      "low",
+      "tide",
+      "ocean",
+      "rising",
+      "down",
+      "falling"
+    ],
+    "categories": [
+      "weather",
+      "sustainability"
+    ]
+  },
+  "waves-arrow-up": {
+    "$schema": "../icon.schema.json",
+    "contributors": [
+      "karsa-mistmere",
+      "ericfennis",
+      "danielbayley"
+    ],
+    "tags": [
+      "water",
+      "sea",
+      "level",
+      "sound",
+      "hertz",
+      "wavelength",
+      "vibrate",
+      "high",
+      "tide",
+      "ocean",
+      "rising"
+    ],
+    "categories": [
+      "weather",
+      "sustainability"
+    ]
+  },
   "waves-ladder": {
     "$schema": "../icon.schema.json",
     "contributors": [
@@ -35101,6 +35860,26 @@
       "geometry",
       "scales",
       "balance"
+    ],
+    "categories": [
+      "math"
+    ]
+  },
+  "weight-tilde": {
+    "$schema": "../icon.schema.json",
+    "contributors": [
+      "nathan-de-pachtere"
+    ],
+    "tags": [
+      "measure",
+      "scale",
+      "estimate",
+      "load",
+      "balance",
+      "size",
+      "measurement",
+      "quantity",
+      "mass"
     ],
     "categories": [
       "math"

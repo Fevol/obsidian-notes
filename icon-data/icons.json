@@ -1332,8 +1332,7 @@
       ],
       "categories": [
         "arrows",
-        "gaming",
-        "navigation"
+        "gaming"
       ]
     },
     {
@@ -1356,8 +1355,7 @@
       "categories": [
         "arrows",
         "files",
-        "gaming",
-        "navigation"
+        "gaming"
       ]
     },
     {
@@ -1378,8 +1376,7 @@
       ],
       "categories": [
         "arrows",
-        "gaming",
-        "navigation"
+        "gaming"
       ]
     },
     {
@@ -1401,8 +1398,7 @@
       ],
       "categories": [
         "arrows",
-        "gaming",
-        "navigation"
+        "gaming"
       ]
     },
     {
@@ -1423,8 +1419,7 @@
       ],
       "categories": [
         "arrows",
-        "gaming",
-        "navigation"
+        "gaming"
       ]
     },
     {
@@ -1446,8 +1441,7 @@
       ],
       "categories": [
         "arrows",
-        "gaming",
-        "navigation"
+        "gaming"
       ]
     },
     {
@@ -1474,7 +1468,6 @@
         "arrows",
         "development",
         "gaming",
-        "navigation",
         "text"
       ]
     },
@@ -1504,7 +1497,6 @@
         "arrows",
         "development",
         "gaming",
-        "navigation",
         "text"
       ]
     },
@@ -1524,8 +1516,7 @@
         "south"
       ],
       "categories": [
-        "arrows",
-        "navigation"
+        "arrows"
       ]
     },
     {
@@ -1597,8 +1588,7 @@
       ],
       "categories": [
         "arrows",
-        "files",
-        "navigation"
+        "files"
       ]
     },
     {
@@ -1616,8 +1606,7 @@
         "south-west"
       ],
       "categories": [
-        "arrows",
-        "navigation"
+        "arrows"
       ]
     },
     {
@@ -1702,8 +1691,7 @@
         "south-east"
       ],
       "categories": [
-        "arrows",
-        "navigation"
+        "arrows"
       ]
     },
     {
@@ -1781,8 +1769,7 @@
         "waypoint"
       ],
       "categories": [
-        "arrows",
-        "navigation"
+        "arrows"
       ]
     },
     {
@@ -1810,8 +1797,7 @@
       "categories": [
         "arrows",
         "development",
-        "files",
-        "navigation"
+        "files"
       ]
     },
     {
@@ -1839,8 +1825,7 @@
         "two-way"
       ],
       "categories": [
-        "arrows",
-        "navigation"
+        "arrows"
       ]
     },
     {
@@ -1897,8 +1882,7 @@
         "west"
       ],
       "categories": [
-        "arrows",
-        "navigation"
+        "arrows"
       ]
     },
     {
@@ -1933,8 +1917,7 @@
         "west"
       ],
       "categories": [
-        "arrows",
-        "navigation"
+        "arrows"
       ]
     },
     {
@@ -1959,8 +1942,7 @@
         "two-way"
       ],
       "categories": [
-        "arrows",
-        "navigation"
+        "arrows"
       ]
     },
     {
@@ -1998,8 +1980,7 @@
         "|<-"
       ],
       "categories": [
-        "arrows",
-        "navigation"
+        "arrows"
       ]
     },
     {
@@ -2019,8 +2000,7 @@
         "next"
       ],
       "categories": [
-        "arrows",
-        "navigation"
+        "arrows"
       ]
     },
     {
@@ -2056,8 +2036,7 @@
         "|->"
       ],
       "categories": [
-        "arrows",
-        "navigation"
+        "arrows"
       ]
     },
     {
@@ -2082,8 +2061,7 @@
         "two-way"
       ],
       "categories": [
-        "arrows",
-        "navigation"
+        "arrows"
       ]
     },
     {
@@ -2126,8 +2104,7 @@
       ],
       "categories": [
         "arrows",
-        "development",
-        "navigation"
+        "development"
       ]
     },
     {
@@ -2145,8 +2122,7 @@
         "north"
       ],
       "categories": [
-        "arrows",
-        "navigation"
+        "arrows"
       ]
     },
     {
@@ -2220,8 +2196,7 @@
         "two-way"
       ],
       "categories": [
-        "arrows",
-        "navigation"
+        "arrows"
       ]
     },
     {
@@ -2240,8 +2215,7 @@
         "step"
       ],
       "categories": [
-        "arrows",
-        "navigation"
+        "arrows"
       ]
     },
     {
@@ -2268,8 +2242,7 @@
       "categories": [
         "arrows",
         "development",
-        "files",
-        "navigation"
+        "files"
       ]
     },
     {
@@ -2287,8 +2260,7 @@
         "north-west"
       ],
       "categories": [
-        "arrows",
-        "navigation"
+        "arrows"
       ]
     },
     {
@@ -2373,8 +2345,7 @@
         "north-east"
       ],
       "categories": [
-        "arrows",
-        "navigation"
+        "arrows"
       ]
     },
     {
@@ -2454,8 +2425,7 @@
       ],
       "categories": [
         "arrows",
-        "files",
-        "navigation"
+        "files"
       ]
     },
     {
@@ -4505,8 +4475,20 @@
       "lastVersion": "1.11.2",
       "deprecated": false,
       "is_new": true,
-      "tags": [],
-      "categories": []
+      "tags": [
+        "bird",
+        "birdhouse",
+        "garden",
+        "home",
+        "house",
+        "woodwork"
+      ],
+      "categories": [
+        "animals",
+        "home",
+        "nature",
+        "navigation"
+      ]
     },
     {
       "id": "lucide-bitcoin",
@@ -7823,7 +7805,8 @@
       ],
       "categories": [
         "buildings",
-        "gaming"
+        "gaming",
+        "navigation"
       ]
     },
     {
@@ -8547,8 +8530,17 @@
       "lastVersion": "1.11.2",
       "deprecated": false,
       "is_new": true,
-      "tags": [],
-      "categories": []
+      "tags": [
+        "board game",
+        "miter",
+        "mitre",
+        "piece",
+        "religion"
+      ],
+      "categories": [
+        "emoji",
+        "gaming"
+      ]
     },
     {
       "id": "lucide-chess-king",
@@ -8559,8 +8551,17 @@
       "lastVersion": "1.11.2",
       "deprecated": false,
       "is_new": true,
-      "tags": [],
-      "categories": []
+      "tags": [
+        "board game",
+        "crown",
+        "piece",
+        "ruler",
+        "stalemate"
+      ],
+      "categories": [
+        "emoji",
+        "gaming"
+      ]
     },
     {
       "id": "lucide-chess-knight",
@@ -8571,8 +8572,15 @@
       "lastVersion": "1.11.2",
       "deprecated": false,
       "is_new": true,
-      "tags": [],
-      "categories": []
+      "tags": [
+        "board game",
+        "horse",
+        "piece"
+      ],
+      "categories": [
+        "emoji",
+        "gaming"
+      ]
     },
     {
       "id": "lucide-chess-pawn",
@@ -8583,8 +8591,14 @@
       "lastVersion": "1.11.2",
       "deprecated": false,
       "is_new": true,
-      "tags": [],
-      "categories": []
+      "tags": [
+        "board game",
+        "piece"
+      ],
+      "categories": [
+        "emoji",
+        "gaming"
+      ]
     },
     {
       "id": "lucide-chess-queen",
@@ -8595,8 +8609,17 @@
       "lastVersion": "1.11.2",
       "deprecated": false,
       "is_new": true,
-      "tags": [],
-      "categories": []
+      "tags": [
+        "board game",
+        "crown",
+        "piece",
+        "ruler",
+        "stalemate"
+      ],
+      "categories": [
+        "emoji",
+        "gaming"
+      ]
     },
     {
       "id": "lucide-chess-rook",
@@ -8607,8 +8630,15 @@
       "lastVersion": "1.11.2",
       "deprecated": false,
       "is_new": true,
-      "tags": [],
-      "categories": []
+      "tags": [
+        "board game",
+        "castle",
+        "piece"
+      ],
+      "categories": [
+        "emoji",
+        "gaming"
+      ]
     },
     {
       "id": "lucide-chevron-down",
@@ -8627,8 +8657,7 @@
       ],
       "categories": [
         "arrows",
-        "gaming",
-        "navigation"
+        "gaming"
       ]
     },
     {
@@ -8713,8 +8742,7 @@
         "previous"
       ],
       "categories": [
-        "arrows",
-        "navigation"
+        "arrows"
       ]
     },
     {
@@ -8770,8 +8798,7 @@
       "categories": [
         "arrows",
         "development",
-        "math",
-        "navigation"
+        "math"
       ]
     },
     {
@@ -8827,8 +8854,7 @@
       "categories": [
         "arrows",
         "gaming",
-        "math",
-        "navigation"
+        "math"
       ]
     },
     {
@@ -8874,8 +8900,7 @@
       ],
       "categories": [
         "arrows",
-        "gaming",
-        "navigation"
+        "gaming"
       ]
     },
     {
@@ -8911,8 +8936,7 @@
       ],
       "categories": [
         "arrows",
-        "gaming",
-        "navigation"
+        "gaming"
       ]
     },
     {
@@ -8991,8 +9015,7 @@
       ],
       "categories": [
         "arrows",
-        "gaming",
-        "navigation"
+        "gaming"
       ]
     },
     {
@@ -9031,8 +9054,7 @@
       ],
       "categories": [
         "arrows",
-        "gaming",
-        "navigation"
+        "gaming"
       ]
     },
     {
@@ -9197,8 +9219,7 @@
       ],
       "categories": [
         "arrows",
-        "gaming",
-        "navigation"
+        "gaming"
       ]
     },
     {
@@ -9222,8 +9243,7 @@
       ],
       "categories": [
         "arrows",
-        "gaming",
-        "navigation"
+        "gaming"
       ]
     },
     {
@@ -9242,8 +9262,7 @@
         "south-west"
       ],
       "categories": [
-        "arrows",
-        "navigation"
+        "arrows"
       ]
     },
     {
@@ -9262,8 +9281,7 @@
         "south-east"
       ],
       "categories": [
-        "arrows",
-        "navigation"
+        "arrows"
       ]
     },
     {
@@ -9286,8 +9304,7 @@
       ],
       "categories": [
         "arrows",
-        "development",
-        "navigation"
+        "development"
       ]
     },
     {
@@ -9306,8 +9323,7 @@
         "outwards"
       ],
       "categories": [
-        "arrows",
-        "navigation"
+        "arrows"
       ]
     },
     {
@@ -9331,8 +9347,7 @@
       ],
       "categories": [
         "arrows",
-        "gaming",
-        "navigation"
+        "gaming"
       ]
     },
     {
@@ -9353,8 +9368,7 @@
       ],
       "categories": [
         "arrows",
-        "gaming",
-        "navigation"
+        "gaming"
       ]
     },
     {
@@ -9414,8 +9428,7 @@
         "menu"
       ],
       "categories": [
-        "arrows",
-        "navigation"
+        "arrows"
       ]
     },
     {
@@ -9439,8 +9452,7 @@
         "previous"
       ],
       "categories": [
-        "arrows",
-        "navigation"
+        "arrows"
       ]
     },
     {
@@ -9463,8 +9475,7 @@
         "more than"
       ],
       "categories": [
-        "arrows",
-        "navigation"
+        "arrows"
       ]
     },
     {
@@ -9486,8 +9497,7 @@
         "menu"
       ],
       "categories": [
-        "arrows",
-        "navigation"
+        "arrows"
       ]
     },
     {
@@ -10919,8 +10929,14 @@
       "lastVersion": "1.11.2",
       "deprecated": false,
       "is_new": true,
-      "tags": [],
-      "categories": []
+      "tags": [
+        "alarm",
+        "time",
+        "watch"
+      ],
+      "categories": [
+        "time"
+      ]
     },
     {
       "id": "lucide-clock-fading",
@@ -12636,6 +12652,7 @@
       ],
       "categories": [
         "buildings",
+        "navigation",
         "sustainability"
       ]
     },
@@ -14601,7 +14618,8 @@
         "sector"
       ],
       "categories": [
-        "buildings"
+        "buildings",
+        "navigation"
       ]
     },
     {
@@ -14767,15 +14785,8 @@
       "lastVersion": "1.11.2",
       "deprecated": false,
       "is_new": false,
-      "tags": [
-        "audio",
-        "headphones",
-        "music",
-        "sound"
-      ],
-      "categories": [
-        "files"
-      ]
+      "tags": [],
+      "categories": []
     },
     {
       "id": "lucide-file-audio-2",
@@ -14786,15 +14797,8 @@
       "lastVersion": "1.11.2",
       "deprecated": false,
       "is_new": false,
-      "tags": [
-        "audio",
-        "headphones",
-        "music",
-        "sound"
-      ],
-      "categories": [
-        "files"
-      ]
+      "tags": [],
+      "categories": []
     },
     {
       "id": "lucide-file-axis-3d",
@@ -14846,17 +14850,8 @@
       "lastVersion": "1.11.2",
       "deprecated": false,
       "is_new": false,
-      "tags": [
-        "achievement",
-        "award",
-        "badge",
-        "prize",
-        "rosette",
-        "winner"
-      ],
-      "categories": [
-        "files"
-      ]
+      "tags": [],
+      "categories": []
     },
     {
       "id": "lucide-file-bar-chart",
@@ -14909,8 +14904,16 @@
       "lastVersion": "1.11.2",
       "deprecated": false,
       "is_new": true,
-      "tags": [],
-      "categories": []
+      "tags": [
+        "code",
+        "curly braces",
+        "curly brackets",
+        "json"
+      ],
+      "categories": [
+        "development",
+        "files"
+      ]
     },
     {
       "id": "lucide-file-braces-corner",
@@ -14921,8 +14924,16 @@
       "lastVersion": "1.11.2",
       "deprecated": false,
       "is_new": true,
-      "tags": [],
-      "categories": []
+      "tags": [
+        "code",
+        "curly braces",
+        "curly brackets",
+        "json"
+      ],
+      "categories": [
+        "development",
+        "files"
+      ]
     },
     {
       "id": "lucide-file-chart-column",
@@ -15035,6 +15046,18 @@
       "lastVersion": "1.11.2",
       "deprecated": false,
       "is_new": false,
+      "tags": [],
+      "categories": []
+    },
+    {
+      "id": "lucide-file-check-corner",
+      "name": "File Check Corner",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"svg-icon lucide-file-check-corner\"><path d=\"M10.5 22H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.706.706l3.588 3.588A2.4 2.4 0 0 1 20 8v6\"></path><path d=\"M14 2v5a1 1 0 0 0 1 1h5\"></path><path d=\"m14 20 2 2 4-4\"></path></svg>",
+      "lucide": true,
+      "firstVersion": "1.11.2",
+      "lastVersion": "1.11.2",
+      "deprecated": false,
+      "is_new": true,
       "tags": [
         "complete",
         "document",
@@ -15046,18 +15069,6 @@
       "categories": [
         "files"
       ]
-    },
-    {
-      "id": "lucide-file-check-corner",
-      "name": "File Check Corner",
-      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"svg-icon lucide-file-check-corner\"><path d=\"M10.5 22H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.706.706l3.588 3.588A2.4 2.4 0 0 1 20 8v6\"></path><path d=\"M14 2v5a1 1 0 0 0 1 1h5\"></path><path d=\"m14 20 2 2 4-4\"></path></svg>",
-      "lucide": true,
-      "firstVersion": "1.11.2",
-      "lastVersion": "1.11.2",
-      "deprecated": false,
-      "is_new": true,
-      "tags": [],
-      "categories": []
     },
     {
       "id": "lucide-file-clock",
@@ -15116,6 +15127,18 @@
       ],
       "deprecated": false,
       "is_new": false,
+      "tags": [],
+      "categories": []
+    },
+    {
+      "id": "lucide-file-code-corner",
+      "name": "File Code Corner",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"svg-icon lucide-file-code-corner\"><path d=\"M4 12.15V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.706.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2h-3.35\"></path><path d=\"M14 2v5a1 1 0 0 0 1 1h5\"></path><path d=\"m5 16-3 3 3 3\"></path><path d=\"m9 22 3-3-3-3\"></path></svg>",
+      "lucide": true,
+      "firstVersion": "1.11.2",
+      "lastVersion": "1.11.2",
+      "deprecated": false,
+      "is_new": true,
       "tags": [
         "document",
         "html",
@@ -15128,18 +15151,6 @@
         "development",
         "files"
       ]
-    },
-    {
-      "id": "lucide-file-code-corner",
-      "name": "File Code Corner",
-      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"svg-icon lucide-file-code-corner\"><path d=\"M4 12.15V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.706.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2h-3.35\"></path><path d=\"M14 2v5a1 1 0 0 0 1 1h5\"></path><path d=\"m5 16-3 3 3 3\"></path><path d=\"m9 22 3-3-3-3\"></path></svg>",
-      "lucide": true,
-      "firstVersion": "1.11.2",
-      "lastVersion": "1.11.2",
-      "deprecated": false,
-      "is_new": true,
-      "tags": [],
-      "categories": []
     },
     {
       "id": "lucide-file-cog",
@@ -15249,8 +15260,18 @@
       "lastVersion": "1.11.2",
       "deprecated": false,
       "is_new": true,
-      "tags": [],
-      "categories": []
+      "tags": [
+        "alert",
+        "danger",
+        "exclamation mark",
+        "hidden",
+        "protected",
+        "warning"
+      ],
+      "categories": [
+        "files",
+        "notifications"
+      ]
     },
     {
       "id": "lucide-file-headphone",
@@ -15261,8 +15282,15 @@
       "lastVersion": "1.11.2",
       "deprecated": false,
       "is_new": true,
-      "tags": [],
-      "categories": []
+      "tags": [
+        "audio",
+        "headphones",
+        "music",
+        "sound"
+      ],
+      "categories": [
+        "files"
+      ]
     },
     {
       "id": "lucide-file-heart",
@@ -15328,16 +15356,8 @@
       "lastVersion": "1.11.2",
       "deprecated": false,
       "is_new": false,
-      "tags": [
-        "code",
-        "curly braces",
-        "curly brackets",
-        "json"
-      ],
-      "categories": [
-        "development",
-        "files"
-      ]
+      "tags": [],
+      "categories": []
     },
     {
       "id": "lucide-file-json-2",
@@ -15348,16 +15368,8 @@
       "lastVersion": "1.11.2",
       "deprecated": false,
       "is_new": false,
-      "tags": [
-        "code",
-        "curly braces",
-        "curly brackets",
-        "json"
-      ],
-      "categories": [
-        "development",
-        "files"
-      ]
+      "tags": [],
+      "categories": []
     },
     {
       "id": "lucide-file-key",
@@ -15388,16 +15400,8 @@
       "lastVersion": "1.11.2",
       "deprecated": false,
       "is_new": false,
-      "tags": [
-        "key",
-        "private",
-        "public",
-        "security"
-      ],
-      "categories": [
-        "files",
-        "security"
-      ]
+      "tags": [],
+      "categories": []
     },
     {
       "id": "lucide-file-line-chart",
@@ -15439,15 +15443,8 @@
       "lastVersion": "1.11.2",
       "deprecated": false,
       "is_new": false,
-      "tags": [
-        "lock",
-        "password",
-        "security"
-      ],
-      "categories": [
-        "files",
-        "security"
-      ]
+      "tags": [],
+      "categories": []
     },
     {
       "id": "lucide-file-minus",
@@ -15477,12 +15474,8 @@
       "lastVersion": "1.11.2",
       "deprecated": false,
       "is_new": false,
-      "tags": [
-        "document"
-      ],
-      "categories": [
-        "files"
-      ]
+      "tags": [],
+      "categories": []
     },
     {
       "id": "lucide-file-minus-corner",
@@ -15493,8 +15486,12 @@
       "lastVersion": "1.11.2",
       "deprecated": false,
       "is_new": true,
-      "tags": [],
-      "categories": []
+      "tags": [
+        "document"
+      ],
+      "categories": [
+        "files"
+      ]
     },
     {
       "id": "lucide-file-music",
@@ -15633,15 +15630,8 @@
       "lastVersion": "1.11.2",
       "deprecated": false,
       "is_new": false,
-      "tags": [
-        "add",
-        "create",
-        "document",
-        "new"
-      ],
-      "categories": [
-        "files"
-      ]
+      "tags": [],
+      "categories": []
     },
     {
       "id": "lucide-file-plus-corner",
@@ -15652,8 +15642,15 @@
       "lastVersion": "1.11.2",
       "deprecated": false,
       "is_new": true,
-      "tags": [],
-      "categories": []
+      "tags": [
+        "add",
+        "create",
+        "document",
+        "new"
+      ],
+      "categories": [
+        "files"
+      ]
     },
     {
       "id": "lucide-file-question",
@@ -15732,6 +15729,18 @@
       "lastVersion": "1.11.2",
       "deprecated": false,
       "is_new": false,
+      "tags": [],
+      "categories": []
+    },
+    {
+      "id": "lucide-file-search-corner",
+      "name": "File Search Corner",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"svg-icon lucide-file-search-corner\"><path d=\"M11.1 22H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.706.706l3.589 3.588A2.4 2.4 0 0 1 20 8v3.25\"></path><path d=\"M14 2v5a1 1 0 0 0 1 1h5\"></path><path d=\"m21 22-2.88-2.88\"></path><circle cx=\"16\" cy=\"17\" r=\"3\"></circle></svg>",
+      "lucide": true,
+      "firstVersion": "1.11.2",
+      "lastVersion": "1.11.2",
+      "deprecated": false,
+      "is_new": true,
       "tags": [
         "browser",
         "document",
@@ -15744,18 +15753,6 @@
       ]
     },
     {
-      "id": "lucide-file-search-corner",
-      "name": "File Search Corner",
-      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"svg-icon lucide-file-search-corner\"><path d=\"M11.1 22H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.706.706l3.589 3.588A2.4 2.4 0 0 1 20 8v3.25\"></path><path d=\"M14 2v5a1 1 0 0 0 1 1h5\"></path><path d=\"m21 22-2.88-2.88\"></path><circle cx=\"16\" cy=\"17\" r=\"3\"></circle></svg>",
-      "lucide": true,
-      "firstVersion": "1.11.2",
-      "lastVersion": "1.11.2",
-      "deprecated": false,
-      "is_new": true,
-      "tags": [],
-      "categories": []
-    },
-    {
       "id": "lucide-file-signal",
       "name": "File Signal",
       "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"svg-icon lucide-file-signal\"><path d=\"M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z\"></path><path d=\"M14 2v5a1 1 0 0 0 1 1h5\"></path><path d=\"M8 15h.01\"></path><path d=\"M11.5 13.5a2.5 2.5 0 0 1 0 3\"></path><path d=\"M15 12a5 5 0 0 1 0 6\"></path></svg>",
@@ -15764,8 +15761,14 @@
       "lastVersion": "1.11.2",
       "deprecated": false,
       "is_new": true,
-      "tags": [],
-      "categories": []
+      "tags": [
+        "audio",
+        "music",
+        "volume"
+      ],
+      "categories": [
+        "files"
+      ]
     },
     {
       "id": "lucide-file-signature",
@@ -15935,16 +15938,8 @@
       "lastVersion": "1.11.2",
       "deprecated": false,
       "is_new": false,
-      "tags": [
-        "font",
-        "text",
-        "type",
-        "typography"
-      ],
-      "categories": [
-        "files",
-        "text"
-      ]
+      "tags": [],
+      "categories": []
     },
     {
       "id": "lucide-file-type-corner",
@@ -15955,8 +15950,16 @@
       "lastVersion": "1.11.2",
       "deprecated": false,
       "is_new": true,
-      "tags": [],
-      "categories": []
+      "tags": [
+        "font",
+        "text",
+        "type",
+        "typography"
+      ],
+      "categories": [
+        "files",
+        "text"
+      ]
     },
     {
       "id": "lucide-file-up",
@@ -16074,14 +16077,8 @@
       "lastVersion": "1.11.2",
       "deprecated": false,
       "is_new": false,
-      "tags": [
-        "audio",
-        "music",
-        "volume"
-      ],
-      "categories": [
-        "files"
-      ]
+      "tags": [],
+      "categories": []
     },
     {
       "id": "lucide-file-warning",
@@ -16092,18 +16089,8 @@
       "lastVersion": "1.11.2",
       "deprecated": false,
       "is_new": false,
-      "tags": [
-        "alert",
-        "danger",
-        "exclamation mark",
-        "hidden",
-        "protected",
-        "warning"
-      ],
-      "categories": [
-        "files",
-        "notifications"
-      ]
+      "tags": [],
+      "categories": []
     },
     {
       "id": "lucide-file-x",
@@ -16221,19 +16208,8 @@
       "lastVersion": "1.11.2",
       "deprecated": false,
       "is_new": false,
-      "tags": [
-        "2fa",
-        "authentication",
-        "biometric",
-        "identity",
-        "security"
-      ],
-      "categories": [
-        "account",
-        "devices",
-        "medical",
-        "security"
-      ]
+      "tags": [],
+      "categories": []
     },
     {
       "id": "lucide-fire-extinguisher",
@@ -16514,6 +16490,12 @@
       "deprecated": false,
       "is_new": false,
       "tags": [
+        "beam",
+        "bright",
+        "emergency",
+        "light",
+        "safety",
+        "tool",
         "torch"
       ],
       "categories": [
@@ -16531,6 +16513,12 @@
       "deprecated": false,
       "is_new": false,
       "tags": [
+        "beam",
+        "bright",
+        "emergency",
+        "light",
+        "safety",
+        "tool",
         "torch"
       ],
       "categories": [
@@ -17898,8 +17886,23 @@
       "lastVersion": "1.11.2",
       "deprecated": false,
       "is_new": true,
-      "tags": [],
-      "categories": []
+      "tags": [
+        "arrow",
+        "arrowhead",
+        "button",
+        "console",
+        "controller",
+        "direction",
+        "game",
+        "gaming",
+        "move",
+        "navigation",
+        "pointer"
+      ],
+      "categories": [
+        "devices",
+        "gaming"
+      ]
     },
     {
       "id": "lucide-gantt-chart",
@@ -18095,6 +18098,8 @@
       "is_new": false,
       "tags": [
         "code",
+        "repository",
+        "vcs",
         "version control"
       ],
       "categories": [
@@ -18110,8 +18115,18 @@
       "lastVersion": "1.11.2",
       "deprecated": false,
       "is_new": true,
-      "tags": [],
-      "categories": []
+      "tags": [
+        "-",
+        "code",
+        "delete",
+        "remove",
+        "repository",
+        "vcs",
+        "version control"
+      ],
+      "categories": [
+        "development"
+      ]
     },
     {
       "id": "lucide-git-branch-plus",
@@ -18125,7 +18140,11 @@
       "tags": [
         "+",
         "add",
-        "create"
+        "code",
+        "create",
+        "repository",
+        "vcs",
+        "version control"
       ],
       "categories": [
         "development"
@@ -19781,8 +19800,23 @@
       "lastVersion": "1.11.2",
       "deprecated": false,
       "is_new": true,
-      "tags": [],
-      "categories": []
+      "tags": [
+        "aircraft",
+        "aviation",
+        "flyer",
+        "flying",
+        "gear",
+        "helicopter",
+        "helipad",
+        "rotor",
+        "technology",
+        "transport",
+        "vehicle"
+      ],
+      "categories": [
+        "transportation",
+        "travel"
+      ]
     },
     {
       "id": "help",
@@ -20026,7 +20060,8 @@
       ],
       "categories": [
         "buildings",
-        "home"
+        "home",
+        "navigation"
       ]
     },
     {
@@ -28400,6 +28435,7 @@
         "trip"
       ],
       "categories": [
+        "navigation",
         "transportation",
         "travel"
       ]
@@ -28507,11 +28543,15 @@
       "deprecated": false,
       "is_new": false,
       "tags": [
+        "charger",
+        "current",
         "electricity",
         "electronics",
         "energy",
         "outlet",
-        "socket"
+        "power",
+        "socket",
+        "voltage"
       ],
       "categories": [
         "development",
@@ -30984,14 +31024,24 @@
       "is_new": false,
       "tags": [
         "balance",
+        "compare",
+        "decision",
+        "ethics",
+        "fair",
+        "judge",
+        "justice",
         "law",
         "legal",
         "license",
+        "measure",
         "right",
-        "rule"
+        "rule",
+        "weight"
       ],
       "categories": [
-        "navigation"
+        "finance",
+        "navigation",
+        "science"
       ]
     },
     {
@@ -33852,8 +33902,21 @@
       "lastVersion": "1.11.2",
       "deprecated": false,
       "is_new": true,
-      "tags": [],
-      "categories": []
+      "tags": [
+        "electricity",
+        "energy",
+        "light",
+        "panel",
+        "solar",
+        "solar panel",
+        "sun"
+      ],
+      "categories": [
+        "home",
+        "science",
+        "sustainability",
+        "weather"
+      ]
     },
     {
       "id": "lucide-sort-asc",
@@ -34399,8 +34462,7 @@
       ],
       "categories": [
         "arrows",
-        "gaming",
-        "navigation"
+        "gaming"
       ]
     },
     {
@@ -34426,8 +34488,7 @@
       ],
       "categories": [
         "arrows",
-        "gaming",
-        "navigation"
+        "gaming"
       ]
     },
     {
@@ -34453,8 +34514,7 @@
       ],
       "categories": [
         "arrows",
-        "gaming",
-        "navigation"
+        "gaming"
       ]
     },
     {
@@ -34480,8 +34540,7 @@
         "west"
       ],
       "categories": [
-        "arrows",
-        "navigation"
+        "arrows"
       ]
     },
     {
@@ -34503,8 +34562,7 @@
         "south-west"
       ],
       "categories": [
-        "arrows",
-        "navigation"
+        "arrows"
       ]
     },
     {
@@ -34526,8 +34584,7 @@
         "south-east"
       ],
       "categories": [
-        "arrows",
-        "navigation"
+        "arrows"
       ]
     },
     {
@@ -34549,8 +34606,7 @@
         "outwards"
       ],
       "categories": [
-        "arrows",
-        "navigation"
+        "arrows"
       ]
     },
     {
@@ -34577,7 +34633,6 @@
       ],
       "categories": [
         "arrows",
-        "navigation",
         "social"
       ]
     },
@@ -34604,8 +34659,7 @@
         "west"
       ],
       "categories": [
-        "arrows",
-        "navigation"
+        "arrows"
       ]
     },
     {
@@ -34629,8 +34683,7 @@
         "sign"
       ],
       "categories": [
-        "arrows",
-        "navigation"
+        "arrows"
       ]
     },
     {
@@ -34654,8 +34707,7 @@
         "sign"
       ],
       "categories": [
-        "arrows",
-        "navigation"
+        "arrows"
       ]
     },
     {
@@ -34681,7 +34733,6 @@
       ],
       "categories": [
         "arrows",
-        "navigation",
         "social"
       ]
     },
@@ -41978,6 +42029,7 @@
     "air conditioning",
     "air freshener",
     "airborne",
+    "aircraft",
     "airplane",
     "airplay",
     "airport",
@@ -42056,6 +42108,7 @@
     "array",
     "arrival",
     "arrow",
+    "arrowhead",
     "arrows",
     "art",
     "art gallery",
@@ -42108,6 +42161,7 @@
     "average",
     "avg",
     "avian",
+    "aviation",
     "award",
     "awareness",
     "axis",
@@ -42183,6 +42237,7 @@
     "biology",
     "biometric",
     "bird",
+    "birdhouse",
     "birdwatching",
     "biro",
     "birthdate",
@@ -42213,6 +42268,7 @@
     "blow",
     "blower",
     "board",
+    "board game",
     "boat",
     "bobbin",
     "boilerplate",
@@ -42336,6 +42392,7 @@
     "cash",
     "cassette",
     "cast",
+    "castle",
     "cat",
     "catalog",
     "catalogue",
@@ -42585,6 +42642,7 @@
     "cross out",
     "crosshair",
     "crotchet",
+    "crown",
     "cruise",
     "crush",
     "crustacean",
@@ -42887,6 +42945,7 @@
     "estimated",
     "et cetera",
     "etc",
+    "ethics",
     "ev",
     "even",
     "evening",
@@ -42939,6 +42998,7 @@
     "fahrenheit",
     "failed",
     "failure",
+    "fair",
     "falling",
     "fallout",
     "false",
@@ -43013,6 +43073,7 @@
     "flow",
     "fluid",
     "fly",
+    "flyer",
     "flying",
     "foam",
     "fob",
@@ -43234,6 +43295,8 @@
     "heavy",
     "hedge fund",
     "height",
+    "helicopter",
+    "helipad",
     "helix",
     "helmet",
     "help",
@@ -43271,6 +43334,7 @@
     "hopper",
     "horizontal",
     "horizontal rule",
+    "horse",
     "horseshoe",
     "hose",
     "hosepipe",
@@ -43282,6 +43346,7 @@
     "hotel",
     "hound",
     "hour",
+    "house",
     "household",
     "housekeeping",
     "hr",
@@ -43406,6 +43471,7 @@
     "journey",
     "jpy",
     "json",
+    "judge",
     "judgment",
     "juicy",
     "junk",
@@ -43665,6 +43731,8 @@
     "misinformed",
     "mist",
     "mistake",
+    "miter",
+    "mitre",
     "mixed",
     "mm",
     "mobile",
@@ -44183,6 +44251,7 @@
     "relaxation",
     "release",
     "releases",
+    "religion",
     "relish",
     "reload",
     "remainder",
@@ -44264,6 +44333,7 @@
     "rosette",
     "rotate",
     "rotation",
+    "rotor",
     "round",
     "rounded",
     "rounding",
@@ -44494,6 +44564,7 @@
     "software",
     "software as a service",
     "solar",
+    "solar panel",
     "solera",
     "solidarity",
     "sommelier",
@@ -44556,6 +44627,7 @@
     "ssd",
     "stack",
     "stage",
+    "stalemate",
     "stand",
     "star",
     "stargazing",
@@ -44945,6 +45017,7 @@
     "van",
     "variable",
     "vase",
+    "vcs",
     "vdi",
     "vector",
     "vegan",
@@ -44997,6 +45070,7 @@
     "void",
     "voip",
     "volatile",
+    "voltage",
     "volume",
     "vote",
     "voucher",

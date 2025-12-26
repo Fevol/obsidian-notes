@@ -215,14 +215,31 @@
 
 /* ------------------------   Select  ------------------------ */
 .icon-util-settings select {
+    --select-outline: var(--sl-color-accent);
+
     padding: 0 4px;
     border: 0;
     border-radius: 8px;
     cursor: pointer;
 }
 
+.icon-util-select.bg-new {
+    background-color: var(--sl-color-green-low);
+    --select-outline: var(--sl-color-green);
+}
+
+.icon-util-select.bg-deprecated {
+    background-color: var(--sl-color-red-low);
+    --select-outline: var(--sl-color-red);
+}
+
+.icon-util-select.bg-unique {
+    background-color: var(--sl-color-blue-low);
+    --select-outline: var(--sl-color-blue);
+}
+
 .icon-util-settings select:focus {
-    box-shadow: 0 0 0 2px var(--sl-color-accent);
+    box-shadow: 0 0 0 2px var(--select-outline);
 }
 /* ----------------------------------------------------------- */
 
@@ -342,6 +359,26 @@
     box-shadow: var(--sl-shadow-lg);
 }
 
+.icon-util-info-box-close {
+    position: absolute;
+    top: 19px;
+    right: 8px;
+
+    width: 24px;
+    height: 24px;
+
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+
+    color: var(--sl-color-gray-4);
+}
+
+
+.icon-util-info-box-close:hover {
+    color: var(--sl-color-gray-2);
+}
+
 .icon-util-info-box > svg {
     background-color: var(--sl-color-gray-6);
     border-radius: 8px;
@@ -358,8 +395,9 @@
 
 .icon-util-info-box-content p {
     display: flex;
+    align-items: first baseline;
+
     flex-direction: row;
-    align-items: center;
     gap: 8px;
 
     white-space: nowrap;
@@ -372,6 +410,10 @@
     flex-wrap: wrap;
     gap: 8px;
     margin-top: 8px;
+
+    background: var(--sl-color-bg);
+    padding: 8px;
+    border-radius: 4px;
 }
 
 .icon-util-info-box-label {

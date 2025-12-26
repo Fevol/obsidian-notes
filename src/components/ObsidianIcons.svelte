@@ -13,7 +13,8 @@
         categoryIcon,
         searchIcon,
         linkIcon,
-        identifierIcon, newIcon, deprecatedIcon, uniqueIcon
+        identifierIcon,
+        crossIcon,
     } from './icons';
 
     import {onMount} from "svelte";
@@ -50,21 +51,24 @@
     // EXPL: Search and filter settings
     let inputtedText: string = $state('');
     let addLucidePrefix: boolean = $state(false);
-    let filterNewIcons: boolean = $state(false);
-    let filterDeprecatedIcons: boolean = $state(false);
-    let filterUniqueIcons: boolean = $state(false);
+    let filterIconType: string = $state('all');
     let minimumVersion: number = $state(versions.findIndex(v => v === LATEST_VERSION_CUTOFF));
+    let filterVersionType: string = $state('available');
+    let filterVersionRange: string = $state('higher');
     let searchIdentifiers: boolean = $state(true);
     let searchTags: boolean = $state(false);
     let searchCategories: boolean = $state(false);
+
+    let infoBoxX: number = $state(0);
+    let infoBoxY: number = $state(0);
 
     // EXPL: Search box hints rendering
     let currentHint: number | null = $state(null);
     let searchHintsElement: HTMLDivElement | null = $state(null);
 
     // EXPL: Icon info box positioning
-    let mouseEvent: MouseEvent | null = $state(null);
     let clickedIcon: Icon | null = $state(null);
+    let iconInfoContent: HTMLDivElement | null = $state(null);
     let iconListContentRect = $state({ left: 0, width: 0, height: 0, top: 0, right: 0, bottom: 0, x: 0, y: 0 }) as DOMRect;
     let iconInfoContentRect = $state({ left: 0, width: 0, height: 0, top: 0, right: 0, bottom: 0, x: 0, y: 0 }) as DOMRect;
 
@@ -72,6 +76,17 @@
     let downloadSuccess: boolean = $state(false);
     let copySvgSuccess: boolean = $state(false);
     let copyIdSuccess: boolean = $state(false);
+
+    let filterVersionTypeOptions = {
+        'available': 'available',
+        'added': 'added',
+        'removed': 'removed',
+    }
+    let filterVersionRangeOptions = {
+        'exact': '(exactly)',
+        'higher': 'and later',
+        'lower': 'and earlier',
+    }
 
     let searchPlaceholder: string = $derived.by(() => {
         if (searchIdentifiers && searchTags && searchCategories) {
@@ -92,7 +107,12 @@
         return 'Search icons...';
     });
 
-    let filteredList = $derived.by(() => filterIcons(icons, inputtedText, filterNewIcons, filterDeprecatedIcons, filterUniqueIcons, versions[minimumVersion]));
+    let filteredList = $derived.by(
+        () => filterIcons(
+                icons, inputtedText, filterIconType,
+                versions[minimumVersion], filterVersionType, filterVersionRange
+        )
+    );
 
     let allSearchableItems = $derived.by(() => {
         return [
@@ -136,17 +156,6 @@
             : allSearchableItems.map(item => ({value: item, markings: []}));
     });
 
-    // EXPL: Prevent nasty bug where info box will keep resizing itself to fit against the edge, which it shouldn't do
-    let previousWidth = iconInfoContentRect.width;
-    let infoBoxX = $derived.by(() => {
-        let width = Math.abs(previousWidth - iconInfoContentRect.width) < 25 ? previousWidth : iconInfoContentRect.width;
-        previousWidth = iconInfoContentRect.width;
-        return Math.max(0, Math.min((mouseEvent?.layerX ?? 0) - width / 2, iconListContentRect.width - width - 30))
-    });
-    let infoBoxY = $derived.by(() =>
-        (mouseEvent?.layerY ?? 0) + 105 - ((mouseEvent?.layerY ?? 0) + 5) % 92
-    );
-
     $effect(() => {
         if (inputtedText.length > 0 && currentHint === null) {
             currentHint = 0;
@@ -155,27 +164,20 @@
         }
     })
 
-    //     let inputtedText: string = $state('');
-    // let addLucidePrefix: boolean = $state(false);
-    // let filterNewIcons: boolean = $state(false);
-    // let filterDeprecatedIcons: boolean = $state(false);
-    // let filterUniqueIcons: boolean = $state(false);
-    // let minimumVersion: number = $state(versions.findIndex(v => v === '1.8.10'));
-    // let searchIdentifiers: boolean = $state(true);
-    // let searchTags: boolean = $state(false);
-    // let searchCategories: boolean = $state(false);
-
     onMount(() => {
         const url = new URL(window.location.href);
         inputtedText = url.searchParams.get('q') || '';
         addLucidePrefix = url.searchParams.has('prefix') ? url.searchParams.get('prefix') === 't' : addLucidePrefix;
-        filterNewIcons = url.searchParams.has('new') ? url.searchParams.get('new') === 't' : filterNewIcons;
-        filterDeprecatedIcons = url.searchParams.has('rem') ? url.searchParams.get('rem') === 't' : filterDeprecatedIcons;
-        filterUniqueIcons = url.searchParams.has('unq') ? url.searchParams.get('unq') === 't' : filterUniqueIcons;
-        minimumVersion = url.searchParams.has('min_version') ? versions.findIndex(v => v === url.searchParams.get('min_version')) : minimumVersion;
+
+        filterIconType = url.searchParams.get('i_typ') || filterIconType;
+        minimumVersion = url.searchParams.has('v_min') ? versions.findIndex(v => v === url.searchParams.get('v_min')) : minimumVersion;
+        filterVersionRange = url.searchParams.get('v_ran') || filterVersionRange;
+        filterVersionType = url.searchParams.get('v_typ') || filterVersionType;
         searchIdentifiers = url.searchParams.has('id') ? url.searchParams.get('id') === 't' : searchIdentifiers;
         searchTags = url.searchParams.has('tag') ? url.searchParams.get('tag') === 't' : searchTags;
         searchCategories = url.searchParams.has('cat') ? url.searchParams.get('cat') === 't' : searchCategories;
+
+        iconInfoContent!.style.visibility = 'hidden';
     });
 
     function copyShareLink() {
@@ -183,10 +185,6 @@
         const check: [string, string | boolean][] = [
             ['q', inputtedText],
             ['prefix', addLucidePrefix],
-
-            ['new', filterNewIcons],
-            ['rem', filterDeprecatedIcons],
-            ['unq', filterUniqueIcons],
 
             ['id', searchIdentifiers],
             ['tag', searchTags],
@@ -203,7 +201,10 @@
             }
         }
 
-        url.searchParams.set('min_version', versions[minimumVersion]);
+        url.searchParams.set('i_typ', filterIconType);
+        url.searchParams.set('v_min', versions[minimumVersion]);
+        url.searchParams.set('v_ran', filterVersionRange);
+        url.searchParams.set('v_typ', filterVersionType);
 
         window.history.replaceState({}, '', url);
 
@@ -218,27 +219,58 @@
         return a.localeCompare(b, 'en', { numeric: true }) === 1;
     }
 
-    function filterIcons(list: IconList, search: string, focus_new: boolean, focus_deprecated: boolean, focus_unique: boolean,
-    minimum_version: string): IconList {
+    function versionCompare(firstVersion: string, lastVersion: string, selectedVersion: string, type: "added" | "removed" | "available", range: 'exact' | 'higher' | 'lower'): boolean {
+        if (type === 'available') {
+            return !semverCompare(firstVersion, selectedVersion);
+        }
+
+        if (type !== "added" && lastVersion === versions[versions.length - 1]) {
+            return false;
+        }
+
+        const version = type === 'added' ? firstVersion : lastVersion;
+
+        switch (range) {
+            case 'exact':
+                return version === selectedVersion;
+            case 'higher':
+                return version === selectedVersion || semverCompare(version, selectedVersion);
+            case 'lower':
+                return version === selectedVersion || semverCompare(selectedVersion, version);
+            default:
+                return false;
+        }
+    }
+
+    function filterIcons(
+            list: IconList, search: string, filter_icon_type: string,
+            selected_version: string, version_type: string, version_range: string
+    ): IconList {
         let filtered = search?.length
             ? iconFuse.search(search).map(result => result.item)
             : list;
         return filtered.filter(({ lucide, firstVersion, is_new, deprecated, lastVersion }) => {
             return !(
-                (focus_new && !is_new) ||
-                (focus_deprecated && !deprecated) ||
-                (focus_unique && lucide) ||
-                (semverCompare(firstVersion, minimum_version))
+                (filter_icon_type === "new" && !is_new) ||
+                (filter_icon_type === "deprecated" && !deprecated) ||
+                (filter_icon_type === "unique" && lucide) ||
+                (!versionCompare(firstVersion, lastVersion, selected_version, version_type, version_range))
             );
         });
     }
 
     function onClick(event: MouseEvent) {
-        const target = event.target as HTMLElement;
-        const iconId = target.closest('li')?.id;
+        const target = event.currentTarget as HTMLElement;
+        const iconId = target.parentElement!.id;
+        iconInfoContent!.style.visibility = 'hidden';
         if (iconId) {
             clickedIcon = icons.find(icon => icon.id === iconId) || null;
-            mouseEvent = event;
+
+            setTimeout(() => {
+                iconInfoContent!.style.visibility = 'visible';
+                infoBoxX = Math.min(target.offsetLeft, iconListContentRect.right - iconInfoContentRect.width - 32);
+                infoBoxY = target.offsetTop;
+            }, 0);
             navigator.clipboard.writeText(iconId).then(() => {
                 console.log('Icon ID copied to clipboard:', iconId);
             }).catch(err => {
@@ -283,13 +315,7 @@
 
     function onClickOutside(event: CustomEvent<MouseEvent>) {
         clickedIcon = null;
-        mouseEvent = null;
-    }
-
-    function toggleFilterFocus(idx: number) {
-        filterNewIcons = idx === 0 ? !filterNewIcons : false;
-        filterDeprecatedIcons = idx === 1 ? !filterDeprecatedIcons : false;
-        filterUniqueIcons = idx === 2 ? !filterUniqueIcons : false;
+        iconInfoContent!.style.visibility = 'hidden';
     }
 </script>
 
@@ -381,97 +407,112 @@
 
         <br/>
 
-        <div class="icon-util-focus-groups">
-           <button class="icon-util-focus-group icon-util-focus-group-new" onclick={() => { toggleFilterFocus(0) }} class:icon-util-focus-group-active={filterNewIcons} use:tooltip aria-label={`Focus on icons added in v${LATEST_VERSION_CUTOFF} and higher`}>
-               {@html newIcon}
-               New
-            </button>
-
-            <button class="icon-util-focus-group icon-util-focus-group-deprecated" onclick={() => { toggleFilterFocus(1) }} class:icon-util-focus-group-active={filterDeprecatedIcons} use:tooltip aria-label="Focus on deprecated icons">
-                {@html deprecatedIcon}
-                Deprecated
-            </button>
-
-            <button class="icon-util-focus-group icon-util-focus-group-unique" onclick={() => { toggleFilterFocus(2) }} class:icon-util-focus-group-active={filterUniqueIcons} use:tooltip aria-label="Focus on icons not from Lucide">
-                {@html uniqueIcon}
-                Obsidian-only
-            </button>
-        </div>
-
         <div>
             <p>
-                Available in version
+                Filter
+
+                <select
+                        bind:value={filterIconType}
+                        class="icon-util-select"
+                        class:bg-new={filterIconType === 'new'}
+                        class:bg-deprecated={filterIconType === 'deprecated'}
+                        class:bg-unique={filterIconType === 'unique'}
+                >
+                    <option value="all">all</option>
+                    <option value="new">new</option>
+                    <option value="deprecated">deprecated</option>
+                    <option value="unique">obsidian-unique</option>
+                </select>
+
+
+                icons
+                <select bind:value={filterVersionType}>
+                    {#each Object.entries(filterVersionTypeOptions) as [key, label]}
+                        <option value={key}>{label}</option>
+                    {/each}
+                </select>
+
+                in
+
                 <select bind:value={minimumVersion}>
                     {#each versions as version, index}
                         <option value={index}>{version}</option>
                     {/each}
                 </select>
-                and higher
+
+                {#if filterVersionType !== 'available'}
+                    <select bind:value={filterVersionRange}>
+                        {#each Object.entries(filterVersionRangeOptions) as [key, label]}
+                            <option value={key}>{label}</option>
+                        {/each}
+                    </select>
+                {/if}
             </p>
         </div>
     </div>
 
 
-    {#if clickedIcon}
-            <div
-                class="icon-util-info-box"
-                bind:contentRect={iconInfoContentRect}
-                style="left: {infoBoxX}px; top: {infoBoxY}px;"
-                use:clickoutside onclickoutside={onClickOutside}
-            >
-                {@html clickedIcon.svg}
-                <div class="icon-util-info-box-content">
-                    <h4>{clickedIcon.name}</h4>
-                    <p>
-                        <b>Icon ID:</b> <code>{clickedIcon.id}</code>
-                        <button class="icon-util-icon-action" onclick={(e) => { onCopy(e, clickedIcon.id); copyIdSuccess = true; setTimeout(() => { copyIdSuccess = false}, 1000)} }>
-                            {#if copyIdSuccess} {@html checkIcon} {:else} {@html copyIcon} {/if}
-                        </button>
-                    </p>
-                    <p>
-                        <b>SVG:</b>
-                        <button class="icon-util-icon-action" onclick={(e) => { onDownload(e, clickedIcon.svg); downloadSuccess = true; setTimeout(() => { downloadSuccess = false}, 1000)} }>
-                            {#if downloadSuccess} {@html checkIcon} {:else} {@html downloadIcon} {/if}
-                        </button>
-                        <button class="icon-util-icon-action" onclick={(e) => { onCopy(e, clickedIcon.svg); copySvgSuccess = true; setTimeout(() => { copySvgSuccess = false}, 1000)} }>
-                            {#if copySvgSuccess} {@html checkIcon} {:else} {@html copyIcon} {/if}
-                        </button>
-                    </p>
-                    <p><b>Lucide:</b> {clickedIcon.lucide ? 'Yes' : 'No'}</p>
-                    <p><b>Supported versions:</b> {clickedIcon.firstVersion} - {clickedIcon.lastVersion ?? versions[versions.length - 1]}</p>
-                    {#if clickedIcon.categories.length}
-                        <p>
-                            <b>Categories:</b>
-                            <span class="icon-util-info-box-labels">
-                                {#each clickedIcon.categories as category}
-                                    <button class="icon-util-info-box-label" onclick={(evt) => focusSearchGroup(evt, 'category', category)}>{category}</button>
-                                {/each}
-                            </span>
-                        </p>
-                    {/if}
-                    {#if clickedIcon.tags.length}
-                        <p>
-                            <b>Tags:</b>
-                            <span class="icon-util-info-box-labels">
-                                {#each clickedIcon.tags as tag}
-                                    <button class="icon-util-info-box-label" onclick={(evt) => focusSearchGroup(evt, 'tag', tag)}>{tag}</button>
-                                {/each}
-                            </span>
-                        </p>
-                    {/if}
-                    {#if clickedIcon.alternatives}
-                        <p>
-                            <b>Alternatives:</b>
-                            <span class="icon-util-info-box-labels">
-                                {#each clickedIcon.alternatives as alternative}
-                                    <button class="icon-util-info-box-label" onclick={(evt) => focusSearchGroup(evt, 'identifier', alternative)}>{alternative}</button>
-                                {/each}
-                            </span>
-                        </p>
-                    {/if}
-                </div>
-            </div>
-    {/if}
+    <div
+        bind:this={iconInfoContent}
+        bind:contentRect={iconInfoContentRect}
+        class="icon-util-info-box"
+        style="left: {infoBoxX}px; top: {infoBoxY}px;"
+        use:clickoutside onclickoutside={onClickOutside}
+    >
+        <button class="icon-util-info-box-close" onclick={onClickOutside}>{@html crossIcon}</button>
+
+        {@html clickedIcon?.svg}
+        <div class="icon-util-info-box-content">
+            <h4>{clickedIcon?.name}</h4>
+            <p>
+                <b>Icon ID:</b> <code>{clickedIcon?.id}</code>
+                <button class="icon-util-icon-action" onclick={(e) => { onCopy(e, clickedIcon?.id); copyIdSuccess = true; setTimeout(() => { copyIdSuccess = false}, 1000)} }>
+                    {#if copyIdSuccess} {@html checkIcon} {:else} {@html copyIcon} {/if}
+                </button>
+            </p>
+            <p>
+                <b>SVG:</b>
+                <button class="icon-util-icon-action" onclick={(e) => { onDownload(e, clickedIcon?.svg); downloadSuccess = true; setTimeout(() => { downloadSuccess = false}, 1000)} }>
+                    {#if downloadSuccess} {@html checkIcon} {:else} {@html downloadIcon} {/if}
+                </button>
+                <button class="icon-util-icon-action" onclick={(e) => { onCopy(e, clickedIcon?.svg); copySvgSuccess = true; setTimeout(() => { copySvgSuccess = false}, 1000)} }>
+                    {#if copySvgSuccess} {@html checkIcon} {:else} {@html copyIcon} {/if}
+                </button>
+            </p>
+            <p><b>Lucide:</b> {clickedIcon?.lucide ? 'Yes' : 'No'}</p>
+            <p><b>Supported versions:</b> {clickedIcon?.firstVersion} - {clickedIcon?.lastVersion ?? versions[versions.length - 1]}</p>
+            {#if clickedIcon?.categories.length}
+                <p>
+                    <b>Categories:</b>
+                    <span class="icon-util-info-box-labels">
+                        {#each clickedIcon.categories as category}
+                            <button class="icon-util-info-box-label" onclick={(evt) => focusSearchGroup(evt, 'category', category)}>{category}</button>
+                        {/each}
+                    </span>
+                </p>
+            {/if}
+            {#if clickedIcon?.tags.length}
+                <p>
+                    <b>Tags:</b>
+                    <span class="icon-util-info-box-labels">
+                        {#each clickedIcon.tags as tag}
+                            <button class="icon-util-info-box-label" onclick={(evt) => focusSearchGroup(evt, 'tag', tag)}>{tag}</button>
+                        {/each}
+                    </span>
+                </p>
+            {/if}
+            {#if clickedIcon?.alternatives}
+                <p>
+                    <b>Alternatives:</b>
+                    <span class="icon-util-info-box-labels">
+                        {#each clickedIcon.alternatives as alternative}
+                            <button class="icon-util-info-box-label" onclick={(evt) => focusSearchGroup(evt, 'identifier', alternative)}>{alternative}</button>
+                        {/each}
+                    </span>
+                </p>
+            {/if}
+        </div>
+    </div>
 
     <!-- TODO: This could use a VirtualLists, but couldn't find a package that supports CSS grids -->
     <ul class="icon-util-grid"

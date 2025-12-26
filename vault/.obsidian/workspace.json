@@ -22,6 +22,18 @@
             }
           },
           {
+            "id": "c9f97391d0d2015b",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.10.3"
+              },
+              "icon": "lucide-book-up",
+              "title": "Release Notes 1.10.3"
+            }
+          },
+          {
             "id": "3d2027558998fbc5",
             "type": "leaf",
             "state": {
@@ -35,7 +47,8 @@
               "title": "Storing Settings"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -178,7 +191,7 @@
       "bases:Create new base": false
     }
   },
-  "active": "ff2c135ba8683771",
+  "active": "c9f97391d0d2015b",
   "lastOpenFiles": [
     "Tutorials/Storing Settings.md",
     "Tutorials/Showcase Plugin and Theme Downloads.md",

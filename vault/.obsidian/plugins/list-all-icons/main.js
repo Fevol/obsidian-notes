@@ -63,6 +63,11 @@ var IconLister = class extends import_obsidian.Plugin {
         });
     }
 
+    logAllIcons() {
+        const icons = import_obsidian.getIconIds()
+        console.log(icons);
+    }
+
     async onload() {
         this.registerObsidianProtocolHandler("list-icons", async (e) => {
             this.saveIconsToFile()
@@ -73,6 +78,14 @@ var IconLister = class extends import_obsidian.Plugin {
             name: "Fetch all icons and generate a file",
             callback: () => {
                 this.saveIconsToFile();
+            }
+        });
+
+        this.addCommand({
+            id: "log-all-icons",
+            name: "Log all icon IDs to console",
+            callback: () => {
+                this.logAllIcons();
             }
         });
     }

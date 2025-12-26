@@ -48,12 +48,18 @@ const LUCIDE_ALIASES = Object.entries(LUCIDE_ICONS_DATA).reduce((acc: Record<str
 }, {});
 
 function semverCompare(a: string, b: string): boolean {
-    return a.localeCompare(b, undefined, { numeric: true, sensitivity: 'base' }) >= 0;
+    const aParts = a.split('.').map(Number);
+    const bParts = b.split('.').map(Number);
+    for (let i = 0; i < 3; i++) {
+        if (aParts[i] > bParts[i]) return true;
+        if (aParts[i] < bParts[i]) return false;
+    }
+    return true;
 }
 
 
 const iconData: Record<string, IconData> = {};
-for (const file of fs.readdirSync(ICONS_DIR)) {
+for (const file of fs.readdirSync(ICONS_DIR).sort((a,b) => semverCompare(a.slice(0, -5), b.slice(0, -5)) ? 1 : -1)) {
     if (!/^\d+\.\d+\.\d+\.json$/.test(file)) {
         continue;
     }
@@ -123,11 +129,10 @@ const outputIcons: IconData[] = Object.entries(iconData)
                 categories: icon.categories.sort(),
             deprecated: icon.lastVersion !== included_versions[included_versions.length - 1],
         }
-    })
-    .sort((a, b) => a.name.localeCompare(b.name));
+    });
 
 const output = {
-    icons: outputIcons,
+    icons: outputIcons.sort((a, b) => a.name.localeCompare(b.name)),
     versions: included_versions,
     tags: Array.from(included_tags).sort(),
     categories: Array.from(included_categories).sort(),
